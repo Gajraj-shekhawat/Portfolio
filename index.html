@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.jpg" />
+
+  <!-- Put your site title here -->
+  <title>
+    Gajraj Singh shekhawat  | Full Stack Web Developer
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item">
+            <a href="#clients" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Rahul Kharche</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>A Web Developer who develop  full fledged products</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+  <!-- ***** About ***** -->
+
+  <section class="about" id="about">
+    <div class="row">
+      <h2>About Me</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            Self-motivated and creative full-stack developer with a specialization in MERN stack.
+             Interested in building innovative and attractive websites. 
+             Curious to work with an exciting company to develop full-fledged interactive products.
+          </p>
+          <!-- Provide a link to your resume -->
+          <a target= "_blank" href="https://drive.google.com/drive/u/0/folders/1f2zx5IE0naNxmvTk4UWyKY1jkz1ur7gV" class="btn">My Resume</a>
+        </div>
+
+        <div class="about__photo-container">
+          <!-- Add a nice photo of yourself -->
+          <img class="about__photo" src="./images/myimage.jpg"  alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Skills Section-->
+
+    
+  <section class="client" id="clients">
+    <div class="row">
+      <h2>My Skills</h2>
+      <div class="client__logos">
+        <!-- Add logos of the clients or companies you'have worked with. -->
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" class="client__logo" alt="Company 2" />
+          <p>HTML</p>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/15rjYXcr/css-removebg-preview.png" class="client__logo" alt="Company 3" />
+          <p>CSS</p>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/66j7VLFr/react-removebg-preview-1.png" class="client__logo" alt="Company 1" />
+          <p>ReactJS</p>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/220px-Bootstrap_logo.svg.png" class="client__logo" alt="Company 1" />
+          <p>Bootstrap</p>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/CLrQVtXR/node-removebg-preview.png" class="client__logo" alt="Company 3" />
+          <p>NodeJS</p>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/prxgpFJy/mongodb-removebg-preview.png" class="client__logo" alt="Company 1" />
+          <p>MongoDB</p>
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/85sGTWwG/dsa-removebg-preview.png" class="client__logo" alt="Company 1" />
+          <p>DSA</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>Projects</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <!-- <div class="work__box">
+            <div class="work__text">
+              <h3>Spotify Clone</h3>
+              <p>
+                This is the clone of Spotify. It's a music app where we can 
+                listen to our favourite songs and  create our playlists. 
+                
+              </p>
+
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>ReactJS</li>
+                <li>Material UI</li>
+                <li>Spotify web API</li>
+              </ul>
+              <p class="aor__work">Area of responsibility</p>
+              <ui>
+                <li>Build a Home Page</li>
+                <li>Build Homepage Responsiveness</li>
+                <li>Implement Search Functionality using <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> debouncing</li>
+                <li>Build Navbar</li>
+                
+              </ui>
+              <br><br>
+              <div class="work__links">
+                <a href="" target="_blank" class="link__text">
+                   Demo <span>&rarr;</span>
+              </a>
+                <a href="https://github.com/shikha-max/spotify_clone/tree/master" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/album.jpg" class="work__image" alt="Project 1" />
+            </div>
+          </div> -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Fernway Travel</h3>
+              <p>
+                Fernway is an app for solo travelers, including features for
+                searching your travel destination with a wide range of accommodation information, and also making a tour plan
+              </p>
+              <p>(Note - This app is specially develop for mobile view only)</p>
+              <ul class="work__list">
+                <li>ReactJS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <p class="aor__work">Area of responsibility</p>
+              <ui>
+                <li>Build a Sign Up Page</li>
+                <li>Build Login OTP page</li>
+                <li>Build a Select your trip page</li>
+              </ui>
+              <br><br>
+              <div class="work__links">
+                <a href="https://fernway-travels.herokuapp.com/" target="_blank" class="link__text">
+                   Demo <span>&rarr;</span>
+              </a>
+                <a href="https://github.com/madanakrishnanmasai/fernway_travel" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/home_page.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>YouTube API</h3>
+              <p>
+                A dummy YouTube App where user can watch most trending videos 
+                as well as he can search for any video and user will get maximum 
+                20 videos for his search
+              </p>
+              <ul class="work__list">
+                <li>Youtube API</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <p class="aor__work">Area of responsibility</p>
+              <ui>
+                <li>Build home page</li>
+                <li>Fetch data on browser using YouTube <span class="class1">API</span> </li>
+                <li>User will see top trending videos on <span class="class1">youtube initially</span></li>
+                <li>User can search for any videos</li>
+                <li>User will see a maximum 20 videos for <span class="class1">each search</span></li>
+              </ui>
+              <br><br>
+              <div class="work__links">
+                <a target ="_blank" href="https://you-tube-api-rahulk2699-gmailcom.vercel.app/" class="link__text">
+                   Demo <span>&rarr;</span>
+                </a>
+                <a target ="_blank" href="https://github.com/RahulK2699/YouTube-API">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/youtube_api.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Are you looking for a fast-performing and user-friendly website to
+          represent your product or business?
+          or want to ask questions? or have some advice for me
+          or just want to say "Hi 👋" in any case feel free to Let me know. I
+          will do my best to respond back. 😊 The quickest way to reach out to
+          me is via an email.
+        </p>
+        <!-- Replace the email with yours -->
+        <a href="mailto:rahulkharche99@gmail.com" class="btn">rahulkharche99@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a target= "_blank" href="https://twitter.com/rahulkharche99" title="Link to Twitter Profile">
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a target= "_blank" href="https://github.com/RahulK2699" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a target= "_blank" href="https://www.linkedin.com/in/rahul-kharche-9371231b9/" title="Link to Linkedin Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
