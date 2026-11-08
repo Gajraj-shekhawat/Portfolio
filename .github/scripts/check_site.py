@@ -53,9 +53,19 @@ for page in [ROOT / "404.html", *ROOT.rglob("index.html")]:
     for ref in re.findall(r'(?:href|src|srcset)="([^"]+)"', text):
         if re.match(r"^(https?:|mailto:|tel:|#|data:)", ref):
             continue
-        path = ROOT / ref.split("#")[0].split("?")[0].lstrip("/")
+        path = ROOT / ref.split("#")[0].split("?")[0].split(" ")[0].lstrip("/")
         if not path.exists():
             errors.append(f"{page.name}: missing file for {ref}")
+
+# 4b. Asset version tags are current (run tools/build_pages.py after editing CSS/JS/images)
+import hashlib
+for page in [ROOT / "404.html", *ROOT.rglob("index.html")]:
+    for url, ver in re.findall(r'"(?:https://gajrajshekhawat\.com)?/?((?:styles\.css|script\.js|images/[^"?\s]+))\?v=([0-9a-f]+)"', page.read_text(encoding="utf-8")):
+        f = ROOT / url
+        if f.exists() and hashlib.md5(f.read_bytes()).hexdigest()[:8] != ver:
+            errors.append(f"{page.relative_to(ROOT)}: stale ?v= for {url} (run python3 tools/build_pages.py)")
+    if re.search(r'(?:href|src)="/?(?:styles\.css|script\.js)"', page.read_text(encoding="utf-8")):
+        errors.append(f"{page.relative_to(ROOT)}: CSS/JS link without ?v= version tag")
 
 # 5. llms.txt
 llms = (ROOT / "llms.txt").read_text(encoding="utf-8")

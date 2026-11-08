@@ -4,7 +4,9 @@ Run from the repo root:  python3 tools/build_pages.py
 Edit the PAGES list below to change copy; never hand-edit the generated HTML.
 """
 import datetime
+import hashlib
 import html
+import re
 import json
 import pathlib
 
@@ -540,6 +542,26 @@ def sitemap():
 '''
 
 
+ASSET_RE = re.compile(
+    r'((?:href|src|srcset|content)=")((?:https://gajrajshekhawat\.com)?/?(?:styles\.css|script\.js|images/[^"?\s]+))(?:\?v=[0-9a-f]+)?"')
+
+
+def asset_version(path):
+    return hashlib.md5((ROOT / path).read_bytes()).hexdigest()[:8]
+
+
+def bust_assets(html_text):
+    """Append ?v=<content hash> to CSS, JS and image URLs so every deploy is picked up
+    immediately while files can still be cached for a long time."""
+    def repl(m):
+        url = m.group(2)
+        local = re.sub(r"^(https://gajrajshekhawat\.com)?/?", "", url)
+        if not (ROOT / local).exists():
+            return m.group(0)
+        return f'{m.group(1)}{url}?v={asset_version(local)}"'
+    return ASSET_RE.sub(repl, html_text)
+
+
 if __name__ == "__main__":
     for p in PAGES:
         out = ROOT / p["slug"] / "index.html"
@@ -551,5 +573,13 @@ if __name__ == "__main__":
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(case_html(c), encoding="utf-8")
         print("built", out.relative_to(ROOT))
+    for page in [ROOT / "404.html", *ROOT.rglob("index.html")]:
+        if "node_modules" in page.parts:
+            continue
+        text = page.read_text(encoding="utf-8")
+        busted = bust_assets(text)
+        if busted != text:
+            page.write_text(busted, encoding="utf-8")
+    print("asset versions refreshed")
     (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
     print("sitemap.xml updated with", len(PAGES) + len(CASES) + 2, "URLs")
