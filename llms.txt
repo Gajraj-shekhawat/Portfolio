@@ -2,7 +2,7 @@
 
 > Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a full-stack software engineer (frontend, backend, mobile, AI and data) based in India, working remotely with teams worldwide. He has been building software since 2021, with 4+ years of professional experience shipping production software. He works full-time at Shuru Technologies (job title: Product Engineer, Backend), currently on Equiti's multi-asset trading platform, after building the data platform and app backends for Pickup Coffee. Alongside, he works with startups, schools and businesses as a software consultant and tech advisor to design and build complete products. He is open to select projects and collaborations.
 
-Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · based in India (IST, UTC+5:30), working remotely with clients worldwide.
+Contact: email contact@gajrajshekhawat.com · phone and WhatsApp +91 94145 84444 · based in India (IST, UTC+5:30), working remotely with clients worldwide.
 
 ## Profile
 
@@ -72,4 +72,4 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 - **Which technologies does he use?** Node.js, TypeScript and Python on the backend (Express, Fastify, NestJS, FastAPI); React, Next.js and React Native on the frontend and mobile; PostgreSQL, MongoDB, Redis and BigQuery for data, with Airflow and Metabase; AWS, Google Cloud, DigitalOcean, Docker and Kubernetes for infrastructure; and LLM agents, text-to-SQL and OpenCV for AI.
 - **Can he add AI to an existing product?** Yes. He has built a text-to-SQL agent on a self-hosted model, AI reading of exam answer sheets, Indian-language call transcription and summaries, and an AI lesson planner. He can also host models privately when data privacy or running cost matters.
 - **How does a project start, and how is it priced?** It starts with a short call to understand the problem. You then get a clear scope, timeline and fixed quote before any work begins, followed by weekly demos during the build.
-- **How can I contact Gajraj?** By email at gaju2gajraj@gmail.com, or by phone or WhatsApp on +91 94145 84444. He usually replies within a day.
+- **How can I contact Gajraj?** By email at contact@gajrajshekhawat.com, or by phone or WhatsApp on +91 94145 84444. He usually replies within a day.

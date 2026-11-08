@@ -17,7 +17,7 @@ from cases import CASES  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
 NOW_ISO = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).replace(microsecond=0).isoformat()
-EMAIL = "gaju2gajraj@gmail.com"
+EMAIL = "contact@gajrajshekhawat.com"
 PHONE = "+91 94145 84444"
 PHONE_E164 = "+919414584444"
 WA = "https://wa.me/919414584444?text=Hi%20Gajraj%2C%20I%27d%20like%20to%20discuss%20a%20project."

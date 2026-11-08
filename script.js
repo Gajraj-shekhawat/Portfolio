@@ -235,7 +235,7 @@
       if (!endpoint) {
         // No sheet connected yet: open the visitor's email app with everything filled in.
         const body = `Hi Gajraj,\n\n${payload.message}\n\nInterested in: ${payload.interest}\n\n${payload.name}\n${payload.email}${payload.phone ? '\n' + payload.phone : ''}`;
-        location.href = `mailto:gaju2gajraj@gmail.com?subject=${encodeURIComponent('Project enquiry from ' + payload.name)}&body=${encodeURIComponent(body)}`;
+        location.href = `mailto:contact@gajrajshekhawat.com?subject=${encodeURIComponent('Project enquiry from ' + payload.name)}&body=${encodeURIComponent(body)}`;
         setStatus('Your email app should open with the message ready. Just press send.', 'ok');
         return;
       }
@@ -256,7 +256,7 @@
         form.classList.remove('is-sending');
         $('.form__submit', form).disabled = false;
         label.textContent = 'Send message';
-        setStatus('Something went wrong. Please email gaju2gajraj@gmail.com or WhatsApp +91 94145 84444.', 'err');
+        setStatus('Something went wrong. Please email contact@gajrajshekhawat.com or WhatsApp +91 94145 84444.', 'err');
       }
     });
   }
