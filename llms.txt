@@ -38,6 +38,13 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 - Yugam Ask: an AI agent that answers plain-English questions about 1.7M Indian schools using text-to-SQL, on a self-hosted Qwen model with a GPU that starts on demand.
 - Face attendance: marks a class present from one photo using OpenCV (YuNet + SFace) on CPU, with no cloud AI.
 
+## Case studies
+
+- [Neem Karoli Sales ordering platform](https://gajrajshekhawat.com/work/neem-karoli-sales-ordering-platform/)
+- [Shikhar EdTech platform](https://gajrajshekhawat.com/work/shikhar-edtech-platform/)
+- [Pickup Coffee data platform and apps](https://gajrajshekhawat.com/work/pickup-coffee-data-platform-and-apps/)
+- [Yugam Ask AI agent](https://gajrajshekhawat.com/work/yugam-ask-ai-agent/)
+
 ## Service pages
 
 - [Hire a software engineer](https://gajrajshekhawat.com/hire-software-engineer/)

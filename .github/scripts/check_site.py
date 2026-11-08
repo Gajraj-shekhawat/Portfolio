@@ -48,7 +48,7 @@ except ET.ParseError as e:
     errors.append(f"sitemap.xml is not valid XML: {e}")
 
 # 4. Local links and assets exist
-for page in [ROOT / "index.html", ROOT / "404.html", *ROOT.glob("*/index.html")]:
+for page in [ROOT / "404.html", *ROOT.rglob("index.html")]:
     text = page.read_text(encoding="utf-8")
     for ref in re.findall(r'(?:href|src|srcset)="([^"]+)"', text):
         if re.match(r"^(https?:|mailto:|tel:|#|data:)", ref):

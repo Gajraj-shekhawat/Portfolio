@@ -9,6 +9,9 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / "tools"))
+from cases import CASES  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
 EMAIL = "gaju2gajraj@gmail.com"
@@ -399,9 +402,131 @@ def page_html(p):
 '''
 
 
+def case_html(c):
+    url = f"{SITE}/work/{c['slug']}/"
+    ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "Article", "@id": url + "#article", "headline": c["title"][:110], "description": c["description"], "url": url,
+             "image": f"{SITE}/images/og.jpg", "datePublished": TODAY, "dateModified": TODAY, "inLanguage": "en",
+             "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat", "url": SITE + "/"},
+             "publisher": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat"},
+             "about": c["name"], "keywords": ", ".join(c["stack"])},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Gajraj Singh Shekhawat", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Work", "item": SITE + "/#work"},
+                {"@type": "ListItem", "position": 3, "name": c["name"], "item": url}]},
+        ],
+    }
+    facts = "".join(f'<div class="stat"><dt>{esc(k)}</dt><dd class="fact">{esc(v)}</dd></div>' for k, v in c["facts"])
+    sol = "".join(f"<li>{esc(x)}</li>" for x in c["solution"])
+    res = "".join(f"<li>{esc(x)}</li>" for x in c["results"])
+    chips = "".join(f"<li>{esc(x)}</li>" for x in c["stack"])
+    visit = (f'<a class="btn btn--ghost btn--lg" href="{c["url"]}" target="_blank" rel="noopener">Visit {esc(c["url"].split("//")[1])} ↗</a>'
+             if c["url"] else "")
+    more = "".join(f'<li><a href="/work/{o["slug"]}/">{esc(o["name"])} <span aria-hidden="true">→</span></a></li>' for o in CASES if o is not c)
+    body = f'''    <section class="hero hero--page">
+      <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
+      <div class="wrap">
+        <nav class="crumbs load" aria-label="Breadcrumb"><a href="/">Gajraj Singh Shekhawat</a> <span aria-hidden="true">/</span> <a href="/#work">Work</a> <span aria-hidden="true">/</span> <span>{esc(c["name"])}</span></nav>
+        <p class="eyebrow load" style="--d:1">{esc(c["eyebrow"])}</p>
+        <h1 class="page-title load" style="--d:2">{c["h1"]}</h1>
+        <p class="lead load" style="--d:3">{esc(c["summary"])}</p>
+        <div class="hero__cta load" style="--d:4">
+          <a href="/#contact" class="btn btn--primary btn--lg">Build something similar <span class="btn__arrow" aria-hidden="true">→</span></a>
+          {visit}
+        </div>
+        <dl class="stats facts load" style="--d:5">{facts}</dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <div class="reveal"><p class="eyebrow"><span>01</span> The challenge</p><p class="prose__lead">{esc(c["challenge"])}</p></div>
+        <div class="reveal"><p class="eyebrow"><span>02</span> What I built</p><ul class="prose__list">{sol}</ul></div>
+        <div class="reveal"><p class="eyebrow"><span>03</span> Results</p><ul class="prose__list prose__list--results">{res}</ul></div>
+        <div class="reveal"><p class="eyebrow"><span>04</span> Stack</p><ul class="chips page-chips">{chips}</ul></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Want something like this <em>for your business?</em></h2>
+          <p class="section__sub">Tell me what you need. I usually reply within a day.</p>
+          <div class="hero__cta">
+            <a href="/#contact" class="btn btn--primary btn--lg">Send a message <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a href="{WA}" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">WhatsApp {PHONE}</a>
+          </div>
+        </div>
+        <nav class="other-services reveal" aria-label="More case studies">
+          <p class="footer__label">More case studies</p>
+          <ul>{more}</ul>
+        </nav>
+      </div>
+    </section>'''
+    return shell(c["title"], c["description"], url, ld, body, "article")
+
+
+def shell(title, description, url, ld, body, og_type="website"):
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(description)}" />
+  <meta name="author" content="Gajraj Singh Shekhawat" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="{url}" />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:type" content="{og_type}" />
+  <meta property="og:site_name" content="Gajraj Singh Shekhawat" />
+  <meta property="og:url" content="{url}" />
+  <meta property="og:title" content="{esc(title)}" />
+  <meta property="og:description" content="{esc(description)}" />
+  <meta property="og:image" content="{SITE}/images/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{SITE}/images/og.jpg" />
+  <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    try {{ var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; }} catch (e) {{}}
+  </script>
+  <script type="application/ld+json">
+{json.dumps(ld, ensure_ascii=False, indent=2)}
+  </script>
+</head>
+<body class="subpage">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+{nav_html()}
+
+  <main id="main">
+{body}
+  </main>
+
+{footer_html()}
+
+  <a href="#top" class="totop" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="totop__track" cx="24" cy="24" r="21" /><circle class="totop__bar" cx="24" cy="24" r="21" /></svg>
+    <span aria-hidden="true">↑</span>
+  </a>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <script src="/script.js" defer></script>
+</body>
+</html>
+'''
+
+
 def sitemap():
     urls = [(f"{SITE}/", "1.0", f"\n    <image:image><image:loc>{SITE}/images/gajraj.jpg</image:loc></image:image>")]
     urls += [(f"{SITE}/{p['slug']}/", "0.8", "") for p in PAGES]
+    urls += [(f"{SITE}/work/{c['slug']}/", "0.7", "") for c in CASES]
     urls += [(f"{SITE}/assets/Gajraj-Shekhawat-Resume.pdf", "0.5", "")]
     body = "".join(f"""  <url>
     <loc>{u}</loc>
@@ -421,5 +546,10 @@ if __name__ == "__main__":
         out.parent.mkdir(exist_ok=True)
         out.write_text(page_html(p), encoding="utf-8")
         print("built", out.relative_to(ROOT))
+    for c in CASES:
+        out = ROOT / "work" / c["slug"] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(case_html(c), encoding="utf-8")
+        print("built", out.relative_to(ROOT))
     (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
-    print("sitemap.xml updated with", len(PAGES) + 2, "URLs")
+    print("sitemap.xml updated with", len(PAGES) + len(CASES) + 2, "URLs")

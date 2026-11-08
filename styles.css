@@ -759,3 +759,41 @@ h1 em, h2 em, .float-card strong {
   .chat { right: 8px; left: 8px; bottom: 74px; width: auto; height: calc(100dvh - 92px); }
   .totop { right: 14px; bottom: 74px; }
 }
+
+/* ---------- Typography & colour polish ---------- */
+:root { --muted: #b2b2bb; --faint: #858590; }
+:root[data-theme="light"] { --muted: #4b4b55; --faint: #6b6b76; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --muted: #4b4b55; --faint: #6b6b76; } }
+body { font-optical-sizing: auto; line-height: 1.65; }
+.lead { font-size: clamp(17.5px, 1.55vw, 20px); line-height: 1.7; }
+.section__head h2 { line-height: 1.04; }
+.case h3 { font-size: 23px; line-height: 1.22; }
+.case p, .service p, .timeline ul li { font-size: 16.5px; line-height: 1.65; }
+.chips li { letter-spacing: -0.01em; }
+.case--wide { grid-column: 1 / -1; padding: 40px; background: radial-gradient(700px 300px at 0% 0%, var(--accent-soft), transparent 60%), var(--surface); }
+.case--wide h3 { font-size: clamp(24px, 2.4vw, 30px); max-width: 30ch; }
+.case--wide > p { max-width: 80ch; font-size: 17px; }
+.case, .service, .skill, .faq__item { background-image: linear-gradient(180deg, color-mix(in srgb, var(--text) 2.5%, transparent), transparent 40%); }
+.eyebrow { color: var(--faint); }
+@media (max-width: 560px) { .case h3 { font-size: 21px; } .case--wide { padding: 28px; } }
+
+/* ---------- Industries, case studies ---------- */
+.section--tight { padding: 88px 0 40px; }
+.industries { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.industries li { display: grid; gap: 6px; padding: 22px 24px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); transition: border-color .3s, transform .4s var(--ease); }
+.industries li:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); transform: translateY(-3px); }
+.industries strong { font-size: 18px; letter-spacing: -0.02em; font-weight: 600; }
+.industries span { color: var(--muted); font-size: 15px; }
+.case__link--study { color: var(--text); }
+.case__link--study + .case__link { margin-top: 0; padding-top: 0; }
+.facts { margin-top: 56px; }
+.facts .stat dd.fact { font-size: clamp(16px, 1.5vw, 19px); letter-spacing: -0.01em; line-height: 1.35; font-weight: 500; }
+.prose { max-width: 820px; display: grid; gap: 48px; }
+.prose__lead { font-size: clamp(19px, 2vw, 24px); line-height: 1.5; letter-spacing: -0.015em; }
+.prose__list { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.prose__list li { position: relative; padding-left: 30px; font-size: 17.5px; line-height: 1.6; color: var(--muted); }
+.prose__list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
+.prose__list--results li { color: var(--text); }
+.prose__list--results li::before { content: "✓"; color: var(--ok); }
+@media (max-width: 900px) { .industries { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .industries { grid-template-columns: 1fr; } }
