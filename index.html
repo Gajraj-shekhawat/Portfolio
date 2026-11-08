@@ -54,8 +54,8 @@
   <!-- Speed: fonts and hero photo load first -->
   <link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="images/gajraj.webp?v=760d8b3b" as="image" type="image/webp" fetchpriority="high" />
-  <link rel="stylesheet" href="styles.css?v=b3ed8132" />
+  <link rel="preload" as="image" type="image/webp" imagesrcset="images/gajraj-280.webp 280w, images/gajraj.webp 429w" imagesizes="(max-width: 600px) 132px, (max-width: 900px) 220px, 340px" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.min.css?v=efeef52a" />
 
   <script>
     document.documentElement.classList.add('js');
@@ -83,7 +83,7 @@
         "url": "https://gajrajshekhawat.com/",
         "name": "Gajraj Singh Shekhawat · Full-Stack Software Engineer",
         "inLanguage": "en-IN",
-        "dateModified": "2026-11-08T20:50:57+05:30",
+        "dateModified": "2026-11-08T21:58:28+05:30",
         "mainEntity": {
           "@id": "https://gajrajshekhawat.com/#person"
         },
@@ -405,7 +405,7 @@
   <header class="nav" id="top">
     <div class="wrap nav__inner">
       <a href="#top" class="brand" aria-label="Gajraj Shekhawat, back to top">
-        <img class="brand__avatar" src="images/icon-192.png?v=bea14388" alt="" width="36" height="36" />
+        <img class="brand__avatar" src="images/avatar-96.webp?v=73c7e587" alt="" width="36" height="36" />
         <span class="brand__name">Gajraj Shekhawat</span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
@@ -462,7 +462,7 @@
         <div class="hero__photo load" style="--d:4">
           <div class="photo-ring">
             <picture>
-              <source srcset="images/gajraj.webp?v=760d8b3b" type="image/webp" />
+              <source srcset="images/gajraj-280.webp 280w, images/gajraj.webp 429w" sizes="(max-width: 600px) 132px, (max-width: 900px) 220px, 340px" type="image/webp" />
               <img src="images/gajraj.jpg?v=285a5879" alt="Portrait of Gajraj Singh Shekhawat" width="429" height="582" fetchpriority="high" decoding="async" />
             </picture>
           </div>
@@ -946,6 +946,6 @@
   </a>
   <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 
-  <script src="script.js?v=2c15915f" defer></script>
+  <script src="script.js?v=74cfba93" defer></script>
 </body>
 </html>

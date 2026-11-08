@@ -208,7 +208,7 @@ def nav_html():
     return f'''  <header class="nav" id="top">
     <div class="wrap nav__inner">
       <a href="/" class="brand" aria-label="Gajraj Shekhawat, home">
-        <img class="brand__avatar" src="/images/icon-192.png" alt="" width="36" height="36" />
+        <img class="brand__avatar" src="/images/avatar-96.webp" alt="" width="36" height="36" />
         <span class="brand__name">Gajraj Shekhawat</span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
@@ -322,7 +322,7 @@ def page_html(p):
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.min.css" />
   <script>
     document.documentElement.classList.add('js');
     try {{ var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; }} catch (e) {{}}
@@ -518,7 +518,7 @@ def shell(title, description, url, ld, body, og_type="website"):
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.min.css" />
   <script>
     document.documentElement.classList.add('js');
     try {{ var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; }} catch (e) {{}}
@@ -567,7 +567,7 @@ def sitemap():
 
 
 ASSET_RE = re.compile(
-    r'((?:href|src|srcset|content)=")((?:https://gajrajshekhawat\.com)?/?(?:styles\.css|script\.js|images/[^"?\s]+))(?:\?v=[0-9a-f]+)?"')
+    r'((?:href|src|srcset|content)=")((?:https://gajrajshekhawat\.com)?/?(?:styles\.min\.css|styles\.css|script\.js|images/[^"?\s]+))(?:\?v=[0-9a-f]+)?"')
 
 
 def asset_version(path):
@@ -586,7 +586,19 @@ def bust_assets(html_text):
     return ASSET_RE.sub(repl, html_text)
 
 
+def minify_css():
+    """Write styles.min.css from styles.css (comments + whitespace only; safe for calc())."""
+    src = (ROOT / "styles.css").read_text(encoding="utf-8")
+    css = re.sub(r"/\*.*?\*/", "", src, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,])\s*", r"\1", css)
+    css = re.sub(r":\s+", ":", css).replace(";}", "}")
+    (ROOT / "styles.min.css").write_text(css.strip() + "\n", encoding="utf-8")
+    return len(src), len(css)
+
+
 if __name__ == "__main__":
+    print("css minified %d -> %d bytes" % minify_css())
     for p in PAGES:
         out = ROOT / p["slug"] / "index.html"
         out.parent.mkdir(exist_ok=True)
@@ -601,6 +613,7 @@ if __name__ == "__main__":
         if "node_modules" in page.parts:
             continue
         text = page.read_text(encoding="utf-8")
+        text = re.sub(r'href="(/?)styles\.css(\?v=[0-9a-f]+)?"', r'href="\1styles.min.css"', text)
         busted = bust_assets(text)
         if busted != text:
             page.write_text(busted, encoding="utf-8")

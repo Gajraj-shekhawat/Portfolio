@@ -276,7 +276,7 @@
 
   /* ---------- Chat assistant (scripted lead capture, on every page) ---------- */
   const initChat = () => {
-    const AVATAR = '/images/icon-192.png';
+    const AVATAR = '/images/avatar-96.webp';
     const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
     const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
 
