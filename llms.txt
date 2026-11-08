@@ -1,6 +1,6 @@
 # Gajraj Singh Shekhawat
 
-> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a software engineer (backend and full-stack) based in India, working remotely with teams worldwide, with 4+ years of experience shipping production software. He works full-time at Shuru Technologies (job title: Product Engineer, Backend), currently on Equiti's multi-asset trading platform, after building the data platform and app backends for Pickup Coffee. Alongside, he works with startups, schools and businesses as a software consultant and tech advisor to design and build complete products. He is open to select projects and collaborations.
+> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a full-stack software engineer (frontend, backend, mobile, AI and data) based in India, working remotely with teams worldwide. He has been building software since 2021, with 4+ years of professional experience shipping production software. He works full-time at Shuru Technologies (job title: Product Engineer, Backend), currently on Equiti's multi-asset trading platform, after building the data platform and app backends for Pickup Coffee. Alongside, he works with startups, schools and businesses as a software consultant and tech advisor to design and build complete products. He is open to select projects and collaborations.
 
 Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · based in India (IST, UTC+5:30), working remotely with clients worldwide.
 
@@ -19,7 +19,7 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 - Software Engineering Consultant & Tech Advisor (independent), alongside his full-time job. Client partnerships:
   - [Yugam International School](https://yugam.co), a CBSE school in Kanpur: technology partner. Built the school website, AI tools and face attendance, and leads a small team building its CRM, HR, bus-tracking and smart-classroom software.
   - [Neem Karoli Sales](https://neemkarolisales.in), a Jaipur beverage wholesaler: complete ordering platform.
-  - [Shikhar Classes](https://shikharedtech.com), a coaching institute: StreamFit aptitude platform and backend API.
+  - [Shikhar Classes](https://shikharedtech.com), a JEE/NEET coaching institute: built the complete Shikhar EdTech platform: website with server-rendered SEO, online test platform (test.shikharedtech.com), admissions CRM, JoSAA IIT and NIT college predictors, scholarship and admission portals with Razorpay, StreamFit and the shared API.
   - [Gram Sansad](https://gramsansad.com), a rural-governance organisation: village website platform, main site rebuild, and the founder's personal site.
 - AFM Bigtech (Singapore, remote): Full Stack Web Developer, September 2022 to June 2024. His first company. Worked on MoneyyApp, AFM's fintech product that helps YouTubers and creators get funding, then led backend work on the online learning platform for [Competishun](https://competishun.com), a Jaipur JEE/NEET coaching institute (5 lakh+ students and parents, 2.2M+ YouTube subscribers, seen on Shark Tank India).
 - Education: Full-Stack Web Development at Masai School, Bengaluru (2021–2022).
@@ -31,11 +31,21 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 - [Competishun](https://competishun.com): backend of an online JEE/NEET learning platform with live classes, tests, payments and subscriptions.
 - [Neem Karoli Sales ordering platform](https://neemkarolisales.in): two Android apps (React Native/Expo) and a Fastify + MongoDB API for a Jaipur beverage wholesaler, with self-updating apps, OTP sign-in, Cashfree payments, GST invoices and 1,290+ automated tests. Built solo.
 - [Yugam AI](https://ai.yugam.co): lesson planner, chat assistant, and Indian-language call transcription and summaries on a self-hosted server.
+- [Shikhar EdTech platform](https://shikharedtech.com): complete JEE/NEET coaching platform (website, test platform, CRM, JoSAA predictors, admissions with Razorpay).
 - [StreamFit](https://streamfit.shikharedtech.com): adaptive aptitude test and career-stream recommender for Class 10 students, built for Shikhar Classes.
 - [Gram Sansad village platform](https://gramsansad.com): multi-tenant Next.js sites with automatic DNS and HTTPS for every village, with an English/Hindi admin.
 - [Yugam International School website](https://yugam.co): Next.js site with paid event passes, OTP sign-in and payments.
 - Yugam Ask: an AI agent that answers plain-English questions about 1.7M Indian schools using text-to-SQL, on a self-hosted Qwen model with a GPU that starts on demand.
 - Face attendance: marks a class present from one photo using OpenCV (YuNet + SFace) on CPU, with no cloud AI.
+
+## Service pages
+
+- [Hire a software engineer](https://gajrajshekhawat.com/hire-software-engineer/)
+- [Backend developer](https://gajrajshekhawat.com/backend-developer/)
+- [Full-stack developer](https://gajrajshekhawat.com/full-stack-developer/)
+- [Website development](https://gajrajshekhawat.com/website-development/)
+- [AI developer](https://gajrajshekhawat.com/ai-developer/)
+- [Tech advisor](https://gajrajshekhawat.com/tech-advisor/)
 
 ## Skills and services
 
@@ -45,10 +55,10 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 
 ## FAQ
 
-- **Who is Gajraj Singh Shekhawat?** Gajraj Singh Shekhawat (also known as Gajraj Shekhawat) is a software engineer (backend and full-stack) based in India who works remotely with teams worldwide, with 4+ years of experience building production software. He works at Shuru Technologies, currently on Equiti's trading platform, and also works with startups, schools and businesses as a software consultant and tech advisor, taking products from idea to launch.
-- **Which companies has Gajraj worked with?** At Shuru Technologies he works on Equiti's multi-asset trading platform, and before that built the data platform and app backends for Pickup Coffee, a coffee chain in the Philippines and Mexico. At AFM Bigtech, his first company, he worked on MoneyyApp and built the online learning platform for Competishun, a JEE/NEET coaching institute in Jaipur. As an independent consultant he has built products for Yugam International School, Neem Karoli Sales, Shikhar Classes and Gram Sansad.
+- **Who is Gajraj Singh Shekhawat?** Gajraj Singh Shekhawat (also known as Gajraj Shekhawat) is a full-stack software engineer based in India who works remotely with teams worldwide. He has been building software since 2021 and has 4+ years of professional experience across frontend, backend, mobile, AI and data. He works at Shuru Technologies, currently on Equiti's trading platform, and also works with startups, schools and businesses as a software consultant and tech advisor.
+- **Which companies has Gajraj worked with?** At Shuru Technologies he works on Equiti's multi-asset trading platform, and before that built the data platform and app backends for Pickup Coffee, a coffee chain in the Philippines and Mexico. At AFM Bigtech, his first company, he worked on MoneyyApp and built the online learning platform for Competishun, a JEE/NEET coaching institute in Jaipur. As an independent consultant he built the complete Shikhar EdTech platform (shikharedtech.com) for Shikhar Classes, and products for Yugam International School, Neem Karoli Sales and Gram Sansad.
 - **Can I hire Gajraj as a remote software engineer or consultant?** Yes. He takes on select projects as a remote software engineer, backend or full-stack developer, and technical consultant: building new products, improving existing systems, adding AI features, or advising on architecture and hiring. Reach him by email, WhatsApp or the contact form on this site.
-- **What kind of projects does Gajraj work on?** Web and mobile apps, backend systems and APIs, data pipelines and dashboards, payment and WhatsApp integrations, AI features, and software for schools and coaching institutes. Recent work includes a wholesale ordering platform with two Android apps, an AI agent that answers questions about 1.7 million schools, and face-recognition attendance.
+- **What kind of projects does Gajraj work on?** Anything across the stack: websites and web apps (frontend), APIs and databases (backend), Android apps, AI features and agents, data pipelines and dashboards, and cloud setup. Recent work includes a wholesale ordering platform with two Android apps, an AI agent that answers questions about 1.7 million schools, face-recognition attendance, and Pickup Coffee's data platform.
 - **Can Gajraj be our technical advisor?** Yes. He advises founders and organisations on architecture, choosing the right stack, build-versus-buy decisions, reviewing agency or vendor work, hiring developers and planning the product roadmap. He plays this role for Yugam International School, where he leads the technology team.
 - **Can he build a complete product from scratch?** Yes. He regularly takes products from idea to launch on his own: planning, design, backend, web and Android apps, payments, deployment and support after launch. The Neem Karoli Sales ordering platform, for example, was designed and built end to end by him.
 - **Does he work with international clients?** Yes. He works remotely with companies worldwide, including clients in the Philippines, Mexico, the UAE and the UK. He is based in India (IST, UTC+5:30) and keeps working hours that overlap with Europe, the Middle East and Asia-Pacific, with regular calls and weekly demos on a live link.

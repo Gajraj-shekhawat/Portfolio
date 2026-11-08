@@ -3,13 +3,42 @@
   <url>
     <loc>https://gajrajshekhawat.com/</loc>
     <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://gajrajshekhawat.com/images/gajraj.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://gajrajshekhawat.com/hire-software-engineer/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/backend-developer/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/full-stack-developer/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/website-development/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/ai-developer/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/tech-advisor/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gajrajshekhawat.com/assets/Gajraj-Shekhawat-Resume.pdf</loc>
     <lastmod>2026-11-08</lastmod>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
