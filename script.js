@@ -2,7 +2,7 @@
 (() => {
   // Google Apps Script web-app URL that saves leads to the Sheet and emails Gajraj.
   // Leave empty to fall back to email (form) / WhatsApp (chat).
-  const LEAD_ENDPOINT = '';
+  const LEAD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwvZCRkCqXyEqqIlPJcNyTept1inFr-2pjicCuqlJ4nEh7zoO3AXky9BGc6ZqbVSDqPOQ/exec';
   const WA_NUMBER = '919414584444';
   const root = document.documentElement;
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
