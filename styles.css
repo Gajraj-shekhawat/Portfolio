@@ -382,7 +382,7 @@ code { font-family: var(--mono); font-size: .85em; padding: .12em .4em; border-r
 .footer__links a:hover { color: var(--accent); }
 
 /* ---------- Motion: load + scroll reveal ---------- */
-.js .load { opacity: 0; transform: translateY(18px); filter: blur(6px); animation: rise .9s var(--ease) forwards; animation-delay: calc(var(--d, 0) * 70ms + 80ms); }
+.js .load { opacity: 0; transform: translateY(14px); filter: blur(4px); animation: rise .6s var(--ease) forwards; animation-delay: calc(var(--d, 0) * 45ms); }
 .js .hero__tag .w.load { display: inline-block; }
 @keyframes rise { to { opacity: 1; transform: none; filter: blur(0); } }
 .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease), border-color .35s, box-shadow .45s; transition-delay: calc(var(--d, 0) * 90ms); }
