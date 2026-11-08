@@ -758,6 +758,7 @@ h1 em, h2 em, .float-card strong {
   .chat-launch__text { display: none; }
   .chat-nudge { right: 72px; bottom: 16px; max-width: min(260px, calc(100vw - 88px)); padding: 9px 11px; gap: 8px; font-size: 13px; border-radius: 14px 14px 4px 14px; }
   .chat-nudge img { width: 24px; height: 24px; }
+  .chat-nudge { display: none; }
   .chat { right: 8px; left: 8px; bottom: 74px; width: auto; height: calc(100dvh - 92px); }
   .totop { right: 14px; bottom: 74px; }
 }
