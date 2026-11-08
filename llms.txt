@@ -1,6 +1,6 @@
 # Gajraj Singh Shekhawat
 
-> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He works full-time as a Product Engineer at Shuru Technologies and, alongside that, builds complete products as a freelancer (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure) for schools and businesses. He is available for freelance projects.
+> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He works full-time as a Product Engineer at Shuru Technologies and, alongside that, partners with schools and businesses as an independent consultant to design and build complete products (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure). He is open to select projects and collaborations.
 
 Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · based in Jaipur, India (IST), working with clients in India and worldwide.
 
@@ -14,7 +14,7 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 ## Experience
 
 - Shuru Technologies: Product Engineer (Backend), full-time, June 2024 to present. His current job. Builds backend microservices for Pickup Coffee; cut API latency by 30%, set up OpenTelemetry tracing and Redis caching, and built the referral program.
-- Freelance Product Engineer, alongside his full-time job. Clients:
+- Independent Product Engineering Consultant, alongside his full-time job. Client partnerships:
   - [Yugam International School](https://yugam.co), a CBSE school in Kanpur: technology partner. Built the school website, AI tools and face attendance, and leads a small team building its CRM, HR, bus-tracking and smart-classroom software.
   - [Neem Karoli Sales](https://neemkarolisales.in), a Jaipur beverage wholesaler: complete ordering platform.
   - [Shikhar Classes](https://shikharedtech.com), a coaching institute: StreamFit aptitude platform and backend API.
@@ -36,4 +36,15 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 
 - Skills: Node.js, Express, Fastify, NestJS, Python, FastAPI, React, Next.js, TypeScript, React Native, PostgreSQL, MongoDB, Redis, BigQuery, Airflow, GCP, AWS, DigitalOcean, Docker, Kubernetes, OpenTelemetry, LLM agents, text-to-SQL, vLLM, OpenCV.
 - Services: custom web and mobile apps; backend APIs and integrations (payments, WhatsApp, OTP, GST invoicing); AI features; performance tuning and cloud setup.
-- [Hire Gajraj](https://gajraj-shekhawat.github.io/Portfolio/#contact): start a project by email or WhatsApp
+- [Work with Gajraj](https://gajraj-shekhawat.github.io/Portfolio/#contact): discuss a project by email or WhatsApp
+
+## FAQ
+
+- **Who is Gajraj Singh Shekhawat?** Gajraj Singh Shekhawat (also known as Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience building production software. He works as a Product Engineer at Shuru Technologies, and also partners with schools and businesses to design and build complete products.
+- **What kind of projects does Gajraj work on?** Web and mobile apps, backend systems and APIs, payment and WhatsApp integrations, AI features, and software for schools. Recent work includes a wholesale ordering platform with two Android apps, an AI agent that answers questions about 1.7 million schools, face-recognition attendance, and websites and internal tools for a CBSE school.
+- **Can he build a complete product from scratch?** Yes. He regularly takes products from idea to launch on his own: planning, design, backend, web and Android apps, payments, deployment and support after launch. The Neem Karoli Sales ordering platform, for example, was designed and built end to end by him.
+- **Does he work with clients outside Jaipur or outside India?** Yes. He works remotely with organisations across India and abroad, on Indian Standard Time, with regular calls and weekly demos on a live link.
+- **Which technologies does he use?** Node.js, TypeScript and Python on the backend (Express, Fastify, NestJS, FastAPI); React, Next.js and React Native on the frontend and mobile; PostgreSQL, MongoDB and Redis for data; AWS, Google Cloud, DigitalOcean, Docker and Kubernetes for infrastructure; and LLM agents, text-to-SQL and OpenCV for AI.
+- **Can he add AI to an existing product?** Yes. He has built a text-to-SQL agent on a self-hosted model, AI reading of exam answer sheets, Indian-language call transcription and summaries, and an AI lesson planner. He can also host models privately when data privacy or running cost matters.
+- **How does a project start, and how is it priced?** It starts with a short call to understand the problem. You then get a clear scope, timeline and fixed quote before any work begins, followed by weekly demos during the build.
+- **How can I contact Gajraj?** By email at gaju2gajraj@gmail.com, or by phone or WhatsApp on +91 94145 84444. He usually replies within a day.
