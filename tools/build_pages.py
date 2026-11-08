@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from cases import CASES  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
+NOW_ISO = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).replace(microsecond=0).isoformat()
 EMAIL = "gaju2gajraj@gmail.com"
 PHONE = "+91 94145 84444"
 PHONE_E164 = "+919414584444"
@@ -235,7 +236,7 @@ def page_html(p):
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "WebPage", "@id": url + "#page", "url": url, "name": p["title"], "description": p["description"],
-             "inLanguage": "en", "dateModified": TODAY, "isPartOf": {"@id": SITE + "/#website"},
+             "inLanguage": "en", "dateModified": NOW_ISO, "isPartOf": {"@id": SITE + "/#website"},
              "about": {"@id": SITE + "/#person"}, "breadcrumb": {"@id": url + "#breadcrumb"}},
             {"@type": "Service", "@id": url + "#service", "name": p["nav"].title() if p["slug"] != "ai-developer" else "AI Development",
              "serviceType": p["eyebrow"], "description": p["description"], "url": url,
@@ -410,7 +411,7 @@ def case_html(c):
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "Article", "@id": url + "#article", "headline": c["title"][:110], "description": c["description"], "url": url,
-             "image": f"{SITE}/images/og.jpg", "datePublished": TODAY, "dateModified": TODAY, "inLanguage": "en",
+             "image": f"{SITE}/images/og.jpg", "datePublished": NOW_ISO, "dateModified": NOW_ISO, "inLanguage": "en",
              "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat", "url": SITE + "/"},
              "publisher": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat"},
              "about": c["name"], "keywords": ", ".join(c["stack"])},
@@ -580,6 +581,9 @@ if __name__ == "__main__":
         busted = bust_assets(text)
         if busted != text:
             page.write_text(busted, encoding="utf-8")
+    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    home = re.sub(r'("@id": "https://gajrajshekhawat\.com/#page",(?:.|\n)*?"dateModified": ")[^"]*"', lambda m: m.group(1) + NOW_ISO + '"', home, count=1)
+    (ROOT / "index.html").write_text(home, encoding="utf-8")
     print("asset versions refreshed")
     (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
     print("sitemap.xml updated with", len(PAGES) + len(CASES) + 2, "URLs")
