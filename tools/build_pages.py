@@ -33,7 +33,7 @@ PROOF = {
     "face": ("Face attendance", "A class marked present from one photo, using OpenCV on an ordinary CPU, with no cloud AI.", None),
     "streamfit": ("StreamFit · Shikhar Classes", "Adaptive aptitude test and career-stream recommender with AI-read OMR sheets and PDF reports.", "https://streamfit.shikharedtech.com"),
     "shikhar": ("Shikhar EdTech · complete coaching platform", "Website with SEO, online JEE/NEET test platform, admissions CRM, JoSAA college predictors and Razorpay admissions, all built and run by me.", "https://shikharedtech.com"),
-    "gram": ("Gram Sansad · village websites", "Multi-tenant platform: every village gets its own website with automatic DNS and HTTPS.", "https://gramsansad.com"),
+    "gram": ("Gram Sansad · village websites", "A platform that gives every village its own website, all managed from one system.", "https://gramsansad.com"),
 }
 
 PAGES = [
@@ -41,7 +41,7 @@ PAGES = [
         "slug": "hire-software-engineer",
         "nav": "Hire a software engineer",
         "title": "Hire a Remote Software Engineer · Gajraj Singh Shekhawat",
-        "description": "Hire Gajraj Singh Shekhawat, a remote software engineer (backend & full-stack) with 4+ years of production experience for Equiti, Pickup Coffee and Competishun. Web, mobile, APIs and AI.",
+        "description": "Hire Gajraj Singh Shekhawat, a remote software engineer (backend & full-stack) with production experience on Equiti, Pickup Coffee and Competishun. Web, mobile, APIs and AI.",
         "eyebrow": "Hire a software engineer",
         "h1": 'Hire a remote software engineer who <em>ships to production</em>',
         "lead": "I'm Gajraj Singh Shekhawat, a full-stack software engineer (frontend, backend, mobile, AI and data) at Shuru Technologies, working on Equiti's trading platform. For startups, schools and businesses, I take on select projects end to end: planning, backend, web and mobile apps, payments, AI and deployment.",
@@ -57,7 +57,7 @@ PAGES = [
             ("How do I hire Gajraj?", "Send a message through the contact form, email or WhatsApp with a short description of what you need. You'll get a reply within a day and a short call to discuss scope."),
             ("Does he work with international clients?", "Yes. He works remotely with teams worldwide, including the Philippines, Mexico, the UAE and the UK, from India (IST, UTC+5:30) with working hours that overlap Europe, the Middle East and Asia."),
             ("How is pricing decided?", "After a short call you get a clear scope, timeline and fixed quote before any work begins. Ongoing work can also be monthly."),
-            ("What experience does he have?", "4+ years building production software: Equiti's trading platform and Pickup Coffee's data platform and apps at Shuru Technologies, Competishun's learning platform at AFM Bigtech, and complete products for schools and businesses."),
+            ("What experience does he have?", "Production software for global companies: Equiti's trading platform and Pickup Coffee's data platform and apps at Shuru Technologies, Competishun's learning platform at AFM Bigtech, and complete products for schools and businesses."),
         ],
     },
     {
@@ -124,6 +124,29 @@ PAGES = [
             ("How long does a website take?", "A typical business website takes one to three weeks depending on pages and features. You get a live preview link from the first week."),
             ("Will the website show up on Google?", "Every site is set up for search: fast loading, structured data, sitemap and Google Search Console, plus llms.txt for AI assistants."),
             ("Can the website accept payments?", "Yes, through Razorpay or Cashfree, with OTP sign-in when needed, as on the Yugam International School website."),
+        ],
+    },
+    {
+        "slug": "ecommerce-development",
+        "nav": "E-commerce development",
+        "title": "E-commerce Website & App Development · Online Stores, B2B & Wholesale · Gajraj Shekhawat",
+        "description": "E-commerce development for retail, wholesale and D2C brands: online stores, B2B ordering portals, shopping apps, payments, offers, inventory, GST invoicing and delivery tracking.",
+        "eyebrow": "E-commerce development",
+        "h1": 'Online stores and ordering apps that <em>sell more</em>',
+        "lead": "I build e-commerce that fits how you actually sell: an online store for retail customers, a B2B portal where shops reorder in bulk, or a mobile app for your regular buyers. Catalogue, cart, payments, invoices and delivery, all connected to one backend you own.",
+        "what": [
+            ("Online stores (B2C & D2C)", "Product catalogue, search and filters, cart and checkout, coupons, customer accounts and order tracking, on a fast, SEO-ready website."),
+            ("B2B & wholesale ordering", "Apps and portals where retailers and distributors order in bulk, with server-side pricing, GST invoices and delivery tracking, as built for a beverage wholesaler."),
+            ("Payments, offers & loyalty", "Razorpay and Cashfree checkout, wallets, vouchers, referral programs and loyalty rewards, as on Pickup Coffee's ordering apps."),
+            ("Inventory, orders & admin", "Stock, order and delivery management, staff roles, reports and dashboards, plus WhatsApp and SMS updates for customers."),
+        ],
+        "proof": ["nks", "pickup", "yugam_web", "shikhar"],
+        "stack": ["Next.js", "React", "React Native", "Node.js", "MongoDB", "PostgreSQL", "Redis", "Razorpay", "Cashfree", "WhatsApp API", "SEO"],
+        "faqs": [
+            ("Can Gajraj build an e-commerce website or online store?", "Yes. He builds online stores and ordering apps end to end: catalogue, cart, checkout, payments, order tracking and an admin panel, for retail, wholesale and D2C businesses."),
+            ("Can he build a B2B or wholesale ordering app?", "Yes. For Neem Karoli Sales, a beverage wholesaler, he built Android apps for retailers and delivery staff, a web admin and the API, with online payments and GST invoices."),
+            ("Should I use Shopify or a custom store?", "If a ready-made platform like Shopify fits your needs, he will tell you. A custom build makes sense for B2B ordering, special pricing rules, your own mobile app or deep integrations with your other systems."),
+            ("Which payment gateways does he integrate?", "Razorpay and Cashfree in production, plus wallets, vouchers and referral rewards from his work on Pickup Coffee's apps."),
         ],
     },
     {
