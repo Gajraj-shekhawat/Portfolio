@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Gajraj Singh Shekhawat · Backend & Product Engineer · Freelance Developer in Jaipur</title>
-  <meta name="description" content="Gajraj Singh Shekhawat (Gajraj Shekhawat) is a backend and product engineer in Jaipur, India. He builds APIs, Android and web apps, payments and AI features for businesses, and takes freelance projects." />
+  <meta name="description" content="Gajraj Singh Shekhawat (Gajraj Shekhawat) is a Product Engineer at Shuru Technologies and a freelance developer in Jaipur, India. He builds APIs, Android and web apps, payments and AI features for schools and businesses." />
   <meta name="author" content="Gajraj Singh Shekhawat" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://gajraj-shekhawat.github.io/Portfolio/" />
@@ -81,9 +81,10 @@
         "telephone": "+91-9414584444",
         "address": { "@type": "PostalAddress", "addressLocality": "Jaipur", "addressRegion": "Rajasthan", "addressCountry": "IN" },
         "nationality": { "@type": "Country", "name": "India" },
-        "worksFor": [
-          { "@type": "Organization", "name": "Yugam International School", "url": "https://yugam.co" },
-          { "@type": "Organization", "name": "Shuru Technologies" }
+        "worksFor": { "@type": "Organization", "name": "Shuru Technologies" },
+        "hasOccupation": [
+          { "@type": "Occupation", "name": "Product Engineer (Backend)", "description": "Full-time at Shuru Technologies since June 2024" },
+          { "@type": "Occupation", "name": "Freelance Product Engineer", "description": "Builds web, mobile and AI products for schools and businesses" }
         ],
         "alumniOf": [
           { "@type": "EducationalOrganization", "name": "Masai School" },
@@ -109,7 +110,9 @@
         "address": { "@type": "PostalAddress", "addressLocality": "Jaipur", "addressRegion": "Rajasthan", "addressCountry": "IN" },
         "areaServed": ["IN", "Worldwide"],
         "priceRange": "₹₹",
-        "serviceType": ["Custom web and mobile app development", "Backend and API development", "AI integration", "Cloud and performance consulting"]
+        "serviceType": ["Custom web and mobile app development", "Backend and API development", "AI integration", "School and education software", "Cloud and performance consulting"],
+        "knowsAbout": ["School management software", "Wholesale ordering apps", "Multi-tenant websites", "AI agents"],
+        "brand": { "@type": "Brand", "name": "Gajraj Shekhawat" }
       }
     ]
   }
@@ -166,7 +169,7 @@
             </span>
           </h1>
           <p class="lead load" style="--d:7">
-            Backend &amp; product engineer with 4+ years of shipping production software.
+            Product engineer at <strong>Shuru Technologies</strong>, and a freelancer who builds complete products for schools and businesses.
             Need <span class="rotator" aria-live="off"><span class="rotator__word" id="rotator">a backend that scales</span></span>?
             I'll take it from idea to launch: APIs, Android and web apps, payments, AI features and the cloud setup that keeps it all running.
           </p>
@@ -220,13 +223,13 @@
         <header class="section__head reveal">
           <p class="eyebrow"><span>01</span> Selected work</p>
           <h2 id="work-title">Products in production, <em>used by real people</em></h2>
-          <p class="section__sub">Most of this is client and employer work, so the code is private. Here's what each product does and the part I built.</p>
+          <p class="section__sub">My full-time work at Shuru, plus freelance products for a CBSE school, a wholesaler, a coaching institute and a rural-governance organisation. The code is private, so here's what each product does and the part I built.</p>
         </header>
 
         <article class="case case--featured reveal spot">
           <div class="case__body">
             <div class="case__meta">
-              <span class="tag tag--accent">Featured · Freelance client</span>
+              <span class="tag tag--accent">Featured · Freelance</span>
               <span class="case__org">Neem Karoli Sales, Jaipur</span>
             </div>
             <h3>A complete wholesale ordering platform: two Android apps and the API behind them</h3>
@@ -266,21 +269,21 @@
 
         <div class="cases">
           <article class="case reveal spot">
-            <div class="case__meta"><span class="tag">AI agent</span><span class="case__org">Yugam</span></div>
+            <div class="case__meta"><span class="tag">AI agent</span><span class="case__org">Freelance · Yugam International School</span></div>
             <h3>Yugam Ask: plain-English questions over 1.7M schools</h3>
             <p>An AI agent that turns everyday questions into safe, read-only SQL over India's UDISE school data, with web search and memory for each user. It runs on our own GPU, which switches on when someone asks and off when nobody is using it, to keep costs low.</p>
             <ul class="chips"><li>FastAPI</li><li>Qwen on vLLM</li><li>PostgreSQL</li><li>Text-to-SQL</li></ul>
           </article>
 
           <article class="case reveal spot" style="--d:1">
-            <div class="case__meta"><span class="tag">Computer vision</span><span class="case__org">Yugam</span></div>
+            <div class="case__meta"><span class="tag">Computer vision</span><span class="case__org">Freelance · Yugam International School</span></div>
             <h3>Face attendance from a single class photo</h3>
             <p>A teacher takes a photo or short video and the whole class is marked present. Recognition runs on an ordinary CPU, with no cloud AI and no faces sent to third parties. Includes one-click rollback, nightly backups and a 75-check acceptance suite.</p>
             <ul class="chips"><li>OpenCV</li><li>FastAPI</li><li>MongoDB</li><li>React 19</li></ul>
           </article>
 
           <article class="case reveal spot">
-            <div class="case__meta"><span class="tag">EdTech</span><span class="case__org">Shikhar Classes</span></div>
+            <div class="case__meta"><span class="tag">EdTech</span><span class="case__org">Freelance · Shikhar Classes</span></div>
             <h3>StreamFit: career-stream test for Class 10 students</h3>
             <p>An adaptive aptitude test that gets harder or easier in each of 7 areas, then combines the result with school marks to suggest a stream. Includes a counsellor console, OMR sheets read by AI, and PDF reports for parents.</p>
             <ul class="chips"><li>React + TypeScript</li><li>Express</li><li>Redis</li><li>Gemini</li></ul>
@@ -288,7 +291,7 @@
           </article>
 
           <article class="case reveal spot" style="--d:1">
-            <div class="case__meta"><span class="tag">Multi-tenant</span><span class="case__org">Gram Sansad</span></div>
+            <div class="case__meta"><span class="tag">Multi-tenant</span><span class="case__org">Freelance · Gram Sansad</span></div>
             <h3>A website for every village, set up in one click</h3>
             <p>Adding a village creates its own site at <code>village.gramsansad.com</code>. The DNS record and HTTPS certificate are set up automatically, and villages edit their site in English or Hindi. I also moved the organisation's main site off WordPress without breaking any old links.</p>
             <ul class="chips"><li>Next.js 16</li><li>DNS API</li><li>Caddy auto-TLS</li></ul>
@@ -296,14 +299,14 @@
           </article>
 
           <article class="case reveal spot">
-            <div class="case__meta"><span class="tag">Microservices</span><span class="case__org">Shuru · Pickup Coffee</span></div>
+            <div class="case__meta"><span class="tag">Microservices</span><span class="case__org">Full-time · Shuru Technologies</span></div>
             <h3>Backend for a high-traffic coffee ordering app</h3>
             <p>Built and tuned the services for orders, wallet, vouchers, promotions and stamps. Added tracing across services, Redis caching (40% less database load), the referral program end to end, and Airflow pipelines into BigQuery.</p>
             <ul class="chips"><li>Node.js</li><li>PostgreSQL</li><li>OpenTelemetry</li><li>Kubernetes</li></ul>
           </article>
 
           <article class="case reveal spot" style="--d:1">
-            <div class="case__meta"><span class="tag">AI</span><span class="case__org">Yugam</span></div>
+            <div class="case__meta"><span class="tag">AI</span><span class="case__org">Freelance · Yugam International School</span></div>
             <h3>Yugam AI: lesson planner and call summaries</h3>
             <p>AI tools for teachers and the admissions team: a chat assistant, a lesson planner, and a pipeline that transcribes and summarises calls in Indian languages. Everything runs on the school's own server.</p>
             <ul class="chips"><li>Python</li><li>IndicConformer</li><li>Ollama</li></ul>
@@ -311,7 +314,7 @@
           </article>
 
           <article class="case reveal spot">
-            <div class="case__meta"><span class="tag">Website</span><span class="case__org">Yugam International School</span></div>
+            <div class="case__meta"><span class="tag">Website</span><span class="case__org">Freelance · Yugam International School</span></div>
             <h3>The school's website, with paid event passes</h3>
             <p>Built from scratch. It sells event passes with OTP sign-in and Cashfree payments, includes the required CBSE disclosure pages, and is set up for SEO and AI search engines.</p>
             <ul class="chips"><li>Next.js</li><li>Cashfree</li><li>SEO</li></ul>
@@ -319,9 +322,9 @@
           </article>
 
           <article class="case reveal spot" style="--d:1">
-            <div class="case__meta"><span class="tag">Leadership</span><span class="case__org">Yugam</span></div>
-            <h3>Leading the team behind the school's software</h3>
-            <p>I lead developers and interns building the school group's internal tools: an admissions CRM with WhatsApp and a dialer app, HR and payroll, live school-bus tracking, and IoT control of classroom lights and fans. I own the architecture, code reviews, CI/CD and hiring.</p>
+            <div class="case__meta"><span class="tag">Team lead</span><span class="case__org">Freelance · Yugam International School</span></div>
+            <h3>Technology partner for a CBSE school</h3>
+            <p>As Yugam's freelance technology partner, I lead a small team of developers and interns building the school's internal tools: an admissions CRM with WhatsApp and a dialer app, HR and payroll, live school-bus tracking, and IoT control of classroom lights and fans. I own the architecture, code reviews and deployments.</p>
             <ul class="chips"><li>NestJS</li><li>Expo</li><li>MQTT + ESP32</li><li>WhatsApp API</li></ul>
           </article>
         </div>
@@ -377,38 +380,27 @@
         </header>
         <ol class="timeline">
           <li class="reveal">
-            <p class="timeline__when">2026 – Present</p>
-            <div class="timeline__body">
-              <h3>Technology Lead <span>· Yugam International School</span></h3>
-              <p class="timeline__where">LightTheChange Eduventure · Kanpur (Remote)</p>
-              <ul>
-                <li>Lead the team building the school group's software: admissions CRM, HRMS, bus tracking, IoT classrooms and school discovery</li>
-                <li>Built the AI products myself: Yugam Ask (text-to-SQL agent), face attendance and Yugam AI</li>
-                <li>Set up WhatsApp Cloud API and DLT-registered SMS OTP, plus CI/CD, deployments and hiring</li>
-              </ul>
-            </div>
-          </li>
-          <li class="reveal">
-            <p class="timeline__when">2026 – Present</p>
-            <div class="timeline__body">
-              <h3>Freelance Product Engineer <span>· Independent</span></h3>
-              <p class="timeline__where">Clients in wholesale, education and rural governance</p>
-              <ul>
-                <li>Neem Karoli Sales: complete ordering platform with two Android apps, payments and GST invoicing</li>
-                <li>Shikhar Classes: StreamFit aptitude platform and backend API</li>
-                <li>Gram Sansad: multi-tenant village website platform and site migration</li>
-              </ul>
-            </div>
-          </li>
-          <li class="reveal">
             <p class="timeline__when">Jun 2024 – Present</p>
             <div class="timeline__body">
               <h3>Product Engineer, Backend <span>· Shuru Technologies</span></h3>
-              <p class="timeline__where">Gurgaon (Remote)</p>
+              <p class="timeline__where">Full-time · Gurgaon (Remote)</p>
               <ul>
                 <li>Microservices for Pickup Coffee, which handles thousands of orders a day. Cut API latency by 30%.</li>
                 <li>Set up OpenTelemetry + Jaeger tracing across 5+ services. Issues now take half as long to debug.</li>
                 <li>Redis caching (40% less database load), Bull queues, a referral program with TalonOne, and Airflow → BigQuery pipelines</li>
+              </ul>
+            </div>
+          </li>
+          <li class="reveal">
+            <p class="timeline__when">Freelance · Ongoing</p>
+            <div class="timeline__body">
+              <h3>Freelance Product Engineer <span>· Independent</span></h3>
+              <p class="timeline__where">Alongside my full-time role · clients in education, wholesale and rural governance</p>
+              <ul>
+                <li><strong>Yugam International School</strong> (CBSE school, Kanpur): technology partner. I built the website, the AI tools and face attendance, and lead a small team building their CRM, HR, bus-tracking and smart-classroom software</li>
+                <li><strong>Neem Karoli Sales</strong> (Jaipur): complete ordering platform with two Android apps, payments and GST invoicing</li>
+                <li><strong>Shikhar Classes</strong>: StreamFit aptitude platform and backend API</li>
+                <li><strong>Gram Sansad</strong>: village website platform, main website rebuild, and the founder's personal site</li>
               </ul>
             </div>
           </li>

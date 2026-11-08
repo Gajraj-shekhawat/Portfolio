@@ -1,6 +1,6 @@
 # Gajraj Singh Shekhawat
 
-> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He builds products end to end (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure) and is available for freelance projects.
+> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He works full-time as a Product Engineer at Shuru Technologies and, alongside that, builds complete products as a freelancer (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure) for schools and businesses. He is available for freelance projects.
 
 Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · based in Jaipur, India (IST), working with clients in India and worldwide.
 
@@ -13,9 +13,12 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 
 ## Experience
 
-- [Yugam International School](https://yugam.co): Technology Lead, 2026 to present. Leads the team building the school group's software (admissions CRM, HRMS, bus tracking, IoT classrooms) and personally built its AI products.
-- Freelance Product Engineer, 2026 to present. Clients include Neem Karoli Sales, Shikhar Classes and Gram Sansad.
-- Shuru Technologies: Product Engineer (Backend), June 2024 to present. Built backend microservices for Pickup Coffee, cut API latency by 30%, set up OpenTelemetry tracing and Redis caching.
+- Shuru Technologies: Product Engineer (Backend), full-time, June 2024 to present. His current job. Builds backend microservices for Pickup Coffee; cut API latency by 30%, set up OpenTelemetry tracing and Redis caching, and built the referral program.
+- Freelance Product Engineer, alongside his full-time job. Clients:
+  - [Yugam International School](https://yugam.co), a CBSE school in Kanpur: technology partner. Built the school website, AI tools and face attendance, and leads a small team building its CRM, HR, bus-tracking and smart-classroom software.
+  - [Neem Karoli Sales](https://neemkarolisales.in), a Jaipur beverage wholesaler: complete ordering platform.
+  - [Shikhar Classes](https://shikharedtech.com), a coaching institute: StreamFit aptitude platform and backend API.
+  - [Gram Sansad](https://gramsansad.com), a rural-governance organisation: village website platform, main site rebuild, and the founder's personal site.
 - AFM Bigtech (Singapore, remote): Full Stack Web Developer, September 2022 to June 2024. Built the backend for a JEE/NEET exam-prep learning platform.
 - Education: Full-Stack Web Development at Masai School (2021–2022). B.A. from Shekhawati University (2017–2020).
 
