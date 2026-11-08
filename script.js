@@ -261,6 +261,19 @@
     });
   }
 
+  /* ---------- "Show all projects" on small screens ---------- */
+  const moreBtn = $('.cases__more');
+  if (moreBtn) moreBtn.addEventListener('click', () => {
+    const cases = $('.cases');
+    const open = !cases.classList.contains('cases--all');
+    cases.classList.toggle('cases--all', open);
+    moreBtn.setAttribute('aria-expanded', String(open));
+    moreBtn.firstChild.textContent = open ? 'Show fewer projects ' : moreBtn.dataset.label;
+    moreBtn.lastElementChild.textContent = open ? '↑' : '↓';
+    if (!open) $('#work').scrollIntoView();
+  });
+  if (moreBtn) moreBtn.dataset.label = moreBtn.firstChild.textContent;
+
   /* ---------- Chat assistant (scripted lead capture, on every page) ---------- */
   const initChat = () => {
     const AVATAR = '/images/icon-192.png';
@@ -295,71 +308,104 @@
 
     const lead = {};
     const OPTIONS = ['Website', 'Web or mobile app', 'Backend / API', 'AI feature', 'Tech advice', 'Something else'];
-    const scroll = () => { log.scrollTop = log.scrollHeight; };
+    // Always keep the newest message in view (also after the input area or keyboard resizes the panel).
+    const scroll = () => requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; });
+    if ('ResizeObserver' in window) new ResizeObserver(scroll).observe(log);
     const say = (text, who = 'bot') => { const b = el('div', 'msg msg--' + who); b.textContent = text; log.append(b); scroll(); return b; };
-    const typing = (ms = 650) => new Promise((res) => {
+    const typing = (ms = 600) => new Promise((res) => {
       const t = el('div', 'msg msg--bot msg--typing'); t.innerHTML = '<i></i><i></i><i></i>'; log.append(t); scroll();
       setTimeout(() => { t.remove(); res(); }, reduceMotion ? 0 : ms);
     });
     const bot = async (...lines) => { for (const l of lines) { await typing(); say(l); } };
 
-    const ask = ({ type = 'text', placeholder = '', optional = false, validate, multiline = false }) => new Promise((resolve) => {
+    // Validation rules
+    const V = {
+      details: (v) => v.length < 10 ? 'Please add a few more words (at least 10 characters).' : '',
+      name: (v) => !/^[\p{L}][\p{L} .'-]{1,59}$/u.test(v) ? 'Please enter your name using letters only (2–60 characters).' : '',
+      email: (v) => /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/.test(v) ? '' : 'Please enter a valid email, e.g. name@company.com',
+      phone: (v) => {
+        const digits = v.replace(/\D/g, '');
+        if (/^[^+\d]/.test(v.trim()) || /[^\d\s()+-]/.test(v)) return 'Use digits only, e.g. +91 98765 43210';
+        const indian = digits.replace(/^(91|0)(?=[6-9]\d{9}$)/, '');
+        if (/^[6-9]\d{9}$/.test(indian)) return '';
+        if (v.trim().startsWith('+') && digits.length >= 8 && digits.length <= 15) return '';
+        if (/^\d{10}$/.test(digits)) return 'Indian mobile numbers start with 6, 7, 8 or 9.';
+        return 'Enter a 10-digit Indian mobile, or an international number starting with + (8–15 digits).';
+      },
+      location: (v) => v.length > 80 ? 'Please keep it short, e.g. Dubai, UAE' : '',
+    };
+    const formatPhone = (v) => {
+      const d = v.replace(/\D/g, '');
+      const m = d.match(/^(?:91|0)?([6-9]\d{9})$/);
+      return m ? `+91 ${m[1].slice(0, 5)} ${m[1].slice(5)}` : '+' + d;
+    };
+
+    const ask = ({ type = 'text', placeholder = '', optional = false, validate, multiline = false, inputmode, autocomplete }) => new Promise((resolve) => {
       inputArea.innerHTML = '';
       const form = el('form', 'chat__form');
+      form.noValidate = true;
       const input = el(multiline ? 'textarea' : 'input', 'chat__field');
       if (!multiline) input.type = type;
+      if (inputmode) input.inputMode = inputmode;
+      if (autocomplete) input.autocomplete = autocomplete;
       input.placeholder = placeholder;
       input.setAttribute('aria-label', placeholder);
       if (multiline) input.rows = 2;
       const send = el('button', 'chat__send'); send.type = 'submit'; send.setAttribute('aria-label', 'Send');
       send.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2-6z"/></svg>';
       form.append(input, send);
+      const err = el('p', 'chat__error'); err.setAttribute('role', 'alert');
+      inputArea.append(form, err);
       if (optional) { const skip = el('button', 'chat__skip', 'Skip'); skip.type = 'button'; skip.onclick = () => { say('Skipped', 'me'); inputArea.innerHTML = ''; resolve(''); }; inputArea.append(skip); }
-      inputArea.prepend(form);
+      input.addEventListener('input', () => { input.classList.remove('bad'); err.textContent = ''; });
       if (multiline) input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
       form.onsubmit = (e) => {
         e.preventDefault();
         const v = input.value.trim();
-        if (!v && optional) return;
-        const err = !v ? 'Please type an answer.' : (validate ? validate(v) : '');
-        if (err) { input.classList.add('bad'); input.setCustomValidity(err); input.reportValidity(); setTimeout(() => input.setCustomValidity(''), 2000); return; }
-        say(v, 'me'); inputArea.innerHTML = ''; resolve(v);
+        if (!v && optional) { err.textContent = 'Type an answer or tap Skip.'; return; }
+        const msg = !v ? 'Please type an answer.' : (validate ? validate(v) : '');
+        if (msg) { input.classList.add('bad'); err.textContent = msg; input.focus(); scroll(); return; }
+        say(v, 'me'); inputArea.innerHTML = ''; scroll(); resolve(v);
       };
-      setTimeout(() => input.focus(), 50);
+      scroll();
+      setTimeout(() => input.focus({ preventScroll: true }), 60);
     });
     const choose = (opts) => new Promise((resolve) => {
       inputArea.innerHTML = '';
       const wrap = el('div', 'chat__opts');
-      opts.forEach((o) => { const b = el('button', 'chat__opt', o); b.type = 'button'; b.onclick = () => { say(o, 'me'); inputArea.innerHTML = ''; resolve(o); }; wrap.append(b); });
+      opts.forEach((o) => { const b = el('button', 'chat__opt', o); b.type = 'button'; b.onclick = () => { say(o, 'me'); inputArea.innerHTML = ''; scroll(); resolve(o); }; wrap.append(b); });
       inputArea.append(wrap);
+      scroll();
     });
 
     const summaryText = () =>
-      `New enquiry via website chat\nInterested in: ${lead.interest}\nDetails: ${lead.details}\nName: ${lead.name}\nEmail: ${lead.email}` +
-      (lead.phone ? `\nPhone: ${lead.phone}` : '') + (lead.location ? `\nLocation: ${lead.location}` : '');
+      `New enquiry via website chat\nInterested in: ${lead.interest}\nDetails: ${lead.details}\nName: ${lead.name}\nEmail: ${lead.email}\nPhone: ${lead.phone}` +
+      (lead.location ? `\nLocation: ${lead.location}` : '');
 
-    const submit = async () => {
-      const payload = { name: lead.name, email: lead.email, phone: lead.phone || '', location: lead.location || '', interest: lead.interest,
-        message: lead.details, source: 'Website chat', page: location.href, sent: new Date().toISOString() };
-      if (LEAD_ENDPOINT) {
-        await typing(500);
-        try {
-          await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload) });
-          await bot(`Sent! ✅ Gajraj has your details and will get back to you within a day, ${lead.name.split(' ')[0]}.`, 'Want a faster reply? You can also message him on WhatsApp.');
-        } catch (e) {
-          await bot('Hmm, that did not go through. Please send it on WhatsApp instead:');
-        }
-      } else {
-        await bot('Opening WhatsApp with your details filled in. Just press send and Gajraj will reply soon.');
-        window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(summaryText())}`, '_blank', 'noopener');
-      }
+    const finish = () => {
       inputArea.innerHTML = '';
       const row = el('div', 'chat__opts');
       const wa = el('a', 'chat__opt chat__opt--primary', 'WhatsApp Gajraj');
       wa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(summaryText())}`; wa.target = '_blank'; wa.rel = 'noopener';
-      const mail = el('a', 'chat__opt', 'Email instead');
-      mail.href = `mailto:gaju2gajraj@gmail.com?subject=${encodeURIComponent('Project enquiry from ' + lead.name)}&body=${encodeURIComponent(summaryText())}`;
-      row.append(wa, mail); inputArea.append(row);
+      const again = el('button', 'chat__opt', 'Send another message'); again.type = 'button';
+      again.onclick = () => { log.innerHTML = ''; Object.keys(lead).forEach((k) => delete lead[k]); run(); };
+      row.append(wa, again); inputArea.append(row); scroll();
+    };
+
+    const submit = async () => {
+      const payload = { name: lead.name, email: lead.email, phone: lead.phone, location: lead.location || '', interest: lead.interest,
+        message: lead.details, source: 'Website chat', page: location.href, sent: new Date().toISOString() };
+      let ok = false;
+      if (LEAD_ENDPOINT) {
+        try { await fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload) }); ok = true; } catch (e) { ok = false; }
+      }
+      if (ok) {
+        await bot(`Thank you, ${lead.name.split(' ')[0]}! ✅ Your message has reached Gajraj.`,
+          `He'll get back to you within a day on ${lead.email} or WhatsApp. If it's urgent, you can message him on WhatsApp right now.`);
+      } else {
+        await bot("Your details are ready, but the connection dropped. Please tap WhatsApp below to send them to Gajraj directly.");
+      }
+      finish();
     };
 
     let started = false;
@@ -368,23 +414,21 @@
       await bot("Hi 👋 I'm Gajraj's assistant.", 'Gajraj is a full-stack software engineer: websites, web and mobile apps, backends, AI and data, for businesses worldwide. What would you like to build?');
       lead.interest = await choose(OPTIONS);
       await bot('Great choice! Tell me a little about it: what should it do, and is there a deadline?');
-      lead.details = await ask({ placeholder: 'e.g. An app for my shop to take orders on WhatsApp…', multiline: true, validate: (v) => v.length < 5 ? 'A few more words, please.' : '' });
+      lead.details = await ask({ placeholder: 'e.g. An app for my shop to take orders on WhatsApp…', multiline: true, validate: V.details });
       await bot("Thanks, that's helpful. What's your name?");
-      lead.name = await ask({ placeholder: 'Your name', validate: (v) => v.length < 2 ? 'Please enter your name.' : '' });
-      await bot(`Nice to meet you, ${lead.name.split(' ')[0]}! What's your email address?`);
-      lead.email = await ask({ type: 'email', placeholder: 'you@company.com', validate: (v) => emailOk(v) ? '' : 'That email looks incomplete.' });
-      await bot("And your phone or WhatsApp number? It's optional, but makes it quicker to reach you.");
-      lead.phone = await ask({ type: 'tel', placeholder: '+91 98xxxxxxxx', optional: true, validate: (v) => /^[+\d][\d\s()-]{6,}$/.test(v) ? '' : 'Please enter a valid number.' });
+      lead.name = await ask({ placeholder: 'Your full name', autocomplete: 'name', validate: V.name });
+      const first = lead.name.split(' ')[0];
+      await bot(`Nice to meet you, ${first}! What's your email address?`);
+      lead.email = await ask({ type: 'email', inputmode: 'email', autocomplete: 'email', placeholder: 'you@company.com', validate: V.email });
+      await bot('And your mobile / WhatsApp number, so Gajraj can reach you quickly?');
+      lead.phone = formatPhone(await ask({ type: 'tel', inputmode: 'tel', autocomplete: 'tel', placeholder: '+91 98765 43210', validate: V.phone }));
       await bot('Last one: where are you based? City and country is enough.');
-      lead.location = await ask({ placeholder: 'e.g. Dubai, UAE', optional: true });
-      await typing();
+      lead.location = await ask({ placeholder: 'e.g. Dubai, UAE', autocomplete: 'address-level2', optional: true, validate: V.location });
+      await typing(400);
       const card = el('div', 'msg msg--bot msg--card');
-      [['Interested in', lead.interest], ['Details', lead.details], ['Name', lead.name], ['Email', lead.email], ['Phone', lead.phone || '—'], ['Location', lead.location || '—']]
+      [['Interested in', lead.interest], ['Details', lead.details], ['Name', lead.name], ['Email', lead.email], ['Phone', lead.phone], ['Location', lead.location || '—']]
         .forEach(([k, v]) => { const r = el('p'); r.append(el('b', '', k + ': '), document.createTextNode(v)); card.append(r); });
       log.append(card); scroll();
-      await bot('Shall I send this to Gajraj?');
-      const go = await choose(['Send to Gajraj ✓', 'Start over']);
-      if (go.startsWith('Start')) { log.innerHTML = ''; return run(); }
       await submit();
     };
 
