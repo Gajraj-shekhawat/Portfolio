@@ -21,7 +21,7 @@ Contact: email contact@gajrajshekhawat.com · phone and WhatsApp +91 94145 84444
   - [Neem Karoli Sales](https://neemkarolisales.in), a Jaipur beverage wholesaler: complete ordering platform.
   - [Shikhar Classes](https://shikharedtech.com), a JEE/NEET coaching institute: built the complete Shikhar EdTech platform: website with server-rendered SEO, online test platform (test.shikharedtech.com), admissions CRM, JoSAA IIT and NIT college predictors, scholarship and admission portals with Razorpay, StreamFit and the shared API.
   - [Gram Sansad](https://gramsansad.com), a rural-governance organisation: village website platform, main site rebuild, and the founder's personal site.
-- AFM Bigtech (Singapore, remote): Full Stack Web Developer, September 2022 to June 2024. Worked on MoneyyApp, AFM's fintech product that helps YouTubers and creators get funding, then led backend work on the online learning platform for [Competishun](https://competishun.com), a Jaipur JEE/NEET coaching institute (5 lakh+ students and parents, 2.2M+ YouTube subscribers, seen on Shark Tank India).
+- AFM Bigtech (Singapore-registered company; worked from its office in Panchkula, Haryana, India): Full Stack Web Developer, September 2022 to June 2024. Worked on MoneyyApp, AFM's fintech product that helps YouTubers and creators get funding, then led backend work on the online learning platform for [Competishun](https://competishun.com), a Jaipur JEE/NEET coaching institute (5 lakh+ students and parents, 2.2M+ YouTube subscribers, seen on Shark Tank India).
 
 ## Selected projects
 
