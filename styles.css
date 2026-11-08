@@ -424,7 +424,8 @@ code { font-family: var(--mono); font-size: .85em; padding: .12em .4em; border-r
   .nav__links a[data-nav] { padding: 14px 12px; font-size: 18px; border-radius: 12px; }
   .nav__links .btn { margin: 12px 0 0; padding: 15px; font-size: 16px; }
   .hero { padding-top: 48px; }
-  .hero__grid { grid-template-columns: 1fr; }
+  .hero__grid { grid-template-columns: minmax(0, 1fr); }
+  .hero__text { min-width: 0; }
   .hero__photo { order: -1; width: 220px; justify-self: start; }
   .float-card--a { left: auto; right: -150px; bottom: 20px; }
   .float-card--b { display: none; }
@@ -535,7 +536,7 @@ h1 em, h2 em, .float-card strong {
 }
 .term__prompt { color: var(--ok); }
 .term__q { color: var(--faint); }
-.term__text { color: var(--text); }
+.term__text { color: var(--text); min-width: 0; overflow: hidden; text-overflow: clip; }
 .term__caret { width: 8px; height: 18px; margin-left: 1px; background: var(--accent); animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
@@ -755,7 +756,8 @@ h1 em, h2 em, .float-card strong {
 @media (max-width: 560px) {
   .chat-launch { right: 14px; bottom: 14px; padding: 10px; }
   .chat-launch__text { display: none; }
-  .chat-nudge { right: 14px; bottom: 74px; max-width: calc(100vw - 28px); }
+  .chat-nudge { right: 72px; bottom: 16px; max-width: min(260px, calc(100vw - 88px)); padding: 9px 11px; gap: 8px; font-size: 13px; border-radius: 14px 14px 4px 14px; }
+  .chat-nudge img { width: 24px; height: 24px; }
   .chat { right: 8px; left: 8px; bottom: 74px; width: auto; height: calc(100dvh - 92px); }
   .totop { right: 14px; bottom: 74px; }
 }

@@ -452,7 +452,7 @@
 
     let seen = false;
     try { seen = sessionStorage.getItem('chatSeen') === '1'; } catch (e) {}
-    if (!seen) setTimeout(() => { if (panel.hidden) nudge.classList.add('show'); }, 15000);
+    if (!seen) setTimeout(() => { if (panel.hidden) { nudge.classList.add('show'); setTimeout(() => nudge.classList.remove('show'), 10000); } }, 15000);
   };
   if ('requestIdleCallback' in window) requestIdleCallback(initChat, { timeout: 2500 }); else setTimeout(initChat, 1200);
 
