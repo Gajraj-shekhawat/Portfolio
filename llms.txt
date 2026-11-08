@@ -1,36 +1,36 @@
 # Gajraj Singh Shekhawat
 
-> Gajraj Singh Shekhawat is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He builds products end to end (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure) and is available for freelance projects.
+> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a backend and product engineer based in Jaipur, Rajasthan, India, with 4+ years of experience shipping production software. He builds products end to end (APIs and microservices, Android and web apps, payments, AI features and cloud infrastructure) and is available for freelance projects.
 
-- Website: https://gajraj-shekhawat.github.io/Portfolio/
-- Email: gaju2gajraj@gmail.com
-- Phone / WhatsApp: +91 94145 84444
-- LinkedIn: https://www.linkedin.com/in/gajrajshekhawat/
-- GitHub: https://github.com/Gajraj-shekhawat
-- Resume: https://gajraj-shekhawat.github.io/Portfolio/assets/Gajraj-Shekhawat-Resume.pdf
+Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · based in Jaipur, India (IST), working with clients in India and worldwide.
+
+## Profile
+
+- [Portfolio website](https://gajraj-shekhawat.github.io/Portfolio/): selected work, services, experience and contact details
+- [Resume (PDF)](https://gajraj-shekhawat.github.io/Portfolio/assets/Gajraj-Shekhawat-Resume.pdf): full work history and skills
+- [LinkedIn](https://www.linkedin.com/in/gajrajshekhawat/): professional profile
+- [GitHub](https://github.com/Gajraj-shekhawat): public code
 
 ## Experience
 
-- Technology Lead, Yugam International School (LightTheChange Eduventure), 2026 to present. Leads the team building the school group's software and personally built its AI products.
+- [Yugam International School](https://yugam.co): Technology Lead, 2026 to present. Leads the team building the school group's software (admissions CRM, HRMS, bus tracking, IoT classrooms) and personally built its AI products.
 - Freelance Product Engineer, 2026 to present. Clients include Neem Karoli Sales, Shikhar Classes and Gram Sansad.
-- Product Engineer (Backend), Shuru Technologies, June 2024 to present. Built backend microservices for Pickup Coffee, cut API latency by 30% and set up OpenTelemetry tracing.
-- Full Stack Web Developer, AFM Bigtech (Singapore, remote), September 2022 to June 2024. Built the backend for a JEE/NEET exam-prep LMS.
+- Shuru Technologies: Product Engineer (Backend), June 2024 to present. Built backend microservices for Pickup Coffee, cut API latency by 30%, set up OpenTelemetry tracing and Redis caching.
+- AFM Bigtech (Singapore, remote): Full Stack Web Developer, September 2022 to June 2024. Built the backend for a JEE/NEET exam-prep learning platform.
 - Education: Full-Stack Web Development at Masai School (2021–2022). B.A. from Shekhawati University (2017–2020).
 
 ## Selected projects
 
-- Neem Karoli Sales ordering platform: two Android apps (React Native/Expo) and a Fastify + MongoDB API for a Jaipur beverage wholesaler. Self-updating APKs, OTP sign-in, Cashfree payments, GST invoices, 1,290+ tests. https://neemkarolisales.in
+- [Neem Karoli Sales ordering platform](https://neemkarolisales.in): two Android apps (React Native/Expo) and a Fastify + MongoDB API for a Jaipur beverage wholesaler, with self-updating apps, OTP sign-in, Cashfree payments, GST invoices and 1,290+ automated tests. Built solo.
+- [Yugam AI](https://ai.yugam.co): lesson planner, chat assistant, and Indian-language call transcription and summaries, all on a self-hosted server.
+- [StreamFit](https://streamfit.shikharedtech.com): adaptive aptitude test and career-stream recommender for Class 10 students, built for Shikhar Classes.
+- [Gram Sansad village platform](https://gramsansad.com): multi-tenant Next.js sites with automatic DNS and HTTPS for every village, with an English/Hindi admin.
+- [Yugam International School website](https://yugam.co): Next.js site with paid event passes, OTP sign-in and payments.
 - Yugam Ask: an AI agent that answers plain-English questions about 1.7M Indian schools using text-to-SQL, running on a self-hosted Qwen model on vLLM with a GPU that starts on demand.
-- Face attendance: marks a class present from one photo using OpenCV YuNet + SFace on CPU, with no cloud AI.
-- StreamFit: adaptive aptitude test and stream recommender for Class 10 students, built for Shikhar Classes. https://streamfit.shikharedtech.com
-- Gram Sansad village platform: multi-tenant Next.js sites with automatic DNS and HTTPS for every village. https://gramsansad.com
-- Yugam AI: lesson planner and Indian-language call transcription and summaries on a self-hosted server. https://ai.yugam.co
-- Yugam International School website: Next.js with event passes, OTP sign-in and payments. https://yugam.co
+- Face attendance: marks a class present from one photo using OpenCV (YuNet + SFace) on CPU, with no cloud AI.
 
-## Skills
+## Skills and services
 
-Node.js, Express, Fastify, NestJS, Python, FastAPI, React, Next.js, TypeScript, React Native, PostgreSQL, MongoDB, Redis, BigQuery, Airflow, GCP, AWS, DigitalOcean, Docker, Kubernetes, OpenTelemetry, LLM agents, text-to-SQL, vLLM, OpenCV.
-
-## Services
-
-Custom web and mobile apps, backend APIs and integrations (payments, WhatsApp, OTP, GST), AI features, performance tuning and cloud setup.
+- Skills: Node.js, Express, Fastify, NestJS, Python, FastAPI, React, Next.js, TypeScript, React Native, PostgreSQL, MongoDB, Redis, BigQuery, Airflow, GCP, AWS, DigitalOcean, Docker, Kubernetes, OpenTelemetry, LLM agents, text-to-SQL, vLLM, OpenCV.
+- Services: custom web and mobile apps; backend APIs and integrations (payments, WhatsApp, OTP, GST invoicing); AI features; performance tuning and cloud setup.
+- [Hire Gajraj](https://gajraj-shekhawat.github.io/Portfolio/#contact): start a project by email or WhatsApp
