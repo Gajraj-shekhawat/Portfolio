@@ -1,0 +1,40 @@
+# Every push to master:
+#   1. checks the site (structured data, sitemap, links, llms.txt)
+#   2. GitHub Pages (gajraj-shekhawat.github.io/Portfolio) and Cloudflare Pages
+#      (gajrajshekhawat.com) both rebuild automatically from this branch
+#   3. once the domain serves the new version, pings IndexNow (Bing, ChatGPT search,
+#      Copilot, Yandex...) so search engines re-crawl quickly
+name: Check, deploy & notify search engines
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site checks
+        run: python3 .github/scripts/check_site.py
+
+  notify:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for gajrajshekhawat.com to serve this commit
+        run: |
+          want=$(sha256sum index.html | cut -d' ' -f1)
+          for i in $(seq 1 30); do
+            got=$(curl -fsS https://gajrajshekhawat.com/ | sha256sum | cut -d' ' -f1 || true)
+            [ "$got" = "$want" ] && { echo "Domain is serving the new version"; exit 0; }
+            sleep 10
+          done
+          echo "Domain did not update within 5 minutes; pinging anyway"
+      - name: Ping IndexNow
+        run: python3 .github/scripts/indexnow.py
