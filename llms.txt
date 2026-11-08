@@ -6,8 +6,8 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 
 ## Profile
 
-- [Portfolio website](https://gajraj-shekhawat.github.io/Portfolio/): selected work, services, experience, FAQ and contact details
-- [Resume (PDF)](https://gajraj-shekhawat.github.io/Portfolio/assets/Gajraj-Shekhawat-Resume.pdf): full work history and skills
+- [Portfolio website](https://gajrajshekhawat.com/): selected work, services, experience, FAQ and contact details
+- [Resume (PDF)](https://gajrajshekhawat.com/assets/Gajraj-Shekhawat-Resume.pdf): full work history and skills
 - [LinkedIn](https://www.linkedin.com/in/gajrajshekhawat/): professional profile
 - [GitHub](https://github.com/Gajraj-shekhawat): public code
 
@@ -41,7 +41,7 @@ Contact: email gaju2gajraj@gmail.com · phone and WhatsApp +91 94145 84444 · ba
 
 - Skills: Node.js, Express, Fastify, NestJS, Python, FastAPI, React, Next.js, TypeScript, React Native, PostgreSQL, MongoDB, Redis, BigQuery, Apache Airflow, Metabase, GCP, AWS, DigitalOcean, Docker, Kubernetes, OpenTelemetry, LLM agents, text-to-SQL, vLLM, OpenCV.
 - Services: technology advisory for founders and organisations; custom web and mobile apps; backend APIs and integrations (payments, WhatsApp, OTP, GST invoicing); data pipelines and dashboards; AI features; performance tuning and cloud setup.
-- [Work with Gajraj](https://gajraj-shekhawat.github.io/Portfolio/#contact): discuss a project by email or WhatsApp
+- [Work with Gajraj](https://gajrajshekhawat.com/#contact): discuss a project by email or WhatsApp
 
 ## FAQ
 

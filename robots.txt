@@ -19,4 +19,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://gajraj-shekhawat.github.io/Portfolio/sitemap.xml
+Sitemap: https://gajrajshekhawat.com/sitemap.xml
