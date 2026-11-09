@@ -22,6 +22,9 @@ GH_REDIRECT = '<script>if(location.hostname.endsWith("github.io")){location.repl
 EMAIL = "contact@gajrajshekhawat.com"
 PHONE = "+91 94145 84444"
 PHONE_E164 = "+919414584444"
+CASES_PUBLISHED = "2026-11-08"  # when the case studies first went live
+LASTMOD_FILE = ROOT / "tools" / "lastmod.json"  # real last-content-change date per URL (sitemap + dateModified)
+
 # Posts publish themselves on their date: only posts dated today or earlier are built.
 # (.github/workflows/publish-posts.yml rebuilds daily when a post falls due.)
 POSTS = sorted([p for p in ALL_POSTS if p["date"] <= TODAY], key=lambda p: p["date"], reverse=True)
@@ -491,7 +494,7 @@ def case_html(c):
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "Article", "@id": url + "#article", "headline": c["title"][:110], "description": c["description"], "url": url,
-             "image": f"{SITE}/images/og.jpg", "datePublished": NOW_ISO, "dateModified": NOW_ISO, "inLanguage": "en",
+             "image": f"{SITE}/images/og.jpg", "datePublished": CASES_PUBLISHED, "dateModified": NOW_ISO, "inLanguage": "en",
              "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat", "url": SITE + "/"},
              "publisher": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat"},
              "about": c["name"], "keywords": ", ".join(c["stack"])},
@@ -773,19 +776,51 @@ def shell(title, description, url, ld, body, og_type="website"):
 '''
 
 
-def sitemap():
-    urls = [(f"{SITE}/", "1.0", f"\n    <image:image><image:loc>{SITE}/images/gajraj.jpg</image:loc></image:image>")]
-    urls += [(f"{SITE}/{p['slug']}/", "0.8", "") for p in PAGES]
-    urls += [(f"{SITE}/work/{c['slug']}/", "0.7", "") for c in CASES]
-    urls += [(f"{SITE}/blog/", "0.7", "")]
-    urls += [(f"{SITE}/blog/{p['slug']}/", "0.6", "") for p in POSTS]
-    urls += [(f"{SITE}/assets/Gajraj-Shekhawat-Resume.pdf", "0.5", "")]
+def _normalise(text):
+    text = re.sub(r"\?v=[0-9a-f]+", "", text)
+    text = re.sub(r'"date(?:Published|Modified)": "[^"]*"', '"date": ""', text)
+    return text
+
+
+def track_lastmod():
+    """Record the date each page's content last really changed; stamp that into dateModified."""
+    lm = json.loads(LASTMOD_FILE.read_text()) if LASTMOD_FILE.exists() else {}
+    targets = {f"{SITE}/": ROOT / "index.html", f"{SITE}/blog/": ROOT / "blog" / "index.html"}
+    targets.update({f"{SITE}/{p['slug']}/": ROOT / p["slug"] / "index.html" for p in PAGES})
+    targets.update({f"{SITE}/work/{c['slug']}/": ROOT / "work" / c["slug"] / "index.html" for c in CASES})
+    for url, path in targets.items():
+        text = path.read_text(encoding="utf-8")
+        h = hashlib.sha1(_normalise(text).encode()).hexdigest()
+        if lm.get(url, {}).get("hash") != h:
+            lm[url] = {"hash": h, "date": TODAY}
+        stamped = re.sub(r'"dateModified": "[^"]*"', f'"dateModified": "{lm[url]["date"]}"', text)
+        if stamped != text:
+            path.write_text(stamped, encoding="utf-8")
+    pdf = ROOT / "assets" / "Gajraj-Shekhawat-Resume.pdf"
+    url = f"{SITE}/assets/Gajraj-Shekhawat-Resume.pdf"
+    h = hashlib.sha1(pdf.read_bytes()).hexdigest()
+    if lm.get(url, {}).get("hash") != h:
+        lm[url] = {"hash": h, "date": TODAY}
+    LASTMOD_FILE.write_text(json.dumps(lm, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return lm
+
+
+def sitemap(lm):
+    def d(u):
+        return lm[u]["date"]
+    urls = [(f"{SITE}/", d(f"{SITE}/"), "1.0", f"\n    <image:image><image:loc>{SITE}/images/gajraj.jpg</image:loc></image:image>")]
+    urls += [(f"{SITE}/{p['slug']}/", d(f"{SITE}/{p['slug']}/"), "0.8", "") for p in PAGES]
+    urls += [(f"{SITE}/work/{c['slug']}/", d(f"{SITE}/work/{c['slug']}/"), "0.7", "") for c in CASES]
+    urls += [(f"{SITE}/blog/", max([d(f"{SITE}/blog/")] + [p["date"] for p in POSTS]), "0.7", "")]
+    urls += [(f"{SITE}/blog/{p['slug']}/", p["date"], "0.6", "") for p in POSTS]
+    pdf = f"{SITE}/assets/Gajraj-Shekhawat-Resume.pdf"
+    urls += [(pdf, d(pdf), "0.5", "")]
     body = "".join(f"""  <url>
     <loc>{u}</loc>
-    <lastmod>{TODAY}</lastmod>
+    <lastmod>{lmd}</lastmod>
     <priority>{pr}</priority>{img}
   </url>
-""" for u, pr, img in urls)
+""" for u, lmd, pr, img in urls)
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {body}</urlset>
@@ -854,9 +889,7 @@ if __name__ == "__main__":
         busted = bust_assets(text)
         if busted != text:
             page.write_text(busted, encoding="utf-8")
-    home = (ROOT / "index.html").read_text(encoding="utf-8")
-    home = re.sub(r'("@id": "https://gajrajshekhawat\.com/#page",(?:.|\n)*?"dateModified": ")[^"]*"', lambda m: m.group(1) + NOW_ISO + '"', home, count=1)
-    (ROOT / "index.html").write_text(home, encoding="utf-8")
     print("asset versions refreshed")
-    (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
+    lm = track_lastmod()
+    (ROOT / "sitemap.xml").write_text(sitemap(lm), encoding="utf-8")
     print("sitemap.xml updated with", len(PAGES) + len(CASES) + len(POSTS) + 3, "URLs")
