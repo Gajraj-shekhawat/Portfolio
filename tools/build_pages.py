@@ -17,6 +17,7 @@ from cases import CASES  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
 NOW_ISO = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).replace(microsecond=0).isoformat()
+GH_REDIRECT = '<script>if(location.hostname.endsWith("github.io")){location.replace("https://gajrajshekhawat.com"+location.pathname.replace(/^\\/Portfolio/,"")+location.search+location.hash)}</script>'
 EMAIL = "contact@gajrajshekhawat.com"
 PHONE = "+91 94145 84444"
 PHONE_E164 = "+919414584444"
@@ -346,6 +347,7 @@ def page_html(p):
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  {GH_REDIRECT}
   <link rel="stylesheet" href="/styles.min.css" />
   <script>
     document.documentElement.classList.add('js');
@@ -542,6 +544,7 @@ def shell(title, description, url, ld, body, og_type="website"):
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  {GH_REDIRECT}
   <link rel="stylesheet" href="/styles.min.css" />
   <script>
     document.documentElement.classList.add('js');
