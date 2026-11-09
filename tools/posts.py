@@ -9,7 +9,7 @@ POSTS = [
         "slug": "text-to-sql-ai-agent-self-hosted-llm",
         "title": "Building a Text-to-SQL AI Agent on a Self-Hosted LLM",
         "description": "How Gajraj Singh Shekhawat built an AI agent that answers plain-English questions over 1.7M school records with text-to-SQL, vLLM and an on-demand GPU.",
-        "date": "2026-11-09",
+        "date": "2026-09-20",
         "tags": ["AI", "Text-to-SQL", "LLM", "Python", "PostgreSQL"],
         "summary": "Plain-English questions over 1.7 million school records, answered by a model that runs on our own GPU, which only switches on when someone asks.",
         "body": [
@@ -42,7 +42,7 @@ POSTS = [
         "slug": "b2b-wholesale-ordering-app-lessons",
         "title": "Building a B2B Ordering App for a Wholesaler: 5 Lessons",
         "description": "Lessons from building a wholesale ordering platform in India: server-side pricing, OTP sign-in, Cashfree payments, GST invoices and self-updating Android apps.",
-        "date": "2026-11-09",
+        "date": "2026-10-17",
         "tags": ["E-commerce", "B2B", "React Native", "Node.js", "Payments"],
         "summary": "What I learned moving a Jaipur beverage wholesaler from phone and paper orders to its own apps.",
         "body": [
@@ -65,7 +65,7 @@ POSTS = [
         "slug": "reduce-nodejs-api-latency",
         "title": "How to Cut Node.js API Latency: What Actually Worked",
         "description": "Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%.",
-        "date": "2026-11-09",
+        "date": "2026-01-15",
         "tags": ["Node.js", "Performance", "PostgreSQL", "MySQL", "Redis"],
         "summary": "Measure first, fix the database second, cache third. The order matters.",
         "body": [
@@ -92,7 +92,7 @@ POSTS = [
         "slug": "business-website-checklist-jaipur",
         "title": "What a Small Business Website Needs: A Checklist for 2026",
         "description": "A practical checklist for a small business website in Jaipur and across India: speed, mobile, WhatsApp, Google Business Profile, SEO basics and enquiry forms.",
-        "date": "2026-11-09",
+        "date": "2026-11-01",
         "tags": ["Websites", "Small business", "SEO", "Jaipur"],
         "summary": "Most customers find you on a phone, through Google, and want to message you on WhatsApp. Build for that.",
         "body": [
@@ -132,7 +132,7 @@ POSTS = [
         "slug": "what-is-an-ai-agent-for-business",
         "title": "What Is an AI Agent? A Plain-English Guide for Businesses",
         "description": "What an AI agent is, how it differs from a chatbot, where it helps a small business, and how to start safely without sending your data everywhere.",
-        "date": "2026-11-09",
+        "date": "2026-04-24",
         "tags": ["AI agents", "AI chatbot", "Business", "LLM"],
         "summary": "A chatbot answers. An agent answers and then does something: looks up an order, books a slot, drafts a reply. Here's what that means for your business.",
         "body": [
@@ -163,7 +163,7 @@ POSTS = [
         "slug": "nextjs-vs-wordpress-business-website",
         "title": "Next.js vs WordPress for a Business Website in 2026",
         "description": "Next.js or WordPress for your business website? An honest comparison of speed, SEO, cost, security and editing, and which one to pick for your situation.",
-        "date": "2026-11-09",
+        "date": "2026-02-21",
         "tags": ["Next.js", "WordPress", "Websites", "SEO"],
         "summary": "Both can build a great website. The right choice depends on who will edit it, how fast it must be, and what else it needs to do.",
         "body": [
@@ -198,7 +198,7 @@ POSTS = [
         "slug": "app-development-cost-factors-india",
         "title": "What Decides the Cost of Building an App in India",
         "description": "What really drives the cost of a mobile app or web app in India: features, platforms, integrations, design, admin panels, testing and maintenance.",
-        "date": "2026-11-09",
+        "date": "2026-05-16",
         "tags": ["App development", "Cost", "React Native", "India"],
         "summary": "Two apps that look similar can differ in cost several times over. These are the things that make the difference, and how to keep your first version lean.",
         "body": [
@@ -229,7 +229,7 @@ POSTS = [
         "slug": "otp-passkeys-or-passwords-app-login",
         "title": "OTP, Passkeys or Passwords: Which Login Should Your App Use?",
         "description": "Phone OTP, passkeys or passwords? A simple comparison for Indian businesses building apps and websites: security, cost, user experience and when to use each.",
-        "date": "2026-11-09",
+        "date": "2026-08-27",
         "tags": ["Security", "Authentication", "Passkeys", "OTP"],
         "summary": "For most Indian customer apps, phone OTP is the right start. Passkeys are the future. Passwords alone are the weakest choice.",
         "body": [
@@ -264,7 +264,7 @@ POSTS = [
         "slug": "protect-nodejs-project-npm-supply-chain",
         "title": "How to Protect a Node.js Project from npm Supply-Chain Attacks",
         "description": "Simple steps to protect a Node.js app from malicious or hijacked npm packages: lockfiles, npm ci, fewer dependencies, audits, 2FA and safe CI settings.",
-        "date": "2026-11-09",
+        "date": "2026-04-03",
         "tags": ["Node.js", "Security", "npm", "DevOps"],
         "summary": "Attacks through hijacked npm packages keep making the news. Ten practical habits that make your project a much harder target.",
         "body": [
@@ -295,7 +295,7 @@ POSTS = [
         "slug": "how-to-hire-software-developer-small-business",
         "title": "How to Hire a Software Developer for Your Business: A Checklist",
         "description": "A practical checklist for hiring a software developer or agency in India or abroad: proof of work, scope, fixed quotes, code ownership, support and red flags.",
-        "date": "2026-11-16",
+        "date": "2026-03-05",
         "tags": ["Hiring", "Software developer", "Small business", "Outsourcing"],
         "summary": "Most failed software projects go wrong before a line of code is written. Ten questions to ask before you hire anyone.",
         "body": [
@@ -336,7 +336,7 @@ POSTS = [
         "slug": "google-business-profile-setup-guide",
         "title": "Google Business Profile Setup: A Guide for Local Businesses",
         "description": "How to set up and verify a Google Business Profile, pick categories, add photos and services, collect reviews and link it to your website.",
-        "date": "2026-11-28",
+        "date": "2026-11-02",
         "tags": ["Google Business Profile", "Local SEO", "Small business", "Jaipur"],
         "summary": "For a local shop, clinic or coaching centre, your Google Business Profile often brings more customers than your website. Here's how to set it up properly.",
         "body": [
@@ -374,7 +374,7 @@ POSTS = [
         "slug": "react-native-vs-flutter-2026",
         "title": "React Native vs Flutter in 2026: Which Should You Choose?",
         "description": "React Native or Flutter for your app? An honest comparison of performance, hiring, code sharing with the web and cost, with a clear recommendation.",
-        "date": "2026-12-08",
+        "date": "2026-06-30",
         "tags": ["React Native", "Flutter", "Mobile apps", "Android", "iOS"],
         "summary": "Both build good Android and iOS apps from one codebase. The deciding factors are your team, your web plans and your hiring market.",
         "body": [
@@ -407,7 +407,7 @@ POSTS = [
         "slug": "whatsapp-orders-enquiries-for-business",
         "title": "How to Get Orders and Enquiries on WhatsApp from Your Website",
         "description": "Turn website visitors into WhatsApp enquiries and orders: click-to-chat buttons, catalogues, quick replies, the Business API and order updates.",
-        "date": "2026-12-02",
+        "date": "2026-07-22",
         "tags": ["WhatsApp", "Leads", "E-commerce", "Small business"],
         "summary": "In India, many customers would rather message than fill a form. Here's how to make WhatsApp work with your website, from a simple button to automated order updates.",
         "body": [
@@ -437,7 +437,7 @@ POSTS = [
         "slug": "razorpay-vs-cashfree-payment-gateway",
         "title": "Razorpay vs Cashfree: Choosing a Payment Gateway in India",
         "description": "A developer's comparison of Razorpay and Cashfree for Indian websites and apps: payment methods, settlements, payouts and safe integration.",
-        "date": "2026-12-05",
+        "date": "2026-07-15",
         "tags": ["Payments", "Razorpay", "Cashfree", "E-commerce", "India"],
         "summary": "I've integrated both in production. Either is a good choice; the integration done right matters more than the brand.",
         "body": [
@@ -472,7 +472,7 @@ POSTS = [
         "slug": "core-web-vitals-plain-english",
         "title": "Core Web Vitals in Plain English: How to Make Your Site Fast",
         "description": "LCP, INP and CLS explained simply, with Google's targets and practical fixes for images, fonts, scripts and layout shifts on phones.",
-        "date": "2026-12-06",
+        "date": "2026-11-06",
         "tags": ["Performance", "Core Web Vitals", "SEO", "Websites"],
         "summary": "Three numbers decide whether Google thinks your site feels fast. Here's what they mean and how I got my own site to a 99–100 PageSpeed score.",
         "body": [
@@ -501,7 +501,7 @@ POSTS = [
         "slug": "postgresql-vs-mongodb-for-startups",
         "title": "PostgreSQL vs MongoDB: Which Database for Your Startup?",
         "description": "PostgreSQL or MongoDB for a new product? A practical comparison of data shape, reporting, transactions and scaling, from production experience.",
-        "date": "2026-12-10",
+        "date": "2026-03-20",
         "tags": ["PostgreSQL", "MongoDB", "Databases", "Backend", "Startups"],
         "summary": "I run both in production. My default for a new business product is PostgreSQL, with MongoDB where flexible documents genuinely fit better.",
         "body": [
@@ -530,7 +530,7 @@ POSTS = [
         "slug": "gst-invoices-in-your-app-developer-guide",
         "title": "GST Invoices in Your App: What Developers Must Get Right",
         "description": "Building GST invoices into an Indian e-commerce or B2B app: invoice numbering, GSTIN, HSN codes, CGST/SGST vs IGST, rounding, credit notes and PDF generation.",
-        "date": "2026-12-11",
+        "date": "2026-10-20",
         "tags": ["GST", "Invoicing", "E-commerce", "B2B", "India"],
         "summary": "Invoices are legal documents. These are the details that matter when your app generates them automatically. Always confirm rules with your accountant.",
         "body": [
@@ -561,7 +561,7 @@ POSTS = [
         "slug": "rag-chatbot-over-your-documents",
         "title": "RAG Explained: Building a Chatbot over Your Own Documents",
         "description": "How RAG works: chunking, embeddings, vector search, citations and evaluation, to build an AI chatbot that answers from your own documents.",
-        "date": "2026-11-18",
+        "date": "2026-05-27",
         "tags": ["AI", "RAG", "LLM", "Chatbot", "Python"],
         "summary": "A chatbot that answers from your policies, manuals or course notes, and shows where each answer came from. Here's how RAG works and where it goes wrong.",
         "body": [
@@ -593,7 +593,7 @@ POSTS = [
         "slug": "add-ai-to-existing-app",
         "title": "How to Add AI to Your Existing App Without Rewriting It",
         "description": "Practical ways to add AI to an existing web or mobile app: where to start, a separate AI service, cost control, privacy, fallbacks and results.",
-        "date": "2026-11-23",
+        "date": "2026-07-05",
         "tags": ["AI", "LLM", "Product", "Backend"],
         "summary": "You don't need to rebuild your product to use AI. Start with one feature, put it behind its own service, and keep a fallback.",
         "body": [
@@ -625,7 +625,7 @@ POSTS = [
         "slug": "rest-api-design-best-practices",
         "title": "REST API Design That Doesn't Break: 8 Practical Rules",
         "description": "Practical REST API design rules for Node.js and other backends: consistent errors, pagination, versioning, idempotency, validation, auth and documentation.",
-        "date": "2026-11-29",
+        "date": "2026-01-20",
         "tags": ["Backend", "API", "Node.js", "REST"],
         "summary": "Good APIs are boring in the best way: predictable, documented and hard to misuse. Eight rules I follow on every backend.",
         "body": [
@@ -654,7 +654,7 @@ POSTS = [
         "slug": "nodejs-background-jobs-bullmq",
         "title": "Background Jobs in Node.js with BullMQ: When and How",
         "description": "When to use background jobs in Node.js and how to run them with BullMQ and Redis: retries, backoff, idempotency, scheduling and monitoring.",
-        "date": "2026-12-07",
+        "date": "2026-05-10",
         "tags": ["Node.js", "BullMQ", "Redis", "Backend", "Queues"],
         "summary": "If a user is waiting for it, keep it in the request. If not, put it on a queue. Here's how to do that reliably in Node.js.",
         "body": [
@@ -689,7 +689,7 @@ POSTS = [
         "slug": "nextjs-seo-checklist",
         "title": "Next.js SEO Checklist: Titles, Sitemaps, Schema and Speed",
         "description": "A practical SEO checklist for Next.js sites: metadata, canonical URLs, sitemaps, robots, structured data, Open Graph images, internal links and Core Web Vitals.",
-        "date": "2026-12-03",
+        "date": "2026-08-13",
         "tags": ["Next.js", "SEO", "Frontend", "React"],
         "summary": "Next.js gives you the tools for great SEO, but you still have to use them. The checklist I run on every Next.js site before launch.",
         "body": [
@@ -726,7 +726,7 @@ POSTS = [
         "slug": "react-forms-validation-ux-accessibility",
         "title": "Better Forms in React: Validation, UX and Accessibility",
         "description": "How to build React forms people actually finish: field design, validation timing, error messages, accessibility and mobile keyboards.",
-        "date": "2026-12-09",
+        "date": "2026-04-13",
         "tags": ["React", "Frontend", "Forms", "Accessibility", "UX"],
         "summary": "Forms are where users give you money and leads. Small details decide whether they finish. A practical checklist for React forms.",
         "body": [
@@ -765,7 +765,7 @@ POSTS = [
         "slug": "how-a-website-goes-live-domain-dns-hosting",
         "title": "How a Website Goes Live: Domain, DNS and Hosting Explained",
         "description": "A plain-English guide for non-technical owners: what a domain, DNS, hosting, SSL and email really are, how they connect, and what each one costs per year.",
-        "date": "2026-11-14",
+        "date": "2026-01-07",
         "tags": ["Beginners", "Domain", "DNS", "Hosting", "Websites"],
         "summary": "Domain, DNS, hosting, SSL: four words every website owner hears. Here's what each one is, using an everyday comparison, and what you should own yourself.",
         "body": [
@@ -807,7 +807,7 @@ POSTS = [
         "slug": "dns-setup-guide-a-cname-mx-records",
         "title": "DNS Setup for Beginners: A, CNAME, MX and TXT Records",
         "description": "A beginner's guide to DNS records: what A, AAAA, CNAME, MX and TXT records do, how to connect a domain to hosting and email, and how to check that it works.",
-        "date": "2026-11-21",
+        "date": "2026-01-31",
         "tags": ["Beginners", "DNS", "Domain", "Cloudflare", "Email"],
         "summary": "DNS settings look scary but there are only a few record types you'll ever need. Here's what each one does and how to set them safely.",
         "body": [
@@ -847,7 +847,7 @@ POSTS = [
         "slug": "deploy-react-website-free-cloudflare-pages",
         "title": "How to Put a React Website Online for Free (Step by Step)",
         "description": "A beginner's guide to building a React website with Vite and publishing it free on Cloudflare Pages from GitHub, with your own domain.",
-        "date": "2026-11-27",
+        "date": "2026-11-04",
         "tags": ["Beginners", "React", "Deployment", "Cloudflare Pages", "Frontend"],
         "summary": "From an empty folder to a live website on your own domain, using free tools. Every change you push goes live automatically.",
         "body": [
@@ -881,7 +881,7 @@ POSTS = [
         "slug": "deploy-nodejs-backend-digitalocean",
         "title": "How to Deploy a Node.js Backend on DigitalOcean (Beginner Guide)",
         "description": "Step by step: run a Node.js API on a DigitalOcean droplet with Ubuntu, a firewall, PM2, Nginx, your own domain and free Let's Encrypt SSL.",
-        "date": "2026-12-01",
+        "date": "2026-04-19",
         "tags": ["Beginners", "Node.js", "DigitalOcean", "Deployment", "Backend"],
         "summary": "A rented Linux server, your Node.js app, and the few tools that keep it running securely. The setup I use for many small production APIs.",
         "body": [
@@ -920,7 +920,7 @@ POSTS = [
         "slug": "build-and-deploy-nextjs-app",
         "title": "Build and Deploy a Next.js App: From Zero to Live",
         "description": "A beginner's walkthrough of creating a Next.js app, adding pages and an API route, and deploying it to Vercel or a DigitalOcean server with your own domain.",
-        "date": "2026-12-04",
+        "date": "2026-06-01",
         "tags": ["Beginners", "Next.js", "React", "Deployment", "Vercel"],
         "summary": "Next.js gives you a fast website and a backend in one project. Here's how a Next.js app is created and put online, with two hosting options.",
         "body": [
@@ -953,7 +953,7 @@ POSTS = [
         "slug": "how-to-build-an-ecommerce-website-checklist",
         "title": "How to Build an E-commerce Website: A Planning Checklist",
         "description": "Planning an online store in India? A checklist of decisions and features: products, payments, shipping, GST, admin, SEO and launch, plus Shopify vs custom.",
-        "date": "2026-11-12",
+        "date": "2026-06-09",
         "tags": ["Beginners", "E-commerce", "Online store", "Checklist"],
         "summary": "Before you build an online store, answer these questions. This checklist turns a vague idea into a clear plan you can hand to any developer.",
         "body": [
@@ -999,7 +999,7 @@ POSTS = [
         "slug": "how-to-build-edtech-platform-coaching-institute",
         "title": "How to Build an EdTech Platform for Coaching Institutes",
         "description": "What a coaching institute or school needs online: website, admissions and fee payments, online tests, results, CRM and parent updates. A practical build plan.",
-        "date": "2026-11-19",
+        "date": "2026-07-28",
         "tags": ["EdTech", "Coaching", "Schools", "Checklist"],
         "summary": "From a website that ranks to online tests and admissions with fee payment: what to build first, and what can wait.",
         "body": [
@@ -1043,7 +1043,7 @@ POSTS = [
         "slug": "how-to-build-lms-learning-management-system",
         "title": "How to Build an LMS: Features Checklist for Courses and Tests",
         "description": "Planning a learning management system (LMS)? A features checklist: courses, video, live classes, tests, progress, certificates, payments, roles and scaling.",
-        "date": "2026-11-25",
+        "date": "2026-08-21",
         "tags": ["LMS", "EdTech", "Online courses", "Checklist"],
         "summary": "Whether you sell courses or train your staff, here's what a learning management system needs, what to build first, and when to use an existing one instead.",
         "body": [
@@ -1083,7 +1083,7 @@ POSTS = [
         "slug": "otp-login-over-whatsapp-instead-of-firebase",
         "title": "Why I Dropped Firebase and Sent Login Codes over WhatsApp",
         "description": "For a wholesale ordering app in Jaipur, I replaced Firebase phone auth with our own OTP service sent over WhatsApp. Why, and how it works.",
-        "date": "2026-11-11",
+        "date": "2026-10-25",
         "tags": ["Authentication", "OTP", "WhatsApp", "Node.js", "React Native"],
         "summary": "Shop owners in Jaipur kept missing SMS codes. So the codes now arrive on WhatsApp, and the whole login runs on our own backend.",
         "body": [
@@ -1114,7 +1114,7 @@ POSTS = [
         "slug": "self-updating-android-app-google-play",
         "title": "Shipping an Android App That Updates Itself, Outside Play",
         "description": "How I built in-app self-updates for a React Native Android app distributed outside the Play Store, while keeping the Play Store build clean and policy-safe.",
-        "date": "2026-11-20",
+        "date": "2026-10-29",
         "tags": ["React Native", "Android", "Expo", "Mobile apps", "DevOps"],
         "summary": "Depot staff can't wait for a Play Store review when the order screen has a bug. Here's how the app updates itself, and how the Play build stays clean.",
         "body": [
@@ -1142,7 +1142,7 @@ POSTS = [
         "slug": "on-demand-gpu-private-ai",
         "title": "Running a Private AI on a GPU That Sleeps When Nobody Asks",
         "description": "How I run a self-hosted LLM for a school on a GPU that starts on the first question and shuts down after 15 idle minutes, keeping data private and costs low.",
-        "date": "2026-11-13",
+        "date": "2026-09-22",
         "tags": ["AI", "LLM", "GPU", "vLLM", "Cost"],
         "summary": "A GPU running all month costs a lot. One that runs only while people are asking questions costs very little. The trick is a tiny server that never sleeps.",
         "body": [
@@ -1174,7 +1174,7 @@ POSTS = [
         "slug": "useful-ai-on-cpu-only-server-small-models",
         "title": "Useful AI on a CPU-Only Server: Making a 3B Model Behave",
         "description": "Lessons from running chat, lesson planning and call summaries on a small CPU-only server with a 3B model: one model at a time, JSON schemas and honest limits.",
-        "date": "2026-11-26",
+        "date": "2026-09-25",
         "tags": ["AI", "LLM", "Ollama", "Python", "Cost"],
         "summary": "Not every AI feature needs a GPU. A small model on a modest server can do real work if you design around its limits.",
         "body": [
@@ -1198,7 +1198,7 @@ POSTS = [
         "slug": "face-recognition-attendance-without-cloud",
         "title": "Face-Recognition Attendance Without Sending Photos to the Cloud",
         "description": "Class attendance from one photo using OpenCV face recognition on a CPU: why I chose models by licence, and how teachers stay in control.",
-        "date": "2026-11-17",
+        "date": "2026-09-10",
         "tags": ["AI", "Computer vision", "OpenCV", "Privacy", "Schools"],
         "summary": "One photo of the class, and every student is marked. No cloud AI, no photos leaving the school, and the teacher still has the final say.",
         "body": [
@@ -1228,7 +1228,7 @@ POSTS = [
         "slug": "adaptive-aptitude-test-design",
         "title": "Designing an Adaptive Aptitude Test That Doesn't Leak Answers",
         "description": "How I designed StreamFit, an adaptive Class 10 stream test: difficulty ladders, interleaving to beat fatigue, and no answers sent to the browser.",
-        "date": "2026-11-15",
+        "date": "2026-09-12",
         "tags": ["EdTech", "Assessment", "Backend", "Node.js"],
         "summary": "70 questions in 60 minutes, picked one at a time based on how the student is doing, without ever telling the browser which answer is right.",
         "body": [
@@ -1254,7 +1254,7 @@ POSTS = [
         "slug": "website-for-every-village-nextjs-multi-tenant",
         "title": "A Website for Every Village: One Next.js App, Many Subdomains",
         "description": "How one Next.js app serves a separate bilingual website for every village on its own subdomain, with automatic HTTPS, per-site SEO and simple admin controls.",
-        "date": "2026-11-22",
+        "date": "2026-10-06",
         "tags": ["Next.js", "Multi-tenant", "SEO", "Civic tech"],
         "summary": "Each village gets its own website and address. Behind the scenes it's a single app, so adding the next village takes minutes, not a new project.",
         "body": [
@@ -1283,7 +1283,7 @@ POSTS = [
         "slug": "smart-classroom-lighting-iot",
         "title": "Smart Classroom Lighting: An IoT Project with OTA Firmware",
         "description": "A school's classroom lights run on ESP boards over secure MQTT, with schedules, live status and firmware built per board and updated over the air.",
-        "date": "2026-11-30",
+        "date": "2026-10-03",
         "tags": ["IoT", "ESP32", "MQTT", "Node.js", "Schools"],
         "summary": "Lights that switch on by timetable, a dashboard that shows every room live, and firmware updates without touching a single board.",
         "body": [
@@ -1310,7 +1310,7 @@ POSTS = [
         "slug": "how-to-build-a-developer-portfolio-that-gets-clients",
         "title": "How to Build a Developer Portfolio That Gets Clients",
         "description": "What a developer portfolio needs to win clients and jobs: clear positioning, case studies with results, fast pages, SEO and easy contact.",
-        "date": "2026-11-24",
+        "date": "2026-11-08",
         "tags": ["Portfolio", "Career", "SEO", "Freelancing"],
         "summary": "Most developer portfolios list technologies. The ones that bring work show problems solved for real people. What I put in mine, and why.",
         "body": [
@@ -1346,7 +1346,7 @@ POSTS = [
         "slug": "redis-caching-nodejs-practical-guide",
         "title": "Redis Caching in Node.js: What to Cache and What Not To",
         "description": "Redis caching for Node.js APIs: cache-aside, sensible TTLs, invalidation, stampede protection, key naming and what you should never cache.",
-        "date": "2026-12-12",
+        "date": "2026-02-27",
         "tags": ["Node.js", "Redis", "Caching", "Backend", "Performance"],
         "summary": "Caching is the quickest way to speed up an API and the quickest way to show users wrong data. The rules I follow so I get the first without the second.",
         "body": [
@@ -1376,7 +1376,7 @@ POSTS = [
         "slug": "postgres-row-level-security-multi-tenant",
         "title": "Multi-Tenant SaaS with PostgreSQL Row-Level Security",
         "description": "Keep each customer's data separate in a multi-tenant SaaS: a tenant id on every row, PostgreSQL row-level security, and tests that prove it.",
-        "date": "2026-12-18",
+        "date": "2026-06-15",
         "tags": ["PostgreSQL", "SaaS", "Multi-tenant", "Security", "Backend"],
         "summary": "In a SaaS product, the worst bug is one customer seeing another's data. Row-level security makes the database itself refuse to let that happen.",
         "body": [
@@ -1405,7 +1405,7 @@ POSTS = [
         "slug": "typescript-for-nodejs-backends-worth-it",
         "title": "TypeScript for Node.js Backends: Is It Worth It?",
         "description": "Should your Node.js backend use TypeScript? Where it helps (refactors, API contracts, shared types), what it costs, and a practical setup that stays fast.",
-        "date": "2026-12-21",
+        "date": "2026-02-05",
         "tags": ["TypeScript", "Node.js", "Backend", "JavaScript"],
         "summary": "For anything that will live longer than a weekend, yes. Here's why, and how to set it up without slowing your team down.",
         "body": [
@@ -1439,7 +1439,7 @@ POSTS = [
         "slug": "fix-slow-react-app-performance",
         "title": "8 Fixes for a Slow React App",
         "description": "Speed up a slow React app: measure with the Profiler, split code, virtualise long lists, avoid needless re-renders and trim dependencies.",
-        "date": "2026-12-15",
+        "date": "2026-03-15",
         "tags": ["React", "Frontend", "Performance", "JavaScript"],
         "summary": "Most slow React apps are slow for the same handful of reasons. Measure first, then work down this list.",
         "body": [
@@ -1464,7 +1464,7 @@ POSTS = [
         "slug": "tailwind-css-vs-plain-css-business-websites",
         "title": "Tailwind CSS vs Plain CSS: What I Use for Business Websites",
         "description": "Tailwind CSS or plain CSS for your next website? When each one makes sense, what they mean for speed and maintenance, and why my own portfolio uses plain CSS.",
-        "date": "2026-12-23",
+        "date": "2026-05-04",
         "tags": ["CSS", "Tailwind", "Frontend", "Websites"],
         "summary": "I use both. Tailwind for apps with many screens and a team; plain, well-organised CSS for small, fast marketing sites. Here's how I decide.",
         "body": [
@@ -1495,7 +1495,7 @@ POSTS = [
         "slug": "monorepo-for-small-teams-shared-code",
         "title": "Monorepos for Small Teams: Sharing Code Between Apps",
         "description": "Why I put two React Native apps, a web admin and an API in one monorepo: shared packages for auth, UI and types, simpler releases, and the pitfalls to avoid.",
-        "date": "2026-12-14",
+        "date": "2026-10-10",
         "tags": ["Monorepo", "React Native", "TypeScript", "Architecture"],
         "summary": "Two Android apps, an admin panel and an API, all in one repository. For a small team it made everything faster. Here's how it's organised.",
         "body": [
@@ -1525,7 +1525,7 @@ POSTS = [
         "slug": "push-to-deploy-github-actions-small-teams",
         "title": "Push-to-Deploy with GitHub Actions: A Simple Setup",
         "description": "A simple CI/CD setup for small teams with GitHub Actions: checks on every push, automatic deploys from main, secrets handling, rollbacks and failure alerts.",
-        "date": "2026-12-19",
+        "date": "2026-11-07",
         "tags": ["DevOps", "GitHub Actions", "CI/CD", "Deployment"],
         "summary": "If deploying means logging into a server and running commands, it will eventually go wrong at a bad time. Here's the small setup I use on most projects.",
         "body": [
@@ -1559,7 +1559,7 @@ POSTS = [
         "slug": "opentelemetry-tracing-find-slow-requests",
         "title": "Finding Slow Requests with OpenTelemetry Tracing",
         "description": "How OpenTelemetry and Jaeger tracing find slow requests across microservices: what a trace shows, adding it to Node.js, and what to look for.",
-        "date": "2026-12-22",
+        "date": "2026-02-10",
         "tags": ["Observability", "OpenTelemetry", "Node.js", "Microservices"],
         "summary": "Logs tell you something went wrong. A trace shows you exactly where the time went, across every service a request touched.",
         "body": [
@@ -1589,7 +1589,7 @@ POSTS = [
         "slug": "reliable-json-from-llms",
         "title": "Getting Reliable JSON from LLMs in Production",
         "description": "How to get valid, structured JSON from language models in real apps: schemas, constrained decoding, validation, retries, small-model tips and safe fallbacks.",
-        "date": "2026-12-16",
+        "date": "2026-09-04",
         "tags": ["AI", "LLM", "Python", "Structured output"],
         "summary": "A demo can live with a model that's right most of the time. An app that saves the output to a database can't. How I make model output dependable.",
         "body": [
@@ -1617,7 +1617,7 @@ POSTS = [
         "slug": "software-requirements-brief-template",
         "title": "How to Write a Software Brief: A Template for Founders",
         "description": "A simple software requirements brief template for non-technical founders and business owners: the problem, users, must-haves, examples, budget and deadline.",
-        "date": "2026-12-13",
+        "date": "2026-03-29",
         "tags": ["Beginners", "Planning", "Requirements", "Founders"],
         "summary": "A one-page brief gets you better quotes, faster, from any developer. Copy this template and fill it in before you talk to anyone.",
         "body": [
@@ -1645,7 +1645,7 @@ POSTS = [
         "slug": "website-maintenance-what-it-includes",
         "title": "Website Maintenance: What It Includes and Why You Need It",
         "description": "What website maintenance really includes: security updates, backups, uptime monitoring, renewals, small changes and how to budget for it.",
-        "date": "2026-12-17",
+        "date": "2026-06-25",
         "tags": ["Beginners", "Maintenance", "Websites", "Security"],
         "summary": "A website isn't finished at launch. Here's what ongoing maintenance covers, in plain words, so you know what you're paying for.",
         "body": [
@@ -1675,7 +1675,7 @@ POSTS = [
         "slug": "backups-for-small-business-3-2-1-rule",
         "title": "Backups for Small Businesses: The 3-2-1 Rule, Simply",
         "description": "How small businesses should back up website and app data: the 3-2-1 rule, automatic database backups, testing restores, and ransomware safety.",
-        "date": "2026-12-20",
+        "date": "2026-08-07",
         "tags": ["Beginners", "Backups", "Security", "Small business"],
         "summary": "Everyone has backups until they need one. A simple rule, and one test most businesses never run.",
         "body": [

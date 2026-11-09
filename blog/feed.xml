@@ -7,85 +7,472 @@
     <description>Articles by Gajraj Singh Shekhawat, full-stack software engineer from Jaipur, on backends, AI, e-commerce and websites.</description>
     <language>en</language>
     <item>
-      <title>Building a Text-to-SQL AI Agent on a Self-Hosted LLM</title>
-      <link>https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>How to Build a Developer Portfolio That Gets Clients</title>
+      <link>https://gajrajshekhawat.com/blog/how-to-build-a-developer-portfolio-that-gets-clients/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-to-build-a-developer-portfolio-that-gets-clients/</guid>
+      <pubDate>Sun, 08 Nov 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>How Gajraj Singh Shekhawat built an AI agent that answers plain-English questions over 1.7M school records with text-to-SQL, vLLM and an on-demand GPU.</description>
-      <category>AI</category><category>Text-to-SQL</category><category>LLM</category><category>Python</category><category>PostgreSQL</category>
+      <description>What a developer portfolio needs to win clients and jobs: clear positioning, case studies with results, fast pages, SEO and easy contact.</description>
+      <category>Portfolio</category><category>Career</category><category>SEO</category><category>Freelancing</category>
     </item>
     <item>
-      <title>Building a B2B Ordering App for a Wholesaler: 5 Lessons</title>
-      <link>https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>Push-to-Deploy with GitHub Actions: A Simple Setup</title>
+      <link>https://gajrajshekhawat.com/blog/push-to-deploy-github-actions-small-teams/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/push-to-deploy-github-actions-small-teams/</guid>
+      <pubDate>Sat, 07 Nov 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>Lessons from building a wholesale ordering platform in India: server-side pricing, OTP sign-in, Cashfree payments, GST invoices and self-updating Android apps.</description>
-      <category>E-commerce</category><category>B2B</category><category>React Native</category><category>Node.js</category><category>Payments</category>
+      <description>A simple CI/CD setup for small teams with GitHub Actions: checks on every push, automatic deploys from main, secrets handling, rollbacks and failure alerts.</description>
+      <category>DevOps</category><category>GitHub Actions</category><category>CI/CD</category><category>Deployment</category>
     </item>
     <item>
-      <title>How to Cut Node.js API Latency: What Actually Worked</title>
-      <link>https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>Core Web Vitals in Plain English: How to Make Your Site Fast</title>
+      <link>https://gajrajshekhawat.com/blog/core-web-vitals-plain-english/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/core-web-vitals-plain-english/</guid>
+      <pubDate>Fri, 06 Nov 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%.</description>
-      <category>Node.js</category><category>Performance</category><category>PostgreSQL</category><category>MySQL</category><category>Redis</category>
+      <description>LCP, INP and CLS explained simply, with Google&#x27;s targets and practical fixes for images, fonts, scripts and layout shifts on phones.</description>
+      <category>Performance</category><category>Core Web Vitals</category><category>SEO</category><category>Websites</category>
+    </item>
+    <item>
+      <title>How to Put a React Website Online for Free (Step by Step)</title>
+      <link>https://gajrajshekhawat.com/blog/deploy-react-website-free-cloudflare-pages/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/deploy-react-website-free-cloudflare-pages/</guid>
+      <pubDate>Wed, 04 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A beginner&#x27;s guide to building a React website with Vite and publishing it free on Cloudflare Pages from GitHub, with your own domain.</description>
+      <category>Beginners</category><category>React</category><category>Deployment</category><category>Cloudflare Pages</category><category>Frontend</category>
+    </item>
+    <item>
+      <title>Google Business Profile Setup: A Guide for Local Businesses</title>
+      <link>https://gajrajshekhawat.com/blog/google-business-profile-setup-guide/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/google-business-profile-setup-guide/</guid>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How to set up and verify a Google Business Profile, pick categories, add photos and services, collect reviews and link it to your website.</description>
+      <category>Google Business Profile</category><category>Local SEO</category><category>Small business</category><category>Jaipur</category>
     </item>
     <item>
       <title>What a Small Business Website Needs: A Checklist for 2026</title>
       <link>https://gajrajshekhawat.com/blog/business-website-checklist-jaipur/</link>
       <guid isPermaLink="true">https://gajrajshekhawat.com/blog/business-website-checklist-jaipur/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <pubDate>Sun, 01 Nov 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
       <description>A practical checklist for a small business website in Jaipur and across India: speed, mobile, WhatsApp, Google Business Profile, SEO basics and enquiry forms.</description>
       <category>Websites</category><category>Small business</category><category>SEO</category><category>Jaipur</category>
     </item>
     <item>
-      <title>What Is an AI Agent? A Plain-English Guide for Businesses</title>
-      <link>https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>Shipping an Android App That Updates Itself, Outside Play</title>
+      <link>https://gajrajshekhawat.com/blog/self-updating-android-app-google-play/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/self-updating-android-app-google-play/</guid>
+      <pubDate>Thu, 29 Oct 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>What an AI agent is, how it differs from a chatbot, where it helps a small business, and how to start safely without sending your data everywhere.</description>
-      <category>AI agents</category><category>AI chatbot</category><category>Business</category><category>LLM</category>
+      <description>How I built in-app self-updates for a React Native Android app distributed outside the Play Store, while keeping the Play Store build clean and policy-safe.</description>
+      <category>React Native</category><category>Android</category><category>Expo</category><category>Mobile apps</category><category>DevOps</category>
     </item>
     <item>
-      <title>Next.js vs WordPress for a Business Website in 2026</title>
-      <link>https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>Why I Dropped Firebase and Sent Login Codes over WhatsApp</title>
+      <link>https://gajrajshekhawat.com/blog/otp-login-over-whatsapp-instead-of-firebase/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/otp-login-over-whatsapp-instead-of-firebase/</guid>
+      <pubDate>Sun, 25 Oct 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>Next.js or WordPress for your business website? An honest comparison of speed, SEO, cost, security and editing, and which one to pick for your situation.</description>
-      <category>Next.js</category><category>WordPress</category><category>Websites</category><category>SEO</category>
+      <description>For a wholesale ordering app in Jaipur, I replaced Firebase phone auth with our own OTP service sent over WhatsApp. Why, and how it works.</description>
+      <category>Authentication</category><category>OTP</category><category>WhatsApp</category><category>Node.js</category><category>React Native</category>
     </item>
     <item>
-      <title>What Decides the Cost of Building an App in India</title>
-      <link>https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</link>
-      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <title>GST Invoices in Your App: What Developers Must Get Right</title>
+      <link>https://gajrajshekhawat.com/blog/gst-invoices-in-your-app-developer-guide/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/gst-invoices-in-your-app-developer-guide/</guid>
+      <pubDate>Tue, 20 Oct 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
-      <description>What really drives the cost of a mobile app or web app in India: features, platforms, integrations, design, admin panels, testing and maintenance.</description>
-      <category>App development</category><category>Cost</category><category>React Native</category><category>India</category>
+      <description>Building GST invoices into an Indian e-commerce or B2B app: invoice numbering, GSTIN, HSN codes, CGST/SGST vs IGST, rounding, credit notes and PDF generation.</description>
+      <category>GST</category><category>Invoicing</category><category>E-commerce</category><category>B2B</category><category>India</category>
+    </item>
+    <item>
+      <title>Building a B2B Ordering App for a Wholesaler: 5 Lessons</title>
+      <link>https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</guid>
+      <pubDate>Sat, 17 Oct 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Lessons from building a wholesale ordering platform in India: server-side pricing, OTP sign-in, Cashfree payments, GST invoices and self-updating Android apps.</description>
+      <category>E-commerce</category><category>B2B</category><category>React Native</category><category>Node.js</category><category>Payments</category>
+    </item>
+    <item>
+      <title>Monorepos for Small Teams: Sharing Code Between Apps</title>
+      <link>https://gajrajshekhawat.com/blog/monorepo-for-small-teams-shared-code/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/monorepo-for-small-teams-shared-code/</guid>
+      <pubDate>Sat, 10 Oct 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Why I put two React Native apps, a web admin and an API in one monorepo: shared packages for auth, UI and types, simpler releases, and the pitfalls to avoid.</description>
+      <category>Monorepo</category><category>React Native</category><category>TypeScript</category><category>Architecture</category>
+    </item>
+    <item>
+      <title>A Website for Every Village: One Next.js App, Many Subdomains</title>
+      <link>https://gajrajshekhawat.com/blog/website-for-every-village-nextjs-multi-tenant/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/website-for-every-village-nextjs-multi-tenant/</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How one Next.js app serves a separate bilingual website for every village on its own subdomain, with automatic HTTPS, per-site SEO and simple admin controls.</description>
+      <category>Next.js</category><category>Multi-tenant</category><category>SEO</category><category>Civic tech</category>
+    </item>
+    <item>
+      <title>Smart Classroom Lighting: An IoT Project with OTA Firmware</title>
+      <link>https://gajrajshekhawat.com/blog/smart-classroom-lighting-iot/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/smart-classroom-lighting-iot/</guid>
+      <pubDate>Sat, 03 Oct 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A school&#x27;s classroom lights run on ESP boards over secure MQTT, with schedules, live status and firmware built per board and updated over the air.</description>
+      <category>IoT</category><category>ESP32</category><category>MQTT</category><category>Node.js</category><category>Schools</category>
+    </item>
+    <item>
+      <title>Useful AI on a CPU-Only Server: Making a 3B Model Behave</title>
+      <link>https://gajrajshekhawat.com/blog/useful-ai-on-cpu-only-server-small-models/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/useful-ai-on-cpu-only-server-small-models/</guid>
+      <pubDate>Fri, 25 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Lessons from running chat, lesson planning and call summaries on a small CPU-only server with a 3B model: one model at a time, JSON schemas and honest limits.</description>
+      <category>AI</category><category>LLM</category><category>Ollama</category><category>Python</category><category>Cost</category>
+    </item>
+    <item>
+      <title>Running a Private AI on a GPU That Sleeps When Nobody Asks</title>
+      <link>https://gajrajshekhawat.com/blog/on-demand-gpu-private-ai/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/on-demand-gpu-private-ai/</guid>
+      <pubDate>Tue, 22 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How I run a self-hosted LLM for a school on a GPU that starts on the first question and shuts down after 15 idle minutes, keeping data private and costs low.</description>
+      <category>AI</category><category>LLM</category><category>GPU</category><category>vLLM</category><category>Cost</category>
+    </item>
+    <item>
+      <title>Building a Text-to-SQL AI Agent on a Self-Hosted LLM</title>
+      <link>https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</guid>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How Gajraj Singh Shekhawat built an AI agent that answers plain-English questions over 1.7M school records with text-to-SQL, vLLM and an on-demand GPU.</description>
+      <category>AI</category><category>Text-to-SQL</category><category>LLM</category><category>Python</category><category>PostgreSQL</category>
+    </item>
+    <item>
+      <title>Designing an Adaptive Aptitude Test That Doesn&#x27;t Leak Answers</title>
+      <link>https://gajrajshekhawat.com/blog/adaptive-aptitude-test-design/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/adaptive-aptitude-test-design/</guid>
+      <pubDate>Sat, 12 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How I designed StreamFit, an adaptive Class 10 stream test: difficulty ladders, interleaving to beat fatigue, and no answers sent to the browser.</description>
+      <category>EdTech</category><category>Assessment</category><category>Backend</category><category>Node.js</category>
+    </item>
+    <item>
+      <title>Face-Recognition Attendance Without Sending Photos to the Cloud</title>
+      <link>https://gajrajshekhawat.com/blog/face-recognition-attendance-without-cloud/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/face-recognition-attendance-without-cloud/</guid>
+      <pubDate>Thu, 10 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Class attendance from one photo using OpenCV face recognition on a CPU: why I chose models by licence, and how teachers stay in control.</description>
+      <category>AI</category><category>Computer vision</category><category>OpenCV</category><category>Privacy</category><category>Schools</category>
+    </item>
+    <item>
+      <title>Getting Reliable JSON from LLMs in Production</title>
+      <link>https://gajrajshekhawat.com/blog/reliable-json-from-llms/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/reliable-json-from-llms/</guid>
+      <pubDate>Fri, 04 Sep 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How to get valid, structured JSON from language models in real apps: schemas, constrained decoding, validation, retries, small-model tips and safe fallbacks.</description>
+      <category>AI</category><category>LLM</category><category>Python</category><category>Structured output</category>
     </item>
     <item>
       <title>OTP, Passkeys or Passwords: Which Login Should Your App Use?</title>
       <link>https://gajrajshekhawat.com/blog/otp-passkeys-or-passwords-app-login/</link>
       <guid isPermaLink="true">https://gajrajshekhawat.com/blog/otp-passkeys-or-passwords-app-login/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <pubDate>Thu, 27 Aug 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
       <description>Phone OTP, passkeys or passwords? A simple comparison for Indian businesses building apps and websites: security, cost, user experience and when to use each.</description>
       <category>Security</category><category>Authentication</category><category>Passkeys</category><category>OTP</category>
     </item>
     <item>
+      <title>How to Build an LMS: Features Checklist for Courses and Tests</title>
+      <link>https://gajrajshekhawat.com/blog/how-to-build-lms-learning-management-system/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-to-build-lms-learning-management-system/</guid>
+      <pubDate>Fri, 21 Aug 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Planning a learning management system (LMS)? A features checklist: courses, video, live classes, tests, progress, certificates, payments, roles and scaling.</description>
+      <category>LMS</category><category>EdTech</category><category>Online courses</category><category>Checklist</category>
+    </item>
+    <item>
+      <title>Next.js SEO Checklist: Titles, Sitemaps, Schema and Speed</title>
+      <link>https://gajrajshekhawat.com/blog/nextjs-seo-checklist/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/nextjs-seo-checklist/</guid>
+      <pubDate>Thu, 13 Aug 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A practical SEO checklist for Next.js sites: metadata, canonical URLs, sitemaps, robots, structured data, Open Graph images, internal links and Core Web Vitals.</description>
+      <category>Next.js</category><category>SEO</category><category>Frontend</category><category>React</category>
+    </item>
+    <item>
+      <title>Backups for Small Businesses: The 3-2-1 Rule, Simply</title>
+      <link>https://gajrajshekhawat.com/blog/backups-for-small-business-3-2-1-rule/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/backups-for-small-business-3-2-1-rule/</guid>
+      <pubDate>Fri, 07 Aug 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How small businesses should back up website and app data: the 3-2-1 rule, automatic database backups, testing restores, and ransomware safety.</description>
+      <category>Beginners</category><category>Backups</category><category>Security</category><category>Small business</category>
+    </item>
+    <item>
+      <title>How to Build an EdTech Platform for Coaching Institutes</title>
+      <link>https://gajrajshekhawat.com/blog/how-to-build-edtech-platform-coaching-institute/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-to-build-edtech-platform-coaching-institute/</guid>
+      <pubDate>Tue, 28 Jul 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What a coaching institute or school needs online: website, admissions and fee payments, online tests, results, CRM and parent updates. A practical build plan.</description>
+      <category>EdTech</category><category>Coaching</category><category>Schools</category><category>Checklist</category>
+    </item>
+    <item>
+      <title>How to Get Orders and Enquiries on WhatsApp from Your Website</title>
+      <link>https://gajrajshekhawat.com/blog/whatsapp-orders-enquiries-for-business/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/whatsapp-orders-enquiries-for-business/</guid>
+      <pubDate>Wed, 22 Jul 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Turn website visitors into WhatsApp enquiries and orders: click-to-chat buttons, catalogues, quick replies, the Business API and order updates.</description>
+      <category>WhatsApp</category><category>Leads</category><category>E-commerce</category><category>Small business</category>
+    </item>
+    <item>
+      <title>Razorpay vs Cashfree: Choosing a Payment Gateway in India</title>
+      <link>https://gajrajshekhawat.com/blog/razorpay-vs-cashfree-payment-gateway/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/razorpay-vs-cashfree-payment-gateway/</guid>
+      <pubDate>Wed, 15 Jul 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A developer&#x27;s comparison of Razorpay and Cashfree for Indian websites and apps: payment methods, settlements, payouts and safe integration.</description>
+      <category>Payments</category><category>Razorpay</category><category>Cashfree</category><category>E-commerce</category><category>India</category>
+    </item>
+    <item>
+      <title>How to Add AI to Your Existing App Without Rewriting It</title>
+      <link>https://gajrajshekhawat.com/blog/add-ai-to-existing-app/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/add-ai-to-existing-app/</guid>
+      <pubDate>Sun, 05 Jul 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Practical ways to add AI to an existing web or mobile app: where to start, a separate AI service, cost control, privacy, fallbacks and results.</description>
+      <category>AI</category><category>LLM</category><category>Product</category><category>Backend</category>
+    </item>
+    <item>
+      <title>React Native vs Flutter in 2026: Which Should You Choose?</title>
+      <link>https://gajrajshekhawat.com/blog/react-native-vs-flutter-2026/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/react-native-vs-flutter-2026/</guid>
+      <pubDate>Tue, 30 Jun 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>React Native or Flutter for your app? An honest comparison of performance, hiring, code sharing with the web and cost, with a clear recommendation.</description>
+      <category>React Native</category><category>Flutter</category><category>Mobile apps</category><category>Android</category><category>iOS</category>
+    </item>
+    <item>
+      <title>Website Maintenance: What It Includes and Why You Need It</title>
+      <link>https://gajrajshekhawat.com/blog/website-maintenance-what-it-includes/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/website-maintenance-what-it-includes/</guid>
+      <pubDate>Thu, 25 Jun 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What website maintenance really includes: security updates, backups, uptime monitoring, renewals, small changes and how to budget for it.</description>
+      <category>Beginners</category><category>Maintenance</category><category>Websites</category><category>Security</category>
+    </item>
+    <item>
+      <title>Multi-Tenant SaaS with PostgreSQL Row-Level Security</title>
+      <link>https://gajrajshekhawat.com/blog/postgres-row-level-security-multi-tenant/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/postgres-row-level-security-multi-tenant/</guid>
+      <pubDate>Mon, 15 Jun 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Keep each customer&#x27;s data separate in a multi-tenant SaaS: a tenant id on every row, PostgreSQL row-level security, and tests that prove it.</description>
+      <category>PostgreSQL</category><category>SaaS</category><category>Multi-tenant</category><category>Security</category><category>Backend</category>
+    </item>
+    <item>
+      <title>How to Build an E-commerce Website: A Planning Checklist</title>
+      <link>https://gajrajshekhawat.com/blog/how-to-build-an-ecommerce-website-checklist/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-to-build-an-ecommerce-website-checklist/</guid>
+      <pubDate>Tue, 09 Jun 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Planning an online store in India? A checklist of decisions and features: products, payments, shipping, GST, admin, SEO and launch, plus Shopify vs custom.</description>
+      <category>Beginners</category><category>E-commerce</category><category>Online store</category><category>Checklist</category>
+    </item>
+    <item>
+      <title>Build and Deploy a Next.js App: From Zero to Live</title>
+      <link>https://gajrajshekhawat.com/blog/build-and-deploy-nextjs-app/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/build-and-deploy-nextjs-app/</guid>
+      <pubDate>Mon, 01 Jun 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A beginner&#x27;s walkthrough of creating a Next.js app, adding pages and an API route, and deploying it to Vercel or a DigitalOcean server with your own domain.</description>
+      <category>Beginners</category><category>Next.js</category><category>React</category><category>Deployment</category><category>Vercel</category>
+    </item>
+    <item>
+      <title>RAG Explained: Building a Chatbot over Your Own Documents</title>
+      <link>https://gajrajshekhawat.com/blog/rag-chatbot-over-your-documents/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/rag-chatbot-over-your-documents/</guid>
+      <pubDate>Wed, 27 May 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How RAG works: chunking, embeddings, vector search, citations and evaluation, to build an AI chatbot that answers from your own documents.</description>
+      <category>AI</category><category>RAG</category><category>LLM</category><category>Chatbot</category><category>Python</category>
+    </item>
+    <item>
+      <title>What Decides the Cost of Building an App in India</title>
+      <link>https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</guid>
+      <pubDate>Sat, 16 May 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What really drives the cost of a mobile app or web app in India: features, platforms, integrations, design, admin panels, testing and maintenance.</description>
+      <category>App development</category><category>Cost</category><category>React Native</category><category>India</category>
+    </item>
+    <item>
+      <title>Background Jobs in Node.js with BullMQ: When and How</title>
+      <link>https://gajrajshekhawat.com/blog/nodejs-background-jobs-bullmq/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/nodejs-background-jobs-bullmq/</guid>
+      <pubDate>Sun, 10 May 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>When to use background jobs in Node.js and how to run them with BullMQ and Redis: retries, backoff, idempotency, scheduling and monitoring.</description>
+      <category>Node.js</category><category>BullMQ</category><category>Redis</category><category>Backend</category><category>Queues</category>
+    </item>
+    <item>
+      <title>Tailwind CSS vs Plain CSS: What I Use for Business Websites</title>
+      <link>https://gajrajshekhawat.com/blog/tailwind-css-vs-plain-css-business-websites/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/tailwind-css-vs-plain-css-business-websites/</guid>
+      <pubDate>Mon, 04 May 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Tailwind CSS or plain CSS for your next website? When each one makes sense, what they mean for speed and maintenance, and why my own portfolio uses plain CSS.</description>
+      <category>CSS</category><category>Tailwind</category><category>Frontend</category><category>Websites</category>
+    </item>
+    <item>
+      <title>What Is an AI Agent? A Plain-English Guide for Businesses</title>
+      <link>https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</guid>
+      <pubDate>Fri, 24 Apr 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What an AI agent is, how it differs from a chatbot, where it helps a small business, and how to start safely without sending your data everywhere.</description>
+      <category>AI agents</category><category>AI chatbot</category><category>Business</category><category>LLM</category>
+    </item>
+    <item>
+      <title>How to Deploy a Node.js Backend on DigitalOcean (Beginner Guide)</title>
+      <link>https://gajrajshekhawat.com/blog/deploy-nodejs-backend-digitalocean/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/deploy-nodejs-backend-digitalocean/</guid>
+      <pubDate>Sun, 19 Apr 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Step by step: run a Node.js API on a DigitalOcean droplet with Ubuntu, a firewall, PM2, Nginx, your own domain and free Let&#x27;s Encrypt SSL.</description>
+      <category>Beginners</category><category>Node.js</category><category>DigitalOcean</category><category>Deployment</category><category>Backend</category>
+    </item>
+    <item>
+      <title>Better Forms in React: Validation, UX and Accessibility</title>
+      <link>https://gajrajshekhawat.com/blog/react-forms-validation-ux-accessibility/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/react-forms-validation-ux-accessibility/</guid>
+      <pubDate>Mon, 13 Apr 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How to build React forms people actually finish: field design, validation timing, error messages, accessibility and mobile keyboards.</description>
+      <category>React</category><category>Frontend</category><category>Forms</category><category>Accessibility</category><category>UX</category>
+    </item>
+    <item>
       <title>How to Protect a Node.js Project from npm Supply-Chain Attacks</title>
       <link>https://gajrajshekhawat.com/blog/protect-nodejs-project-npm-supply-chain/</link>
       <guid isPermaLink="true">https://gajrajshekhawat.com/blog/protect-nodejs-project-npm-supply-chain/</guid>
-      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <pubDate>Fri, 03 Apr 2026 09:00:00 +0530</pubDate>
       <dc:creator>Gajraj Singh Shekhawat</dc:creator>
       <description>Simple steps to protect a Node.js app from malicious or hijacked npm packages: lockfiles, npm ci, fewer dependencies, audits, 2FA and safe CI settings.</description>
       <category>Node.js</category><category>Security</category><category>npm</category><category>DevOps</category>
+    </item>
+    <item>
+      <title>How to Write a Software Brief: A Template for Founders</title>
+      <link>https://gajrajshekhawat.com/blog/software-requirements-brief-template/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/software-requirements-brief-template/</guid>
+      <pubDate>Sun, 29 Mar 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A simple software requirements brief template for non-technical founders and business owners: the problem, users, must-haves, examples, budget and deadline.</description>
+      <category>Beginners</category><category>Planning</category><category>Requirements</category><category>Founders</category>
+    </item>
+    <item>
+      <title>PostgreSQL vs MongoDB: Which Database for Your Startup?</title>
+      <link>https://gajrajshekhawat.com/blog/postgresql-vs-mongodb-for-startups/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/postgresql-vs-mongodb-for-startups/</guid>
+      <pubDate>Fri, 20 Mar 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>PostgreSQL or MongoDB for a new product? A practical comparison of data shape, reporting, transactions and scaling, from production experience.</description>
+      <category>PostgreSQL</category><category>MongoDB</category><category>Databases</category><category>Backend</category><category>Startups</category>
+    </item>
+    <item>
+      <title>8 Fixes for a Slow React App</title>
+      <link>https://gajrajshekhawat.com/blog/fix-slow-react-app-performance/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/fix-slow-react-app-performance/</guid>
+      <pubDate>Sun, 15 Mar 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Speed up a slow React app: measure with the Profiler, split code, virtualise long lists, avoid needless re-renders and trim dependencies.</description>
+      <category>React</category><category>Frontend</category><category>Performance</category><category>JavaScript</category>
+    </item>
+    <item>
+      <title>How to Hire a Software Developer for Your Business: A Checklist</title>
+      <link>https://gajrajshekhawat.com/blog/how-to-hire-software-developer-small-business/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-to-hire-software-developer-small-business/</guid>
+      <pubDate>Thu, 05 Mar 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A practical checklist for hiring a software developer or agency in India or abroad: proof of work, scope, fixed quotes, code ownership, support and red flags.</description>
+      <category>Hiring</category><category>Software developer</category><category>Small business</category><category>Outsourcing</category>
+    </item>
+    <item>
+      <title>Redis Caching in Node.js: What to Cache and What Not To</title>
+      <link>https://gajrajshekhawat.com/blog/redis-caching-nodejs-practical-guide/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/redis-caching-nodejs-practical-guide/</guid>
+      <pubDate>Fri, 27 Feb 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Redis caching for Node.js APIs: cache-aside, sensible TTLs, invalidation, stampede protection, key naming and what you should never cache.</description>
+      <category>Node.js</category><category>Redis</category><category>Caching</category><category>Backend</category><category>Performance</category>
+    </item>
+    <item>
+      <title>Next.js vs WordPress for a Business Website in 2026</title>
+      <link>https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</guid>
+      <pubDate>Sat, 21 Feb 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Next.js or WordPress for your business website? An honest comparison of speed, SEO, cost, security and editing, and which one to pick for your situation.</description>
+      <category>Next.js</category><category>WordPress</category><category>Websites</category><category>SEO</category>
+    </item>
+    <item>
+      <title>Finding Slow Requests with OpenTelemetry Tracing</title>
+      <link>https://gajrajshekhawat.com/blog/opentelemetry-tracing-find-slow-requests/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/opentelemetry-tracing-find-slow-requests/</guid>
+      <pubDate>Tue, 10 Feb 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How OpenTelemetry and Jaeger tracing find slow requests across microservices: what a trace shows, adding it to Node.js, and what to look for.</description>
+      <category>Observability</category><category>OpenTelemetry</category><category>Node.js</category><category>Microservices</category>
+    </item>
+    <item>
+      <title>TypeScript for Node.js Backends: Is It Worth It?</title>
+      <link>https://gajrajshekhawat.com/blog/typescript-for-nodejs-backends-worth-it/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/typescript-for-nodejs-backends-worth-it/</guid>
+      <pubDate>Thu, 05 Feb 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Should your Node.js backend use TypeScript? Where it helps (refactors, API contracts, shared types), what it costs, and a practical setup that stays fast.</description>
+      <category>TypeScript</category><category>Node.js</category><category>Backend</category><category>JavaScript</category>
+    </item>
+    <item>
+      <title>DNS Setup for Beginners: A, CNAME, MX and TXT Records</title>
+      <link>https://gajrajshekhawat.com/blog/dns-setup-guide-a-cname-mx-records/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/dns-setup-guide-a-cname-mx-records/</guid>
+      <pubDate>Sat, 31 Jan 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A beginner&#x27;s guide to DNS records: what A, AAAA, CNAME, MX and TXT records do, how to connect a domain to hosting and email, and how to check that it works.</description>
+      <category>Beginners</category><category>DNS</category><category>Domain</category><category>Cloudflare</category><category>Email</category>
+    </item>
+    <item>
+      <title>REST API Design That Doesn&#x27;t Break: 8 Practical Rules</title>
+      <link>https://gajrajshekhawat.com/blog/rest-api-design-best-practices/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/rest-api-design-best-practices/</guid>
+      <pubDate>Tue, 20 Jan 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Practical REST API design rules for Node.js and other backends: consistent errors, pagination, versioning, idempotency, validation, auth and documentation.</description>
+      <category>Backend</category><category>API</category><category>Node.js</category><category>REST</category>
+    </item>
+    <item>
+      <title>How to Cut Node.js API Latency: What Actually Worked</title>
+      <link>https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</guid>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%.</description>
+      <category>Node.js</category><category>Performance</category><category>PostgreSQL</category><category>MySQL</category><category>Redis</category>
+    </item>
+    <item>
+      <title>How a Website Goes Live: Domain, DNS and Hosting Explained</title>
+      <link>https://gajrajshekhawat.com/blog/how-a-website-goes-live-domain-dns-hosting/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/how-a-website-goes-live-domain-dns-hosting/</guid>
+      <pubDate>Wed, 07 Jan 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A plain-English guide for non-technical owners: what a domain, DNS, hosting, SSL and email really are, how they connect, and what each one costs per year.</description>
+      <category>Beginners</category><category>Domain</category><category>DNS</category><category>Hosting</category><category>Websites</category>
     </item>
   </channel>
 </rss>

@@ -77,17 +77,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</loc>
+    <loc>https://gajrajshekhawat.com/blog/how-to-build-a-developer-portfolio-that-gets-clients/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</loc>
+    <loc>https://gajrajshekhawat.com/blog/push-to-deploy-github-actions-small-teams/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</loc>
+    <loc>https://gajrajshekhawat.com/blog/core-web-vitals-plain-english/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/deploy-react-website-free-cloudflare-pages/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/google-business-profile-setup-guide/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
@@ -97,17 +107,67 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</loc>
+    <loc>https://gajrajshekhawat.com/blog/self-updating-android-app-google-play/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</loc>
+    <loc>https://gajrajshekhawat.com/blog/otp-login-over-whatsapp-instead-of-firebase/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</loc>
+    <loc>https://gajrajshekhawat.com/blog/gst-invoices-in-your-app-developer-guide/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/monorepo-for-small-teams-shared-code/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/website-for-every-village-nextjs-multi-tenant/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/smart-classroom-lighting-iot/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/useful-ai-on-cpu-only-server-small-models/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/on-demand-gpu-private-ai/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/adaptive-aptitude-test-design/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/face-recognition-attendance-without-cloud/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/reliable-json-from-llms/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
@@ -117,7 +177,162 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://gajrajshekhawat.com/blog/how-to-build-lms-learning-management-system/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/nextjs-seo-checklist/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/backups-for-small-business-3-2-1-rule/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/how-to-build-edtech-platform-coaching-institute/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/whatsapp-orders-enquiries-for-business/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/razorpay-vs-cashfree-payment-gateway/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/add-ai-to-existing-app/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/react-native-vs-flutter-2026/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/website-maintenance-what-it-includes/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/postgres-row-level-security-multi-tenant/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/how-to-build-an-ecommerce-website-checklist/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/build-and-deploy-nextjs-app/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/rag-chatbot-over-your-documents/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/nodejs-background-jobs-bullmq/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/tailwind-css-vs-plain-css-business-websites/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/deploy-nodejs-backend-digitalocean/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/react-forms-validation-ux-accessibility/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://gajrajshekhawat.com/blog/protect-nodejs-project-npm-supply-chain/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/software-requirements-brief-template/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/postgresql-vs-mongodb-for-startups/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/fix-slow-react-app-performance/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/how-to-hire-software-developer-small-business/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/redis-caching-nodejs-practical-guide/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/opentelemetry-tracing-find-slow-requests/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/typescript-for-nodejs-backends-worth-it/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/dns-setup-guide-a-cname-mx-records/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/rest-api-design-best-practices/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gajrajshekhawat.com/blog/how-a-website-goes-live-domain-dns-hosting/</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.6</priority>
   </url>
