@@ -879,3 +879,8 @@ body { font-optical-sizing: auto; line-height: 1.65; }
   .post-card { padding: 22px; }
   .article__author { align-items: flex-start; }
 }
+.article__cta { max-width: 720px; margin-top: 40px; padding: 28px; border-radius: 20px; border: 1px solid var(--accent); background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%); }
+.article__cta-title { font-size: clamp(21px, 2.4vw, 26px); font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin: 0 0 10px; }
+.article__cta p { color: var(--muted); line-height: 1.6; margin: 0 0 18px; }
+.article__cta .hero__cta { margin: 0; }
+@media (max-width: 600px) { .article__cta { padding: 22px; } }

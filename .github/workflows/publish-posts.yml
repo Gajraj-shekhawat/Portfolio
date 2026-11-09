@@ -1,0 +1,47 @@
+# Publishes scheduled blog posts. Every post in tools/posts.py has a "date";
+# posts dated in the future are not built. Once a day this job checks whether
+# a post falls due today (IST), rebuilds the site, commits and pushes, which
+# makes Cloudflare Pages and GitHub Pages deploy it, then pings IndexNow.
+name: Publish scheduled blog posts
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 07:00 IST every day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Kolkata
+    steps:
+      - uses: actions/checkout@v4
+      - name: Any post due today?
+        id: due
+        run: |
+          due=$(python3 -c "import sys,datetime; sys.path.insert(0,'tools'); from posts import POSTS; t=datetime.date.today().isoformat(); print(sum(1 for p in POSTS if p['date']==t))")
+          echo "Posts due today: $due"
+          echo "count=$due" >> "$GITHUB_OUTPUT"
+      - name: Build
+        if: steps.due.outputs.count != '0'
+        run: python3 tools/build_pages.py
+      - name: Check site
+        if: steps.due.outputs.count != '0'
+        run: python3 .github/scripts/check_site.py
+      - name: Commit and push
+        if: steps.due.outputs.count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && { echo "Nothing to commit"; exit 0; }
+          git commit -m "Publish scheduled blog post(s) for $(date +%F)"
+          git push
+      - name: Wait for the domain, then ping IndexNow
+        if: steps.due.outputs.count != '0'
+        run: |
+          sleep 120
+          python3 .github/scripts/indexnow.py

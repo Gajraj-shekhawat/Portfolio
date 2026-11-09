@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 import sys
 sys.path.insert(0, str(ROOT / "tools"))
 from cases import CASES  # noqa: E402
-from posts import POSTS  # noqa: E402
+from posts import POSTS as ALL_POSTS  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
 NOW_ISO = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).replace(microsecond=0).isoformat()
@@ -22,6 +22,9 @@ GH_REDIRECT = '<script>if(location.hostname.endsWith("github.io")){location.repl
 EMAIL = "contact@gajrajshekhawat.com"
 PHONE = "+91 94145 84444"
 PHONE_E164 = "+919414584444"
+# Posts publish themselves on their date: only posts dated today or earlier are built.
+# (.github/workflows/publish-posts.yml rebuilds daily when a post falls due.)
+POSTS = sorted([p for p in ALL_POSTS if p["date"] <= TODAY], key=lambda p: p["date"], reverse=True)
 WA = "https://wa.me/919414584444?text=Hi%20Gajraj%2C%20I%27d%20like%20to%20discuss%20a%20project."
 
 PROOF = {
@@ -582,7 +585,7 @@ def post_html(p):
         ],
     }
     chips = "".join(f"<li>{esc(x)}</li>" for x in p["tags"])
-    more = "".join(f'<li><a href="/blog/{o["slug"]}/">{esc(o["title"])} <span aria-hidden="true">→</span></a></li>' for o in POSTS if o is not p)
+    more = "".join(f'<li><a href="/blog/{o["slug"]}/">{esc(o["title"])} <span aria-hidden="true">→</span></a></li>' for o in [o for o in POSTS if o is not p][:6])
     body = f"""    <section class="hero hero--page">
       <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
       <div class="wrap">
@@ -599,6 +602,14 @@ def post_html(p):
           {render_blocks(p["body"])}
         </article>
         <ul class="chips page-chips article__tags">{chips}</ul>
+        <aside class="article__cta reveal" aria-label="Get help">
+          <p class="article__cta-title">Need help building this?</p>
+          <p>I'm Gajraj Singh Shekhawat, a full-stack software engineer from Jaipur. With my small team I build websites, apps, e-commerce, EdTech platforms and AI tools for businesses in India and worldwide. Tell me what you need and I'll reply within a day.</p>
+          <div class="hero__cta">
+            <a href="/#contact" class="btn btn--primary">Send a message <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a href="{WA}" class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </aside>
         <div class="article__author reveal">
           <img src="/images/avatar-96.webp" alt="Gajraj Singh Shekhawat" width="56" height="56" loading="lazy" />
           <p><strong>Gajraj Singh Shekhawat</strong> is a full-stack software engineer from Jaipur, India, building backends, apps, e-commerce and AI. <a href="/about/">About Gajraj</a> · <a href="/#contact">Contact</a></p>
@@ -686,6 +697,14 @@ def rss_feed():
   </channel>
 </rss>
 """
+
+
+def refresh_llms_blog():
+    path = ROOT / "llms.txt"
+    text = path.read_text(encoding="utf-8")
+    text = re.split(r"\n## Blog\n", text)[0].rstrip("\n")
+    lines = "".join(f"- [{p['title']}]({SITE}/blog/{p['slug']}/): {p['summary']}\n" for p in POSTS)
+    path.write_text(text + "\n\n## Blog\n\n" + lines, encoding="utf-8")
 
 
 def shell(title, description, url, ld, body, og_type="website"):
@@ -813,6 +832,7 @@ if __name__ == "__main__":
     print("built blog/index.html")
     (ROOT / "blog" / "feed.xml").write_text(rss_feed(), encoding="utf-8")
     print("built blog/feed.xml")
+    refresh_llms_blog()
     for p in POSTS:
         out = ROOT / "blog" / p["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
