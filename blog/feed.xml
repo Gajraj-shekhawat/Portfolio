@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Gajraj Singh Shekhawat · Blog</title>
+    <link>https://gajrajshekhawat.com/blog/</link>
+    <atom:link href="https://gajrajshekhawat.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Articles by Gajraj Singh Shekhawat, full-stack software engineer from Jaipur, on backends, AI, e-commerce and websites.</description>
+    <language>en</language>
+    <item>
+      <title>Building a Text-to-SQL AI Agent on a Self-Hosted LLM</title>
+      <link>https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>How Gajraj Singh Shekhawat built an AI agent that answers plain-English questions over 1.7M school records with text-to-SQL, vLLM and an on-demand GPU.</description>
+      <category>AI</category><category>Text-to-SQL</category><category>LLM</category><category>Python</category><category>PostgreSQL</category>
+    </item>
+    <item>
+      <title>Building a B2B Ordering App for a Wholesaler: 5 Lessons</title>
+      <link>https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Lessons from building a wholesale ordering platform in India: server-side pricing, OTP sign-in, Cashfree payments, GST invoices and self-updating Android apps.</description>
+      <category>E-commerce</category><category>B2B</category><category>React Native</category><category>Node.js</category><category>Payments</category>
+    </item>
+    <item>
+      <title>How to Cut Node.js API Latency: What Actually Worked</title>
+      <link>https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%.</description>
+      <category>Node.js</category><category>Performance</category><category>PostgreSQL</category><category>MySQL</category><category>Redis</category>
+    </item>
+    <item>
+      <title>What a Small Business Website Needs: A Checklist for 2026</title>
+      <link>https://gajrajshekhawat.com/blog/business-website-checklist-jaipur/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/business-website-checklist-jaipur/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>A practical checklist for a small business website in Jaipur and across India: speed, mobile, WhatsApp, Google Business Profile, SEO basics and enquiry forms.</description>
+      <category>Websites</category><category>Small business</category><category>SEO</category><category>Jaipur</category>
+    </item>
+    <item>
+      <title>What Is an AI Agent? A Plain-English Guide for Businesses</title>
+      <link>https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/what-is-an-ai-agent-for-business/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What an AI agent is, how it differs from a chatbot, where it helps a small business, and how to start safely without sending your data everywhere.</description>
+      <category>AI agents</category><category>AI chatbot</category><category>Business</category><category>LLM</category>
+    </item>
+    <item>
+      <title>Next.js vs WordPress for a Business Website in 2026</title>
+      <link>https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/nextjs-vs-wordpress-business-website/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Next.js or WordPress for your business website? An honest comparison of speed, SEO, cost, security and editing, and which one to pick for your situation.</description>
+      <category>Next.js</category><category>WordPress</category><category>Websites</category><category>SEO</category>
+    </item>
+    <item>
+      <title>What Decides the Cost of Building an App in India</title>
+      <link>https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/app-development-cost-factors-india/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>What really drives the cost of a mobile app or web app in India: features, platforms, integrations, design, admin panels, testing and maintenance.</description>
+      <category>App development</category><category>Cost</category><category>React Native</category><category>India</category>
+    </item>
+    <item>
+      <title>OTP, Passkeys or Passwords: Which Login Should Your App Use?</title>
+      <link>https://gajrajshekhawat.com/blog/otp-passkeys-or-passwords-app-login/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/otp-passkeys-or-passwords-app-login/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Phone OTP, passkeys or passwords? A simple comparison for Indian businesses building apps and websites: security, cost, user experience and when to use each.</description>
+      <category>Security</category><category>Authentication</category><category>Passkeys</category><category>OTP</category>
+    </item>
+    <item>
+      <title>How to Protect a Node.js Project from npm Supply-Chain Attacks</title>
+      <link>https://gajrajshekhawat.com/blog/protect-nodejs-project-npm-supply-chain/</link>
+      <guid isPermaLink="true">https://gajrajshekhawat.com/blog/protect-nodejs-project-npm-supply-chain/</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>Simple steps to protect a Node.js app from malicious or hijacked npm packages: lockfiles, npm ci, fewer dependencies, audits, 2FA and safe CI settings.</description>
+      <category>Node.js</category><category>Security</category><category>npm</category><category>DevOps</category>
+    </item>
+  </channel>
+</rss>

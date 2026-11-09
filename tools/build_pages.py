@@ -587,7 +587,7 @@ def post_html(p):
       <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
       <div class="wrap">
         <nav class="crumbs load" aria-label="Breadcrumb"><a href="/">Gajraj Singh Shekhawat</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a></nav>
-        <p class="eyebrow load" style="--d:1">By <a href="/about/">Gajraj Singh Shekhawat</a> · <time datetime="{p["date"]}">{fmt_date(p["date"])}</time></p>
+        <p class="post-meta load" style="--d:1"><img src="/images/avatar-96.webp" alt="" width="28" height="28" /><span>By <a href="/about/" rel="author">Gajraj Singh Shekhawat</a></span><span aria-hidden="true">·</span><time datetime="{p["date"]}">{fmt_date(p["date"])}</time></p>
         <h1 class="page-title page-title--post load" style="--d:2">{esc(p["title"])}</h1>
         <p class="lead load" style="--d:3">{esc(p["summary"])}</p>
       </div>
@@ -663,6 +663,31 @@ def blog_index_html():
     return shell(title, description, url, ld, body)
 
 
+def rss_feed():
+    import email.utils
+    items = "".join(f"""
+    <item>
+      <title>{esc(p["title"])}</title>
+      <link>{SITE}/blog/{p["slug"]}/</link>
+      <guid isPermaLink="true">{SITE}/blog/{p["slug"]}/</guid>
+      <pubDate>{email.utils.format_datetime(datetime.datetime.fromisoformat(p["date"] + "T09:00:00+05:30"))}</pubDate>
+      <dc:creator>Gajraj Singh Shekhawat</dc:creator>
+      <description>{esc(p["description"])}</description>
+      {"".join(f"<category>{esc(t)}</category>" for t in p["tags"])}
+    </item>""" for p in sorted(POSTS, key=lambda x: x["date"], reverse=True))
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Gajraj Singh Shekhawat · Blog</title>
+    <link>{SITE}/blog/</link>
+    <atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Articles by Gajraj Singh Shekhawat, full-stack software engineer from Jaipur, on backends, AI, e-commerce and websites.</description>
+    <language>en</language>{items}
+  </channel>
+</rss>
+"""
+
+
 def shell(title, description, url, ld, body, og_type="website"):
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -681,6 +706,8 @@ def shell(title, description, url, ld, body, og_type="website"):
   <meta property="og:title" content="{esc(title)}" />
   <meta property="og:description" content="{esc(description)}" />
   <meta property="og:image" content="{SITE}/images/og.jpg" />
+  <link rel="alternate" type="application/rss+xml" title="Gajraj Singh Shekhawat · Blog" href="{SITE}/blog/feed.xml" />
+  <link rel="author" href="{SITE}/about/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="{SITE}/images/og.jpg" />
   <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
@@ -784,6 +811,8 @@ if __name__ == "__main__":
     (ROOT / "blog").mkdir(exist_ok=True)
     (ROOT / "blog" / "index.html").write_text(blog_index_html(), encoding="utf-8")
     print("built blog/index.html")
+    (ROOT / "blog" / "feed.xml").write_text(rss_feed(), encoding="utf-8")
+    print("built blog/feed.xml")
     for p in POSTS:
         out = ROOT / "blog" / p["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)

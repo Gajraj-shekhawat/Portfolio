@@ -1,0 +1,11 @@
+/* TEAM */
+Developer: Gajraj Singh Shekhawat (Gajraj Shekhawat)
+Role: Full-Stack Software Engineer
+Site: https://gajrajshekhawat.com
+LinkedIn: https://www.linkedin.com/in/gajrajshekhawat/
+GitHub: https://github.com/Gajraj-shekhawat
+From: Jaipur, Rajasthan, India
+
+/* SITE */
+Built with: HTML, CSS, JavaScript, Python build script
+Hosting: Cloudflare Pages
