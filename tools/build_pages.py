@@ -555,6 +555,14 @@ def fmt_date(d):
     return datetime.date.fromisoformat(d).strftime("%-d %b %Y")
 
 
+def unlink_unpublished(html_text):
+    """Turn links to posts that aren't published yet into plain text (they'd 404 until their date)."""
+    live = {p["slug"] for p in POSTS}
+    def repl(m):
+        return m.group(0) if m.group(1) in live else m.group(2)
+    return re.sub(r'<a href="/blog/([a-z0-9-]+)/">(.*?)</a>', repl, html_text)
+
+
 def render_blocks(blocks):
     out = []
     for kind, val in blocks:
@@ -564,7 +572,7 @@ def render_blocks(blocks):
             out.append(f"<h2>{esc(val)}</h2>")
         elif kind in ("ul", "ol"):
             out.append(f"<{kind}>" + "".join(f"<li>{x}</li>" for x in val) + f"</{kind}>")
-    return "\n          ".join(out)
+    return unlink_unpublished("\n          ".join(out))
 
 
 def post_html(p):
