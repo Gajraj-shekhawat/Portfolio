@@ -46,6 +46,7 @@ Contact: email contact@gajrajshekhawat.com · phone and WhatsApp +91 94145 84444
 
 ## Service pages
 
+- [About Gajraj Singh Shekhawat (Gajraj Shekhawat)](https://gajrajshekhawat.com/about/): who he is, background, profiles and contact
 - [Hire a software engineer](https://gajrajshekhawat.com/hire-software-engineer/)
 - [Backend developer](https://gajrajshekhawat.com/backend-developer/)
 - [Full-stack developer](https://gajrajshekhawat.com/full-stack-developer/)

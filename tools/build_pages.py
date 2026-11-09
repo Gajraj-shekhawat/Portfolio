@@ -39,6 +39,29 @@ PROOF = {
 
 PAGES = [
     {
+        "slug": "about",
+        "nav": "About Gajraj",
+        "title": "About Gajraj Singh Shekhawat · Software Engineer, Jaipur",
+        "description": "Gajraj Singh Shekhawat (Gajraj Shekhawat) is a full-stack software engineer from Jaipur, India, at Shuru Technologies, building apps, backends and AI.",
+        "eyebrow": "About Gajraj Shekhawat",
+        "h1": 'Gajraj Singh Shekhawat, <em>software engineer</em> from Jaipur',
+        "lead": "I'm Gajraj Singh Shekhawat (Gajraj Shekhawat), a full-stack software engineer based in Jaipur, Rajasthan. I work at Shuru Technologies on Equiti's global trading platform, and earlier built Pickup Coffee's data platform and app backends and Competishun's learning platform. Alongside that, I lead a small team building websites, apps, e-commerce and AI tools for schools and businesses.",
+        "what": [
+            ("Software engineer at Shuru Technologies", "Backend and full-stack work on Equiti's multi-asset trading platform, and earlier on Pickup Coffee's data platform and Node.js microservices with Maya, GCash and card payments."),
+            ("Full-stack developer at AFM Bigtech", "Backend for Competishun, an online JEE/NEET learning platform used by thousands of students at once: live classes, tests and payments."),
+            ("Software consultant and tech advisor", "Complete products for a CBSE school, a JEE/NEET coaching institute and a beverage wholesaler: websites, apps, payments, CRMs and private AI."),
+            ("Where to find me", "Jaipur, India, working remotely with teams worldwide. Profiles: LinkedIn (gajrajshekhawat), GitHub (Gajraj-shekhawat), Upwork, Peerlist and X."),
+        ],
+        "proof": ["equiti", "pickup", "yugam_ask", "shikhar"],
+        "stack": ["Node.js", "TypeScript", "Python", "React", "Next.js", "React Native", "PostgreSQL", "MySQL", "MongoDB", "Redis", "AWS", "GCP"],
+        "faqs": [
+            ("Who is Gajraj Singh Shekhawat?", "Gajraj Singh Shekhawat, also written Gajraj Shekhawat, is a full-stack software engineer from Jaipur, Rajasthan, India. He works at Shuru Technologies on Equiti's trading platform and builds websites, apps and AI for businesses."),
+            ("What does Gajraj Shekhawat work on?", "Backends and APIs (Node.js, TypeScript, Python), web and mobile apps (React, Next.js, React Native), e-commerce and payments, and AI features such as chatbots and text-to-SQL agents."),
+            ("Where is Gajraj Shekhawat based?", "Jaipur, Rajasthan, India. He works remotely with clients and teams worldwide."),
+            ("How can I contact Gajraj Shekhawat?", "Email contact@gajrajshekhawat.com, use the contact form on this site, or message on WhatsApp at +91 94145 84444."),
+        ],
+    },
+    {
         "slug": "hire-software-engineer",
         "nav": "Hire a software engineer",
         "title": "Hire a Remote Software Engineer · Gajraj Singh Shekhawat",
