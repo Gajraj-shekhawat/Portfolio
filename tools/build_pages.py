@@ -164,7 +164,7 @@ PAGES = [
         "description": "A fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant in Jaipur and India, with WhatsApp button and Google listing, in ~7 days.",
         "eyebrow": "Business website · Jaipur & India",
         "h1": 'Your business online in <em>7 days</em>',
-        "lead": "Customers search on Google and WhatsApp before they visit. I build a fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant, with a WhatsApp button, your Google listing set up and a simple enquiry form, usually ready in about a week.",
+        "lead": "Customers search on Google and WhatsApp before they visit. I build a fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant, with a WhatsApp button, your Google listing set up and a simple enquiry form, usually ready in about a week. Packages start at ₹14,999.",
         "what": [
             ("Website that works on every phone", "Clean, fast pages with your services, photos, prices, location map and timings, easy for customers to read on a mobile."),
             ("WhatsApp & call buttons", "One tap to chat on WhatsApp or call you, so enquiries come straight to your phone."),
@@ -178,6 +178,7 @@ PAGES = [
             ("What do I need to give you?", "Your business name, services, photos, timings, address and phone/WhatsApp number. I help write the text if you don't have it."),
             ("Will customers find me on Google?", "Yes. Every site comes with search setup and help with your Google Business listing so nearby customers can find you on Search and Maps."),
             ("Can I update the website myself later?", "Yes, simple changes are easy, and I offer ongoing support if you'd rather I handle updates."),
+            ("How much does a business website cost?", "Packages start at ₹14,999 for a website of up to 5 pages: mobile-friendly design, WhatsApp and call buttons, an enquiry form, Google Business Profile setup, basic SEO, free SSL and hosting setup, and one month of support. Your domain is billed at cost (usually under ₹1,500 a year). Online booking, payments or more pages are quoted separately."),
             ("How do I get a price?", "Send a WhatsApp message with what your business does. You'll get a clear fixed quote, usually within a day."),
         ],
     },
