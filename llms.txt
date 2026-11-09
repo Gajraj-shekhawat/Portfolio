@@ -1,6 +1,6 @@
 # Gajraj Singh Shekhawat
 
-> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a full-stack software engineer (frontend, backend, mobile, AI and data) based in India, working remotely with teams worldwide. He works full-time at Shuru Technologies (job title: Product Engineer, Backend), currently on Equiti's multi-asset trading platform, after building the data platform and app backends for Pickup Coffee. Alongside, he works with startups, schools and businesses as a software consultant and tech advisor to design and build complete products. He is open to select projects and collaborations.
+> Gajraj Singh Shekhawat (also written Gajraj Shekhawat) is a full-stack software engineer (frontend, backend, mobile, AI and data) based in India, working remotely with teams worldwide. He works full-time at Shuru Technologies (job title: Product Engineer, Backend), currently on Equiti's multi-asset trading platform, after building the data platform and app backends for Pickup Coffee. Alongside, he works with startups, schools and businesses as a software consultant and tech advisor to design and build complete products. He is open to select projects and collaborations, and works with a small team of developers he leads, so he can take on larger or parallel client projects.
 
 Contact: email contact@gajrajshekhawat.com · phone and WhatsApp +91 94145 84444 · based in India (IST, UTC+5:30), working remotely with clients worldwide.
 

@@ -48,7 +48,7 @@ PAGES = [
         "lead": "I'm Gajraj Singh Shekhawat, a full-stack software engineer (frontend, backend, mobile, AI and data) at Shuru Technologies, working on Equiti's trading platform. For startups, schools and businesses, I take on select projects end to end: planning, backend, web and mobile apps, payments, AI and deployment.",
         "what": [
             ("New products, from idea to launch", "MVPs and full products: scope, architecture, backend, web and Android apps, admin panels, payments and launch."),
-            ("Extra engineering capacity", "Join your team remotely on a feature, an integration or a performance problem, with clear updates and clean code."),
+            ("Extra engineering capacity", "Join your team remotely on a feature, an integration or a performance problem, or bring my own small team of developers for larger builds, with me as the single accountable lead."),
             ("Rescue and improvement", "Slow APIs, flaky deployments, missing tests, or a codebase someone else left behind. I find what's wrong and fix it."),
             ("Long-term technology partner", "Like I do for a CBSE school: ongoing development, a small team to lead, and someone accountable for the tech."),
         ],
