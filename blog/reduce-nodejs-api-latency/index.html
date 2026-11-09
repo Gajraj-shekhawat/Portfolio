@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>How to Cut Node.js API Latency: What Actually Worked</title>
+  <meta name="description" content="Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%." />
+  <meta name="author" content="Gajraj Singh Shekhawat" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/" />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Gajraj Singh Shekhawat" />
+  <meta property="og:url" content="https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/" />
+  <meta property="og:title" content="How to Cut Node.js API Latency: What Actually Worked" />
+  <meta property="og:description" content="Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%." />
+  <meta property="og:image" content="https://gajrajshekhawat.com/images/og.jpg?v=0a0192d0" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://gajrajshekhawat.com/images/og.jpg?v=0a0192d0" />
+  <link rel="icon" href="/images/favicon-32.png?v=2cc965c6" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=655f0950" />
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <script>if(location.hostname.endsWith("github.io")){location.replace("https://gajrajshekhawat.com"+location.pathname.replace(/^\/Portfolio/,"")+location.search+location.hash)}</script>
+  <link rel="stylesheet" href="/styles.min.css?v=4545364a" />
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/#article",
+      "headline": "How to Cut Node.js API Latency: What Actually Worked",
+      "description": "Practical ways to make Node.js APIs faster: tracing first, fixing slow SQL, indexes, Redis caching and queues. From work that cut API latency by 30%.",
+      "url": "https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/",
+      "mainEntityOfPage": "https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/",
+      "image": "https://gajrajshekhawat.com/images/og.jpg",
+      "datePublished": "2026-11-09T09:00:00+05:30",
+      "dateModified": "2026-11-09T09:00:00+05:30",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://gajrajshekhawat.com/#person",
+        "name": "Gajraj Singh Shekhawat",
+        "alternateName": "Gajraj Shekhawat",
+        "url": "https://gajrajshekhawat.com/about/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://gajrajshekhawat.com/#person",
+        "name": "Gajraj Singh Shekhawat"
+      },
+      "keywords": "Node.js, Performance, PostgreSQL, MySQL, Redis"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Gajraj Singh Shekhawat",
+          "item": "https://gajrajshekhawat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://gajrajshekhawat.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Cut Node.js API Latency: What Actually Worked",
+          "item": "https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="subpage">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="/" class="brand" aria-label="Gajraj Shekhawat, home">
+        <img class="brand__avatar" src="/images/avatar-96.webp?v=73c7e587" alt="" width="36" height="36" />
+        <span class="brand__name">Gajraj Shekhawat</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="/#work" data-nav>Work</a>
+        <a href="/#services" data-nav>Services</a>
+        <a href="/#experience" data-nav>Experience</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq" data-nav>FAQ</a>
+        <a href="/#contact" class="btn btn--sm btn--primary">Let's talk</a>
+      </nav>
+      <div class="nav__tools">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch light or dark theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn nav__burger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--page">
+      <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
+      <div class="wrap">
+        <nav class="crumbs load" aria-label="Breadcrumb"><a href="/">Gajraj Singh Shekhawat</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a></nav>
+        <p class="eyebrow load" style="--d:1">By <a href="/about/">Gajraj Singh Shekhawat</a> · <time datetime="2026-11-09">9 Nov 2026</time></p>
+        <h1 class="page-title page-title--post load" style="--d:2">How to Cut Node.js API Latency: What Actually Worked</h1>
+        <p class="lead load" style="--d:3">Measure first, fix the database second, cache third. The order matters.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <article class="article reveal">
+          <p>On a high-traffic ordering platform for a coffee chain with 500+ stores (<a href="/work/pickup-coffee-data-platform-and-apps/">case study</a>), our team cut API latency by about 30% and database load by about 40%. None of it was magic. Here is the order of work I'd follow on any Node.js backend.</p>
+          <h2>1. Measure before you change anything</h2>
+          <p>Add distributed tracing (we used OpenTelemetry with Jaeger) so you can see where each request spends its time across services. In almost every slow API I've seen, the time goes to a handful of database queries or to calls made one after another that could run together.</p>
+          <h2>2. Fix the slow queries</h2>
+          <ul><li>Turn on the slow-query log and sort by total time, not just the slowest single query.</li><li>Run EXPLAIN on the worst ones. Missing or wrong indexes are the most common cause.</li><li>Remove N+1 patterns: one query for a list, then one query per item. Fetch them in one go.</li><li>Select only the columns you need, and paginate anything that can grow.</li></ul>
+          <h2>3. Cache what is read often and changes rarely</h2>
+          <p>Menus, prices, store details and configuration are read on almost every request but change rarely. Caching them in Redis with a clear expiry and invalidation on change takes a lot of load off the database. Don't cache everything: stale data in the wrong place causes worse bugs than slowness.</p>
+          <h2>4. Move slow work off the request</h2>
+          <p>Sending notifications, awarding rewards or calling slow third-party APIs doesn't need to happen before the user gets a response. Put it on a queue (Bull or BullMQ on Redis) and let workers handle it.</p>
+          <h2>5. Keep watching</h2>
+          <p>Performance drifts as features are added. Keep the tracing, set alerts on response times, and check the slow-query log every few weeks.</p>
+          <p>If your API is slowing down as you grow, I can help. See <a href="/backend-developer/">backend development</a> or <a href="/#contact">send me a message</a>.</p>
+        </article>
+        <ul class="chips page-chips article__tags"><li>Node.js</li><li>Performance</li><li>PostgreSQL</li><li>MySQL</li><li>Redis</li></ul>
+        <div class="article__author reveal">
+          <img src="/images/avatar-96.webp?v=73c7e587" alt="Gajraj Singh Shekhawat" width="56" height="56" loading="lazy" />
+          <p><strong>Gajraj Singh Shekhawat</strong> is a full-stack software engineer from Jaipur, India, building backends, apps, e-commerce and AI. <a href="/about/">About Gajraj</a> · <a href="/#contact">Contact</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <nav class="other-services reveal" aria-label="More articles">
+          <p class="footer__label">More articles</p>
+          <ul><li><a href="/blog/text-to-sql-ai-agent-self-hosted-llm/">Building a Text-to-SQL AI Agent on a Self-Hosted LLM <span aria-hidden="true">→</span></a></li><li><a href="/blog/b2b-wholesale-ordering-app-lessons/">Building a B2B Ordering App for a Wholesaler: 5 Lessons <span aria-hidden="true">→</span></a></li><li><a href="/blog/business-website-checklist-jaipur/">What a Small Business Website Needs: A Checklist for 2026 <span aria-hidden="true">→</span></a></li></ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <nav class="footer__services" aria-label="Services">
+        <p class="footer__label">Services</p>
+        <ul><li><a href="/about/">About Gajraj</a></li><li><a href="/hire-software-engineer/">Hire a software engineer</a></li><li><a href="/backend-developer/">Backend developer</a></li><li><a href="/full-stack-developer/">Full-stack developer</a></li><li><a href="/website-development/">Website development</a></li><li><a href="/business-website-jaipur/">Business website in 7 days</a></li><li><a href="/ecommerce-development/">E-commerce development</a></li><li><a href="/ai-developer/">AI developer</a></li><li><a href="/tech-advisor/">Tech advisor</a></li></ul>
+      </nav>
+      <div class="footer__inner">
+        <p>© <span id="year">2026</span> Gajraj Singh Shekhawat · Full-Stack Software Engineer &amp; Tech Advisor · Based in India, working worldwide · <a href="mailto:contact@gajrajshekhawat.com">contact@gajrajshekhawat.com</a> · <a href="tel:+919414584444">+91 94145 84444</a></p>
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/gajrajshekhawat/" target="_blank" rel="noopener me">LinkedIn</a></li>
+          <li><a href="https://github.com/Gajraj-shekhawat" target="_blank" rel="noopener me">GitHub</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~015e52d28e1b27390f" target="_blank" rel="noopener me">Upwork</a></li>
+          <li><a href="https://peerlist.io/gajrajshekhawat" target="_blank" rel="noopener me">Peerlist</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/assets/Gajraj-Shekhawat-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="totop" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle class="totop__track" cx="24" cy="24" r="21" /><circle class="totop__bar" cx="24" cy="24" r="21" /></svg>
+    <span aria-hidden="true">↑</span>
+  </a>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <script src="/script.js?v=96339935" defer></script>
+</body>
+</html>

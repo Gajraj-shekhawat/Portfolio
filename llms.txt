@@ -75,3 +75,10 @@ Contact: email contact@gajrajshekhawat.com · phone and WhatsApp +91 94145 84444
 - **Can he add AI to an existing product?** Yes. He has built a text-to-SQL agent on a self-hosted model, AI reading of exam answer sheets, Indian-language call transcription and summaries, and an AI lesson planner. He can also host models privately when data privacy or running cost matters.
 - **How does a project start, and how is it priced?** It starts with a short call to understand the problem. You then get a clear scope, timeline and fixed quote before any work begins, followed by weekly demos during the build.
 - **How can I contact Gajraj?** By email at contact@gajrajshekhawat.com, or by phone or WhatsApp on +91 94145 84444. He usually replies within a day.
+
+## Blog
+
+- [Building a Text-to-SQL AI Agent on a Self-Hosted LLM](https://gajrajshekhawat.com/blog/text-to-sql-ai-agent-self-hosted-llm/): Plain-English questions over 1.7 million school records, answered by a model that runs on our own GPU, which only switches on when someone asks.
+- [Building a B2B Ordering App for a Wholesaler: 5 Lessons](https://gajrajshekhawat.com/blog/b2b-wholesale-ordering-app-lessons/): What I learned moving a Jaipur beverage wholesaler from phone and paper orders to its own apps.
+- [How to Cut Node.js API Latency: What Actually Worked](https://gajrajshekhawat.com/blog/reduce-nodejs-api-latency/): Measure first, fix the database second, cache third. The order matters.
+- [What a Small Business Website Needs: A Checklist for 2026](https://gajrajshekhawat.com/blog/business-website-checklist-jaipur/): Most customers find you on a phone, through Google, and want to message you on WhatsApp. Build for that.

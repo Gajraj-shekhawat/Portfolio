@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 import sys
 sys.path.insert(0, str(ROOT / "tools"))
 from cases import CASES  # noqa: E402
+from posts import POSTS  # noqa: E402
 SITE = "https://gajrajshekhawat.com"
 TODAY = datetime.date.today().isoformat()
 NOW_ISO = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).replace(microsecond=0).isoformat()
@@ -263,6 +264,7 @@ def nav_html():
         <a href="/#work" data-nav>Work</a>
         <a href="/#services" data-nav>Services</a>
         <a href="/#experience" data-nav>Experience</a>
+        <a href="/blog/">Blog</a>
         <a href="/#faq" data-nav>FAQ</a>
         <a href="/#contact" class="btn btn--sm btn--primary">Let's talk</a>
       </nav>
@@ -292,6 +294,9 @@ def footer_html():
         <ul class="footer__links">
           <li><a href="https://www.linkedin.com/in/gajrajshekhawat/" target="_blank" rel="noopener me">LinkedIn</a></li>
           <li><a href="https://github.com/Gajraj-shekhawat" target="_blank" rel="noopener me">GitHub</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~015e52d28e1b27390f" target="_blank" rel="noopener me">Upwork</a></li>
+          <li><a href="https://peerlist.io/gajrajshekhawat" target="_blank" rel="noopener me">Peerlist</a></li>
+          <li><a href="/blog/">Blog</a></li>
           <li><a href="/assets/Gajraj-Shekhawat-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
           <li><a href="/">Home</a></li>
         </ul>
@@ -543,6 +548,121 @@ def case_html(c):
     return shell(c["title"], c["description"], url, ld, body, "article")
 
 
+def fmt_date(d):
+    return datetime.date.fromisoformat(d).strftime("%-d %b %Y")
+
+
+def render_blocks(blocks):
+    out = []
+    for kind, val in blocks:
+        if kind == "p":
+            out.append(f"<p>{val}</p>")
+        elif kind == "h2":
+            out.append(f"<h2>{esc(val)}</h2>")
+        elif kind in ("ul", "ol"):
+            out.append(f"<{kind}>" + "".join(f"<li>{x}</li>" for x in val) + f"</{kind}>")
+    return "\n          ".join(out)
+
+
+def post_html(p):
+    url = f"{SITE}/blog/{p['slug']}/"
+    pub = p["date"] + "T09:00:00+05:30"
+    ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "BlogPosting", "@id": url + "#article", "headline": p["title"][:110], "description": p["description"], "url": url,
+             "mainEntityOfPage": url, "image": f"{SITE}/images/og.jpg", "datePublished": pub, "dateModified": pub, "inLanguage": "en",
+             "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat", "alternateName": "Gajraj Shekhawat", "url": SITE + "/about/"},
+             "publisher": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat"},
+             "keywords": ", ".join(p["tags"])},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Gajraj Singh Shekhawat", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog/"},
+                {"@type": "ListItem", "position": 3, "name": p["title"], "item": url}]},
+        ],
+    }
+    chips = "".join(f"<li>{esc(x)}</li>" for x in p["tags"])
+    more = "".join(f'<li><a href="/blog/{o["slug"]}/">{esc(o["title"])} <span aria-hidden="true">→</span></a></li>' for o in POSTS if o is not p)
+    body = f"""    <section class="hero hero--page">
+      <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
+      <div class="wrap">
+        <nav class="crumbs load" aria-label="Breadcrumb"><a href="/">Gajraj Singh Shekhawat</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a></nav>
+        <p class="eyebrow load" style="--d:1">By <a href="/about/">Gajraj Singh Shekhawat</a> · <time datetime="{p["date"]}">{fmt_date(p["date"])}</time></p>
+        <h1 class="page-title page-title--post load" style="--d:2">{esc(p["title"])}</h1>
+        <p class="lead load" style="--d:3">{esc(p["summary"])}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <article class="article reveal">
+          {render_blocks(p["body"])}
+        </article>
+        <ul class="chips page-chips article__tags">{chips}</ul>
+        <div class="article__author reveal">
+          <img src="/images/avatar-96.webp" alt="Gajraj Singh Shekhawat" width="56" height="56" loading="lazy" />
+          <p><strong>Gajraj Singh Shekhawat</strong> is a full-stack software engineer from Jaipur, India, building backends, apps, e-commerce and AI. <a href="/about/">About Gajraj</a> · <a href="/#contact">Contact</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <nav class="other-services reveal" aria-label="More articles">
+          <p class="footer__label">More articles</p>
+          <ul>{more}</ul>
+        </nav>
+      </div>
+    </section>"""
+    return shell(p["title"] + " · Gajraj Singh Shekhawat" if len(p["title"]) <= 40 else p["title"], p["description"], url, ld, body, "article")
+
+
+def blog_index_html():
+    url = f"{SITE}/blog/"
+    title = "Blog · Gajraj Singh Shekhawat, Software Engineer"
+    description = "Articles and case studies by Gajraj Singh Shekhawat on backends, AI agents, e-commerce, performance and business websites."
+    ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "Blog", "@id": url + "#blog", "name": "Gajraj Singh Shekhawat · Blog", "url": url, "description": description, "inLanguage": "en",
+             "author": {"@type": "Person", "@id": SITE + "/#person", "name": "Gajraj Singh Shekhawat"},
+             "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": p["date"]} for p in POSTS]},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Gajraj Singh Shekhawat", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": url}]},
+        ],
+    }
+    cards = "".join(f"""
+          <a class="post-card reveal" href="/blog/{p["slug"]}/">
+            <p class="post-card__meta"><time datetime="{p["date"]}">{fmt_date(p["date"])}</time> · {esc(", ".join(p["tags"][:3]))}</p>
+            <h2>{esc(p["title"])}</h2>
+            <p>{esc(p["summary"])}</p>
+            <span class="post-card__more">Read article →</span>
+          </a>""" for p in POSTS)
+    cases = "".join(f'<li><a href="/work/{c["slug"]}/">{esc(c["name"])} case study <span aria-hidden="true">→</span></a></li>' for c in CASES)
+    body = f"""    <section class="hero hero--page">
+      <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
+      <div class="wrap">
+        <nav class="crumbs load" aria-label="Breadcrumb"><a href="/">Gajraj Singh Shekhawat</a> <span aria-hidden="true">/</span> <span>Blog</span></nav>
+        <p class="eyebrow load" style="--d:1">Blog</p>
+        <h1 class="page-title load" style="--d:2">Notes from <em>building real software</em></h1>
+        <p class="lead load" style="--d:3">Articles by Gajraj Singh Shekhawat on backends, AI agents, e-commerce, performance and websites for small businesses, drawn from projects in production.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="post-list">{cards}
+        </div>
+        <nav class="other-services reveal" aria-label="Case studies">
+          <p class="footer__label">Case studies</p>
+          <ul>{cases}</ul>
+        </nav>
+      </div>
+    </section>"""
+    return shell(title, description, url, ld, body)
+
+
 def shell(title, description, url, ld, body, og_type="website"):
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -603,6 +723,8 @@ def sitemap():
     urls = [(f"{SITE}/", "1.0", f"\n    <image:image><image:loc>{SITE}/images/gajraj.jpg</image:loc></image:image>")]
     urls += [(f"{SITE}/{p['slug']}/", "0.8", "") for p in PAGES]
     urls += [(f"{SITE}/work/{c['slug']}/", "0.7", "") for c in CASES]
+    urls += [(f"{SITE}/blog/", "0.7", "")]
+    urls += [(f"{SITE}/blog/{p['slug']}/", "0.6", "") for p in POSTS]
     urls += [(f"{SITE}/assets/Gajraj-Shekhawat-Resume.pdf", "0.5", "")]
     body = "".join(f"""  <url>
     <loc>{u}</loc>
@@ -659,6 +781,14 @@ if __name__ == "__main__":
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(case_html(c), encoding="utf-8")
         print("built", out.relative_to(ROOT))
+    (ROOT / "blog").mkdir(exist_ok=True)
+    (ROOT / "blog" / "index.html").write_text(blog_index_html(), encoding="utf-8")
+    print("built blog/index.html")
+    for p in POSTS:
+        out = ROOT / "blog" / p["slug"] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(post_html(p), encoding="utf-8")
+        print("built", out.relative_to(ROOT))
     for page in [ROOT / "404.html", *ROOT.rglob("index.html")]:
         if "node_modules" in page.parts:
             continue
@@ -672,4 +802,4 @@ if __name__ == "__main__":
     (ROOT / "index.html").write_text(home, encoding="utf-8")
     print("asset versions refreshed")
     (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
-    print("sitemap.xml updated with", len(PAGES) + len(CASES) + 2, "URLs")
+    print("sitemap.xml updated with", len(PAGES) + len(CASES) + len(POSTS) + 3, "URLs")
