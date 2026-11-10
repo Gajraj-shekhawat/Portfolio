@@ -799,7 +799,7 @@ def track_lastmod():
         h = hashlib.sha1(_normalise(text).encode()).hexdigest()
         if lm.get(url, {}).get("hash") != h:
             lm[url] = {"hash": h, "date": TODAY}
-        stamped = re.sub(r'"dateModified": "[^"]*"', f'"dateModified": "{lm[url]["date"]}"', text)
+        stamped = re.sub(r'"dateModified": "[^"]*"', f'"dateModified": "{lm[url]["date"]}T09:00:00+05:30"', text)
         if stamped != text:
             path.write_text(stamped, encoding="utf-8")
     pdf = ROOT / "assets" / "Gajraj-Shekhawat-Resume.pdf"
