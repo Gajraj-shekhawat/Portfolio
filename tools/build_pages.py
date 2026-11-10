@@ -31,7 +31,7 @@ POSTS = sorted([p for p in ALL_POSTS if p["date"] <= TODAY], key=lambda p: p["da
 WA = "https://wa.me/919414584444?text=Hi%20Gajraj%2C%20I%27d%20like%20to%20discuss%20a%20project."
 
 PROOF = {
-    "equiti": ("Equiti · global trading platform", "Engineering for Equiti Group's multi-asset trading platform, at Shuru Technologies.", "https://www.equiti.com"),
+    "equiti": ("Global trading platform · fintech", "Engineering for a multi-asset trading platform used by traders worldwide, at Shuru Technologies.", ""),
     "pickup": ("Pickup Coffee · 500+ stores", "Data platform (Airflow, BigQuery, Metabase) and backends for the customer app, barista tablet app and back office. 30% lower API latency.", "https://pickup-coffee.com"),
     "nks": ("Neem Karoli Sales · ordering platform", "Two Android apps, web admin and API for a wholesaler, built solo: OTP sign-in, Cashfree payments, GST invoices, 1,290+ tests.", "https://neemkarolisales.in"),
     "competishun": ("Competishun · JEE/NEET coaching", "Backend of an online learning platform used by thousands of students at once: live classes, tests, payments.", "https://competishun.com"),
@@ -52,9 +52,9 @@ PAGES = [
         "description": "Gajraj Singh Shekhawat (Gajraj Shekhawat) is a full-stack software engineer from Jaipur, India, at Shuru Technologies, building apps, backends and AI.",
         "eyebrow": "About Gajraj Shekhawat",
         "h1": 'Gajraj Singh Shekhawat, <em>software engineer</em> from Jaipur',
-        "lead": "I'm Gajraj Singh Shekhawat (Gajraj Shekhawat), a full-stack software engineer based in Jaipur, Rajasthan. I work at Shuru Technologies on Equiti's global trading platform, and earlier built Pickup Coffee's data platform and app backends and Competishun's learning platform. Alongside that, I lead a small team building websites, apps, e-commerce and AI tools for schools and businesses.",
+        "lead": "I'm Gajraj Singh Shekhawat (Gajraj Shekhawat), a full-stack software engineer based in Jaipur, Rajasthan. I work at Shuru Technologies on a global multi-asset trading platform, and earlier built Pickup Coffee's data platform and app backends and Competishun's learning platform. Alongside that, I lead a small team building websites, apps, e-commerce and AI tools for schools and businesses.",
         "what": [
-            ("Software engineer at Shuru Technologies", "Backend and full-stack work on Equiti's multi-asset trading platform, and earlier on Pickup Coffee's data platform and Node.js microservices with Maya, GCash and card payments."),
+            ("Software engineer at Shuru Technologies", "Backend and full-stack work on a global multi-asset trading platform, and earlier on Pickup Coffee's data platform and Node.js microservices with Maya, GCash and card payments."),
             ("Full-stack developer at AFM Bigtech", "Backend for Competishun, an online JEE/NEET learning platform used by thousands of students at once: live classes, tests and payments."),
             ("Software consultant and tech advisor", "Complete products for a CBSE school, a JEE/NEET coaching institute and a beverage wholesaler: websites, apps, payments, CRMs and private AI."),
             ("Where to find me", "Jaipur, India, working remotely with teams worldwide. Profiles: LinkedIn (gajrajshekhawat), GitHub (Gajraj-shekhawat), Upwork, Peerlist and X."),
@@ -62,7 +62,7 @@ PAGES = [
         "proof": ["equiti", "pickup", "yugam_ask", "shikhar"],
         "stack": ["Node.js", "TypeScript", "Python", "React", "Next.js", "React Native", "PostgreSQL", "MySQL", "MongoDB", "Redis", "AWS", "GCP"],
         "faqs": [
-            ("Who is Gajraj Singh Shekhawat?", "Gajraj Singh Shekhawat, also written Gajraj Shekhawat, is a full-stack software engineer from Jaipur, Rajasthan, India. He works at Shuru Technologies on Equiti's trading platform and builds websites, apps and AI for businesses."),
+            ("Who is Gajraj Singh Shekhawat?", "Gajraj Singh Shekhawat, also written Gajraj Shekhawat, is a full-stack software engineer from Jaipur, Rajasthan, India. He works at Shuru Technologies on a global multi-asset trading platform and builds websites, apps and AI for businesses."),
             ("What does Gajraj Shekhawat work on?", "Backends and APIs (Node.js, TypeScript, Python), web and mobile apps (React, Next.js, React Native), e-commerce and payments, and AI features such as chatbots and text-to-SQL agents."),
             ("Where is Gajraj Shekhawat based?", "Jaipur, Rajasthan, India. He works remotely with clients and teams worldwide."),
             ("How can I contact Gajraj Shekhawat?", "Email contact@gajrajshekhawat.com, use the contact form on this site, or message on WhatsApp at +91 94145 84444."),
@@ -72,10 +72,10 @@ PAGES = [
         "slug": "hire-software-engineer",
         "nav": "Hire a software engineer",
         "title": "Hire a Remote Software Engineer · Gajraj Singh Shekhawat",
-        "description": "Hire Gajraj Singh Shekhawat, a remote full-stack software engineer with production work for Equiti, Pickup Coffee and Competishun: web, mobile, APIs and AI.",
+        "description": "Hire Gajraj Singh Shekhawat, a remote full-stack software engineer with production work for a global trading platform, Pickup Coffee and Competishun: web, mobile, APIs and AI.",
         "eyebrow": "Hire a software engineer",
         "h1": 'Hire a remote software engineer who <em>ships to production</em>',
-        "lead": "I'm Gajraj Singh Shekhawat, a full-stack software engineer (frontend, backend, mobile, AI and data) at Shuru Technologies, working on Equiti's trading platform. For startups, schools and businesses, I take on select projects end to end: planning, backend, web and mobile apps, payments, AI and deployment.",
+        "lead": "I'm Gajraj Singh Shekhawat, a full-stack software engineer (frontend, backend, mobile, AI and data) at Shuru Technologies, working on a global multi-asset trading platform. For startups, schools and businesses, I take on select projects end to end: planning, backend, web and mobile apps, payments, AI and deployment.",
         "what": [
             ("New products, from idea to launch", "MVPs and full products: scope, architecture, backend, web and Android apps, admin panels, payments and launch."),
             ("Extra engineering capacity", "Join your team remotely on a feature, an integration or a performance problem, or bring my own small team of developers for larger builds, with me as the single accountable lead."),
@@ -88,7 +88,7 @@ PAGES = [
             ("How do I hire Gajraj?", "Send a message through the contact form, email or WhatsApp with a short description of what you need. You'll get a reply within a day and a short call to discuss scope."),
             ("Does he work with international clients?", "Yes. He works remotely with teams worldwide, including the Philippines, Mexico, the UAE and the UK, from India (IST, UTC+5:30) with working hours that overlap Europe, the Middle East and Asia."),
             ("How is pricing decided?", "After a short call you get a clear scope, timeline and fixed quote before any work begins. Ongoing work can also be monthly."),
-            ("What experience does he have?", "Production software for global companies: Equiti's trading platform and Pickup Coffee's data platform and apps at Shuru Technologies, Competishun's learning platform at AFM Bigtech, and complete products for schools and businesses."),
+            ("What experience does he have?", "Production software for global companies: a global multi-asset trading platform and Pickup Coffee's data platform and apps at Shuru Technologies, Competishun's learning platform at AFM Bigtech, and complete products for schools and businesses."),
         ],
     },
     {
@@ -160,11 +160,11 @@ PAGES = [
     {
         "slug": "business-website-jaipur",
         "nav": "Business website in 7 days",
-        "title": "Business Website in 7 Days · Jaipur & India · Gajraj Shekhawat",
-        "description": "A fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant in Jaipur and India, with WhatsApp button and Google listing, in ~7 days.",
-        "eyebrow": "Business website · Jaipur & India",
+        "title": "Website Development in Jaipur · Business Website in 7 Days",
+        "description": "Website developer in Jaipur: a fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant, with WhatsApp and Google listing, in ~7 days.",
+        "eyebrow": "Website development · Jaipur & India",
         "h1": 'Your business online in <em>7 days</em>',
-        "lead": "Customers search on Google and WhatsApp before they visit. I build a fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant, with a WhatsApp button, your Google listing set up and a simple enquiry form, usually ready in about a week. Packages start at ₹14,999.",
+        "lead": "Looking for a website developer or a website development company in Jaipur? Customers search on Google and WhatsApp before they visit. I build a fast, mobile-friendly website for your shop, clinic, coaching centre or restaurant, with a WhatsApp button, your Google listing set up and a simple enquiry form, usually ready in about a week. Packages start at ₹14,999.",
         "what": [
             ("Website that works on every phone", "Clean, fast pages with your services, photos, prices, location map and timings, easy for customers to read on a mobile."),
             ("WhatsApp & call buttons", "One tap to chat on WhatsApp or call you, so enquiries come straight to your phone."),
@@ -179,6 +179,7 @@ PAGES = [
             ("Will customers find me on Google?", "Yes. Every site comes with search setup and help with your Google Business listing so nearby customers can find you on Search and Maps."),
             ("Can I update the website myself later?", "Yes, simple changes are easy, and I offer ongoing support if you'd rather I handle updates."),
             ("How much does a business website cost?", "Packages start at ₹14,999 for a website of up to 5 pages: mobile-friendly design, WhatsApp and call buttons, an enquiry form, Google Business Profile setup, basic SEO, free SSL and hosting setup, and one month of support. Your domain is billed at cost (usually under ₹1,500 a year). Online booking, payments or more pages are quoted separately."),
+            ("Are you a website development company in Jaipur?", "I'm Gajraj Singh Shekhawat, a software engineer based in Jaipur, and I lead a small team of developers. You get the quality of a website development company in Jaipur with one accountable person you can call or WhatsApp directly, and I work with businesses across Rajasthan and India."),
             ("How do I get a price?", "Send a WhatsApp message with what your business does. You'll get a clear fixed quote, usually within a day."),
         ],
     },
@@ -597,7 +598,11 @@ def post_html(p):
         ],
     }
     chips = "".join(f"<li>{esc(x)}</li>" for x in p["tags"])
-    more = "".join(f'<li><a href="/blog/{o["slug"]}/">{esc(o["title"])} <span aria-hidden="true">→</span></a></li>' for o in [o for o in POSTS if o is not p][:6])
+    # Related posts: shared tags first, then the posts next to this one by date, so every post gets links from several others.
+    others = [o for o in POSTS if o is not p]
+    idx = POSTS.index(p)
+    others.sort(key=lambda o: (-len(set(o["tags"]) & set(p["tags"])), abs(POSTS.index(o) - idx)))
+    more = "".join(f'<li><a href="/blog/{o["slug"]}/">{esc(o["title"])} <span aria-hidden="true">→</span></a></li>' for o in others[:6])
     body = f"""    <section class="hero hero--page">
       <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="blob blob--2"></span><span class="grid"></span></div>
       <div class="wrap">
